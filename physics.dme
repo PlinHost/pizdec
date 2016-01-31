@@ -1,0 +1,50 @@
+// DM Environment file for physics.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "icons"
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "physics.dm"
+#include "code\atmos\device.dm"
+#include "code\atmos\fire.dm"
+#include "code\atmos\main.dm"
+#include "code\atmos\pipes.dm"
+#include "code\light\area.dm"
+#include "code\light\main.dm"
+#include "code\mob\clothes.dm"
+#include "code\mob\human.dm"
+#include "code\mob\item_attacks.dm"
+#include "code\mob\life.dm"
+#include "code\mob\new_hud.dm"
+#include "code\mob\new_interact.dm"
+#include "code\mob\say.dm"
+#include "code\objects\items.dm"
+#include "code\objects\machine.dm"
+#include "code\objects\medical.dm"
+#include "code\objects\strucrture.dm"
+#include "code\objects\machine\door.dm"
+#include "code\objects\machine\vendings.dm"
+#include "code\other\math.dm"
+#include "code\other\topic.dm"
+#include "code\physics_plus\main.dm"
+#include "code\plumbing\device.dm"
+#include "code\plumbing\main.dm"
+#include "code\plumbing\water.dm"
+#include "code\power\physics_power.dm"
+#include "code\trash\device.dm"
+#include "code\trash\main.dm"
+#include "code\turfs\main.dm"
+#include "code\waves\main.dm"
+#include "map\my_map.dmm"
+// END_INCLUDE
+
