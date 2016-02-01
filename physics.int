@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1454247365
+LAST_COMPILE_TIME: 1454302151
 DIR: code code\atmos code\chemistry code\light code\mob code\objects code\objects\machine code\other code\physics_plus code\plumbing code\power code\trash code\turfs code\waves icons map map\backup 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 509.1318
-WINDOW: icons\physics_cable.dmi;icons\medbay.dmi;icons\main_items.dmi;icons\lum.dmi;icons\light.dmi;icons\lobby.dmi;icons\human.dmi;icons\screen.dmi;icons\shaitan_machine.dmi;icons\power.dmi;map\my_map.dmm;icons\weapon.dmi;icons\water.dmi;icons\vending.dmi;icons\tools.dmi;code\mob\human.dm;code\objects\items.dm;code\physics_plus\main.dm;code\waves\main.dm;code\light\main.dm;code\atmos\main.dm;code\mob\life.dm;code\atmos\device.dm;code\mob\item_attacks.dm;code\mob\new_hud.dm;code\objects\machine.dm;code\plumbing\device.dm;code\power\physics_power.dm;code\mob\new_interact.dm;code\mob\clothes.dm
-FILE: map\my_map.dmm
+WINDOW: icons\physics_cable.dmi;icons\medbay.dmi;icons\main_items.dmi;icons\lum.dmi;icons\light.dmi;icons\lobby.dmi;icons\human.dmi;icons\screen.dmi;icons\shaitan_machine.dmi;icons\power.dmi;map\my_map.dmm;icons\weapon.dmi;icons\water.dmi;icons\vending.dmi;code\objects\strucrture.dm;code\mob\new_hud.dm;code\mob\human.dm;code\objects\items.dm;code\mob\new_interact.dm
+FILE: code\objects\strucrture.dm
 */
 // END_INTERNALS

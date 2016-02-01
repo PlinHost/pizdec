@@ -61,7 +61,6 @@ obj/structure/hatch
 	icon = 'icons/crate.dmi'
 	icon_state = "closed"
 
-
 /obj/structure/closet
 	name = "closet"
 	icon = 'icons/closet.dmi'
@@ -85,26 +84,28 @@ obj/structure/hatch
 				IT.Move(src)
 			usr << "\blue Ты закрываешь [src]"
 			return
-/*
+	New()
+		open = 0
+		sleep(1)
+		for(var/obj/items/IT in src.loc)
+			IT.Move(src)
+
 	act_by_item(var/obj/items/I)
-		if(open == 1)
-			usr << "\blue Ты кладешь предмет в [src]"
-			if(usr.client.hand == 1)
-				I = usr.client.my_rhand_contents
-				for(I in usr)
+		for(I in usr.contents)
+			if(usr.client.my_hand_active == "left")
+				if(istype(I, usr.client.lhand_items[1]))
 					I.Move(src)
+					usr << "\bold Вы положили [I] в [src]"
+					usr.client.L.overlays.Cut()
+					usr.client.lhand_items.Cut()
 
-				usr.client.my_rhand_contents = 0
-				usr.client.R.overlays.Cut()
-
-			if(usr.client.hand == 0)
-				I = usr.client.my_lhand_contents
-				for(I in usr)
+			if(usr.client.my_hand_active == "right")
+				if(istype(I, usr.client.rhand_items[1]))
 					I.Move(src)
+					usr << "\bold Вы положили [I] в [src]"
+					usr.client.R.overlays.Cut()
+					usr.client.rhand_items.Cut()
 
-				usr.client.my_lhand_contents = 0
-				usr.client.L.overlays.Cut()
-*/
 /obj/lobb_y
 	name = "lobby"
 	icon = 'icons/lobby.dmi'
