@@ -18,7 +18,7 @@ var/global/personal_id = 0
 			for(var/obj/machinery/generator/rad_gen/RD in RAD.loc)
 				if(RD in RAD.loc)
 					if(RAD.force > 1)
-						RD.amperage += 70
+						RD.amperage += 150
 						RD.icon_state = "rad_gen_on"
 
 		for(var/wave/W in waves)

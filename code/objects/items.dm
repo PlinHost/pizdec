@@ -45,7 +45,6 @@
 			usr << "\blue Äëèíà âîëíû [R.length]"
 
 
-
 /*	act()
 		if(usr.client.hand == 1)
 			var/obj/items/M = src

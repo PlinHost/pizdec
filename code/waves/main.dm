@@ -76,12 +76,36 @@ var/global/list/wave/waves = list()
 
 /obj/machinery/radio/receiver
 	icon_state = "receiver"
+	frequency = 34
+	wave_length = 4
+
+	act()
+		var/my_text
+		my_text = {"
+		<html>
+		<head><title>Радиопередатчик</title></head>
+		<body>
+		Настройка:
+
+		<br><a href=?+freq_r>Увеличить частоту</a>
+		<br><a href=?-freq_r>Уменьшить частоту</a>
+		<br><a href=?+length_r>Увеличить длину волны</a>
+		<br><a href=?-length_r>Уменьшить длину волны</a>
+		<br>
+		<br>Длина волны - [wave_length]
+		<br>Частота - [frequency]
+
+		</body>
+		</html>
+		"}
+
+		usr << browse(my_text,"window=my_text")
 
 /obj/machinery/radio/transmitter
-	frequency = 27
-	wave_length = 3
+	frequency = 36
+	wave_length = 4
 	use_power = 1
-	need_amperage = 115
+	need_amperage = 50
 	on = 0
 	var/on_ = 0
 
@@ -101,6 +125,27 @@ var/global/list/wave/waves = list()
 			if(on_ == 0)
 				waves()
 				on_ = 1
+	act()
+		var/my_text
+		my_text = {"
+		<html>
+		<head><title>Радиопередатчик</title></head>
+		<body>
+		Настройка:
+
+		<br><a href=?+freq>Увеличить частоту</a>
+		<br><a href=?-freq>Уменьшить частоту</a>
+		<br><a href=?+length>Увеличить длину волны</a>
+		<br><a href=?-length>Уменьшить длину волны</a>
+		<br>
+		<br>Длина волны - [wave_length]
+		<br>Частота - [frequency]
+
+		</body>
+		</html>
+		"}
+
+		usr << browse(my_text,"window=my_text")
 
 /obj/machinery/radio/intercom
 	icon_state = "intercom"
@@ -110,7 +155,7 @@ var/global/list/wave/waves = list()
 			if(W.id == id && W.force > 1)
 				for(var/obj/machinery/radio/receiver/R in W.loc)
 					if(R.frequency == W.frequency)
-						for(var/mob/M in range(15, R))
+						for(var/mob/M in range(6, R))
 							M << "\bold \[из динамика доноситс&#255;\] [message]"
 
 
@@ -123,8 +168,9 @@ var/global/list/wave/waves = list()
 				if(R.wave_length < 25)
 					R.wave_length += 1
 
-					R.del_all_waves()
-					R.waves()
+					if(istype(R, /obj/machinery/radio/transmitter))
+						R.del_all_waves()
+						R.waves()
 
 /obj/machinery/radio/button_length_minus
 	icon_state = "minus"
@@ -135,8 +181,10 @@ var/global/list/wave/waves = list()
 				if(R.wave_length > 0)
 					R.wave_length -= 1
 
-					R.del_all_waves()
-					R.waves()
+					if(istype(R, /obj/machinery/radio/transmitter))
+						R.del_all_waves()
+						R.waves()
+
 
 /obj/machinery/radio/button_frequency_plus
 	icon_state = "plus"
@@ -147,9 +195,9 @@ var/global/list/wave/waves = list()
 				if(R.frequency < MAX_FREQ)
 					R.frequency += 1
 
-					R.del_all_waves()
-
-					R.waves()
+					if(istype(R, /obj/machinery/radio/transmitter))
+						R.del_all_waves()
+						R.waves()
 
 /obj/machinery/radio/button_frequency_minus
 	icon_state = "minus"
@@ -160,8 +208,9 @@ var/global/list/wave/waves = list()
 				if(R.frequency > 0)
 					R.frequency -= 1
 
-					R.del_all_waves()
-					R.waves()
+					if(istype(R, /obj/machinery/radio/transmitter))
+						R.del_all_waves()
+						R.waves()
 
 //RESONANCE
 

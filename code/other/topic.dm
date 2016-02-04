@@ -88,6 +88,52 @@
 	if(href == "get_")
 		get_container(usr)
 */
+	//RADIO
+
+	if(href == "+freq")
+		for(var/obj/machinery/radio/transmitter/T in range(1,usr))
+			T.frequency += 1
+			T.del_all_waves()
+			T.waves()
+			T.on = 0
+
+	if(href == "-freq")
+		for(var/obj/machinery/radio/transmitter/T in range(1,usr))
+			T.frequency -= 1
+			T.del_all_waves()
+			T.waves()
+			T.on = 0
+
+	if(href == "+length")
+		for(var/obj/machinery/radio/transmitter/T in range(1,usr))
+			T.wave_length += 1
+			T.on = 0
+
+
+	if(href == "-length")
+		for(var/obj/machinery/radio/transmitter/T in range(1,usr))
+			T.wave_length -= 1
+			T.on = 0
+
+
+	if(href == "+freq_r")
+		for(var/obj/machinery/radio/receiver/T in range(1,usr))
+			T.frequency += 1
+
+	if(href == "-freq_r")
+		for(var/obj/machinery/radio/receiver/T in range(1,usr))
+			T.frequency -= 1
+
+	if(href == "+length_r")
+		for(var/obj/machinery/radio/receiver/T in range(1,usr))
+			T.wave_length += 1
+
+	if(href == "-length_r")
+		for(var/obj/machinery/radio/receiver/T in range(1,usr))
+			T.wave_length -= 1
+
+	//RADIO
+
 	if(href == "on")
 		for(var/obj/electro/powerbox/P in range(1,usr))
 			for(var/obj/machinery/M in world)
