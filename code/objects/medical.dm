@@ -25,3 +25,14 @@
 	icon_state = "firegel"
 	name = "firegel"
 	medical_power = 25
+
+/obj/items/medical/pill/force
+	icon = 'icons/medbay.dmi'
+	icon_state = "pill"
+	name = "FORCE"
+	medical_power = 10
+
+	act_self()
+		usr.client.can_get += 10
+		usr << "\blue <b>¬ы чувствуете небывалый прилив силы!</b>"
+		del_from_hand()

@@ -57,9 +57,12 @@
 	black
 		icon_state = "human_head_black"
 
+/mob
+	var/list/obj/items/organs/organs = list()
 
 /mob/proc/white_overlay()
 	overlays.Cut()
+	organs.Cut()
 	overlays += /obj/items/organs/r_leg/white
 	overlays += /obj/items/organs/l_leg/white
 	overlays += /obj/items/organs/chest/white
@@ -67,33 +70,49 @@
 	overlays += /obj/items/organs/l_arm/white
 	overlays += /obj/items/organs/head/white
 
-	var/obj/items/organs/r_leg/R_LEG
-	R_LEG = new()
-	R_LEG.Move(src)
 
-	var/obj/items/organs/l_leg/L_LEG
-	L_LEG = new()
-	L_LEG.Move(src)
+	var/obj/items/organs/r_leg/white/R_LEG = new()
+	var/obj/items/organs/l_leg/white/L_LEG = new()
+	var/obj/items/organs/chest/white/CHEST = new()
+	var/obj/items/organs/r_arm/white/R_ARM = new()
+	var/obj/items/organs/l_arm/white/L_ARM = new()
+	var/obj/items/organs/head/white/HEAD = new()
 
-	var/obj/items/organs/r_arm/R_ARM
-	R_ARM = new()
-	R_ARM.Move(src)
+	organs += R_LEG
+	organs += L_LEG
+	organs += CHEST
+	organs += R_ARM
+	organs += L_ARM
+	organs += HEAD
 
-	var/obj/items/organs/l_arm/L_ARM
-	L_ARM = new()
-	L_ARM.Move(src)
+	var/obj/items/organs/r_leg/R_LEG_CONTENTS
+	R_LEG_CONTENTS = new()
+	R_LEG_CONTENTS.Move(src)
 
-	var/obj/items/organs/chest/CHEST
-	CHEST = new()
-	CHEST.Move(src)
+	var/obj/items/organs/l_leg/L_LEG_CONTENTS
+	L_LEG_CONTENTS = new()
+	L_LEG_CONTENTS.Move(src)
 
-	var/obj/items/organs/head/HEAD
-	HEAD = new()
-	HEAD.Move(src)
+	var/obj/items/organs/r_arm/R_ARM_CONTENTS
+	R_ARM_CONTENTS = new()
+	R_ARM_CONTENTS.Move(src)
+
+	var/obj/items/organs/l_arm/L_ARM_CONTENTS
+	L_ARM_CONTENTS = new()
+	L_ARM_CONTENTS.Move(src)
+
+	var/obj/items/organs/chest/CHEST_CONTENTS
+	CHEST_CONTENTS = new()
+	CHEST_CONTENTS.Move(src)
+
+	var/obj/items/organs/head/HEAD_CONTENTS
+	HEAD_CONTENTS = new()
+	HEAD_CONTENTS.Move(src)
 
 
 /mob/proc/white_fem_overlay()
 	overlays.Cut()
+	organs.Cut()
 	overlays += /obj/items/organs/r_leg/white
 	overlays += /obj/items/organs/l_leg/white
 	overlays += /obj/items/organs/chest/white/fem
@@ -101,9 +120,25 @@
 	overlays += /obj/items/organs/l_arm/white
 	overlays += /obj/items/organs/head/white
 
+	var/obj/items/organs/r_leg/white/R_LEG = new()
+	var/obj/items/organs/l_leg/white/L_LEG = new()
+	var/obj/items/organs/chest/white/fem/CHEST = new()
+	var/obj/items/organs/r_arm/white/R_ARM = new()
+	var/obj/items/organs/l_arm/white/L_ARM = new()
+	var/obj/items/organs/head/white/HEAD = new()
+
+	organs += R_LEG
+	organs += L_LEG
+	organs += CHEST
+	organs += R_ARM
+	organs += L_ARM
+	organs += HEAD
+
 
 /mob/proc/black_overlay()
 	overlays.Cut()
+	organs.Cut()
+
 	overlays += /obj/items/organs/r_leg/black
 	overlays += /obj/items/organs/l_leg/black
 	overlays += /obj/items/organs/chest/black
@@ -111,14 +146,44 @@
 	overlays += /obj/items/organs/l_arm/black
 	overlays += /obj/items/organs/head/black
 
+	var/obj/items/organs/r_leg/black/R_LEG = new()
+	var/obj/items/organs/l_leg/black/L_LEG = new()
+	var/obj/items/organs/chest/black/CHEST = new()
+	var/obj/items/organs/r_arm/black/R_ARM = new()
+	var/obj/items/organs/l_arm/black/L_ARM = new()
+	var/obj/items/organs/head/black/HEAD = new()
+
+	organs += R_LEG
+	organs += L_LEG
+	organs += CHEST
+	organs += R_ARM
+	organs += L_ARM
+	organs += HEAD
+
 /mob/proc/black_fem_overlay()
 	overlays.Cut()
+	organs.Cut()
+
 	overlays += /obj/items/organs/r_leg/black
 	overlays += /obj/items/organs/l_leg/black
 	overlays += /obj/items/organs/chest/black/fem
 	overlays += /obj/items/organs/r_arm/black
 	overlays += /obj/items/organs/l_arm/black
 	overlays += /obj/items/organs/head/black
+
+	var/obj/items/organs/r_leg/black/R_LEG = new()
+	var/obj/items/organs/l_leg/black/L_LEG = new()
+	var/obj/items/organs/chest/black/fem/CHEST = new()
+	var/obj/items/organs/r_arm/black/R_ARM = new()
+	var/obj/items/organs/l_arm/black/L_ARM = new()
+	var/obj/items/organs/head/black/HEAD = new()
+
+	organs += R_LEG
+	organs += L_LEG
+	organs += CHEST
+	organs += R_ARM
+	organs += L_ARM
+	organs += HEAD
 
 var/html = {"
 <html>
@@ -158,6 +223,7 @@ client
 	icon_state = "human"
 	layer = 6
 	weight = 70
+	var/lying = 0
 	var/stop = 0
 	var/state_of_health = "normal"
 	var/stamina = 100
@@ -210,6 +276,106 @@ client
 		else
 			usr << "\red Здесь нельз&#255; вынырнуть!"
 
+	proc/lying()
+		lying = 1
+
+		for(var/obj/items/organs/O in organs)
+			overlays -= O
+			O.icon = 'icons/human_lying.dmi'
+			overlays += O
+
+		if(usr.client.head_items.len > 0)
+			if(istype(usr.client.head_items[1],/obj/items/body/head/HELMET))
+				var/obj/items/body/head/HELMET/H = new()
+				overlays -= H
+				H.icon = 'icons/clothes_lying.dmi'
+				overlays += H
+
+		if(usr.client.head_items.len > 0)
+
+			if(istype(usr.client.head_items[1],/obj/items/clothes/head/HELMET_SYN))
+				var/obj/items/body/head/HELMET_SYN/HS = new()
+				overlays -= HS
+				HS.icon = 'icons/clothes_lying.dmi'
+				overlays += HS
+
+		if(usr.client.foot_items.len > 0)
+			var/k = usr.client.foot_items[1]
+			var/obj/items/body/shoes/BLACK/B = new()
+			if(istype(k,/obj/items/clothes/shoes/BLACK))
+				overlays -= B
+				B.icon = 'icons/clothes_lying.dmi'
+				overlays += B
+
+		if(usr.client.foot_items.len > 0)
+			if(istype(usr.client.foot_items[1],/obj/items/clothes/shoes/COOL))
+				var/obj/items/body/shoes/COOL/CO = new()
+				overlays -= CO
+				CO.icon = 'icons/clothes_lying.dmi'
+				overlays += CO
+
+		if(usr.client.uniform_items.len > 0)
+			var/obj/items/clothes/C = usr.client.uniform_items[1]
+			overlays -= C
+			C.icon = 'icons/clothes_lying.dmi'
+			overlays += C
+
+		if(usr.client.clothes_items.len > 0)
+			var/obj/items/clothes/C = usr.client.clothes_items[1]
+			overlays -= usr.client.clothes_items[1]
+			C.icon = 'icons/clothes_lying.dmi'
+			overlays += C
+
+	proc/unlying()
+		lying = 0
+
+		for(var/obj/items/organs/O in organs)
+			overlays -= O
+			O.icon = 'icons/human.dmi'
+			overlays += O
+
+		if(usr.client.head_items.len > 0)
+			if(istype(usr.client.head_items[1],/obj/items/body/head/HELMET))
+				var/obj/items/body/head/HELMET/H = new()
+				overlays -= H
+				H.icon = 'icons/clothes.dmi'
+				overlays += H
+
+		if(usr.client.head_items.len > 0)
+
+			if(istype(usr.client.head_items[1],/obj/items/clothes/head/HELMET_SYN))
+				var/obj/items/body/head/HELMET_SYN/HS = new()
+				overlays -= HS
+				HS.icon = 'icons/clothes.dmi'
+				overlays += HS
+
+		if(usr.client.foot_items.len > 0)
+			var/k = usr.client.foot_items[1]
+			var/obj/items/body/shoes/BLACK/B = new()
+			if(istype(k,/obj/items/clothes/shoes/BLACK))
+				overlays -= B
+				B.icon = 'icons/clothes.dmi'
+				overlays += B
+
+		if(usr.client.foot_items.len > 0)
+			if(istype(usr.client.foot_items[1],/obj/items/clothes/shoes/COOL))
+				var/obj/items/body/shoes/COOL/CO = new()
+				overlays -= CO
+				CO.icon = 'icons/clothes.dmi'
+				overlays += CO
+
+		if(usr.client.uniform_items.len > 0)
+			var/obj/items/clothes/C = usr.client.uniform_items[1]
+			overlays -= C
+			C.icon = 'icons/clothes.dmi'
+			overlays += C
+
+		if(usr.client.clothes_items.len > 0)
+			var/obj/items/clothes/C = usr.client.clothes_items[1]
+			overlays -= usr.client.clothes_items[1]
+			C.icon = 'icons/clothes.dmi'
+			overlays += C
+
 /mob/human/process() //как Life(), епта
 	spawn while(1)
 		//if(src == usr)
@@ -231,6 +397,7 @@ client
 
 		var/turf/T = locate(x,y,z)
 		sleep(0.5)
+
 
 		for(var/obj/O in usr.contents)
 			usr.client.my_weight += O.weight

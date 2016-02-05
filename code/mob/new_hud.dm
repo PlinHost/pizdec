@@ -259,13 +259,16 @@ obj
 				usr.client.lhand_items += usr.client.uniform_items[1]
 
 			act()
-				undress_my_uniform_baby()
-				if(usr.client.my_hand_active == "left")
-					add_to_lhand()
+				if(istype(usr,/mob/human))
+					var/mob/human/H = usr
+					if(H.lying == 0)
+						undress_my_uniform_baby()
+						if(usr.client.my_hand_active == "left")
+							add_to_lhand()
 
 
-				if(usr.client.my_hand_active == "right")
-					add_to_rhand()
+						if(usr.client.my_hand_active == "right")
+							add_to_rhand()
 
 
 		mask
@@ -339,13 +342,16 @@ obj
 				usr.client.lhand_items += usr.client.foot_items[1]
 
 			act()
-				undress_my_uniform_baby()
-				if(usr.client.my_hand_active == "left")
-					add_to_lhand()
+				if(istype(usr,/mob/human))
+					var/mob/human/H = usr
+					if(H.lying == 0)
+						undress_my_uniform_baby()
+						if(usr.client.my_hand_active == "left")
+							add_to_lhand()
 
 
-				if(usr.client.my_hand_active == "right")
-					add_to_rhand()
+						if(usr.client.my_hand_active == "right")
+							add_to_rhand()
 
 		head
 			icon_state = "head"
@@ -401,13 +407,16 @@ obj
 				usr.client.lhand_items += usr.client.head_items[1]
 
 			act()
-				undress_my_uniform_baby()
-				if(usr.client.my_hand_active == "left")
-					add_to_lhand()
+				if(istype(usr,/mob/human))
+					var/mob/human/H = usr
+					if(H.lying == 0)
+						undress_my_uniform_baby()
+						if(usr.client.my_hand_active == "left")
+							add_to_lhand()
 
 
-				if(usr.client.my_hand_active == "right")
-					add_to_rhand()
+						if(usr.client.my_hand_active == "right")
+							add_to_rhand()
 
 		clothes
 			icon_state = "clothes"
@@ -449,13 +458,16 @@ obj
 				usr.client.lhand_items += usr.client.clothes_items[1]
 
 			act()
-				undress_my_uniform_baby()
-				if(usr.client.my_hand_active == "left")
-					add_to_lhand()
+				if(istype(usr,/mob/human))
+					var/mob/human/H = usr
+					if(H.lying == 0)
+						undress_my_uniform_baby()
+						if(usr.client.my_hand_active == "left")
+							add_to_lhand()
 
 
-				if(usr.client.my_hand_active == "right")
-					add_to_rhand()
+						if(usr.client.my_hand_active == "right")
+							add_to_rhand()
 		act_intent
 			icon_state = "help"
 			New(client/C)

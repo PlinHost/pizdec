@@ -6,6 +6,22 @@ client/show_popup_menus = 0
 
 /atom/proc/act_self(var/obj/items/I)
 
+/atom/proc/del_from_hand(src)
+	if(usr.client.my_hand_active == "right")
+		for(src in usr.contents)
+			if(istype(src, usr.client.rhand_items[1]))
+				usr.client.rhand_items.Cut()
+				usr.client.R.overlays -= src
+				del(src)
+
+	if(usr.client.my_hand_active == "left")
+		for(src in usr.contents)
+			if(istype(src, usr.client.lhand_items[1]))
+				usr.client.lhand_items.Cut()
+				usr.client.L.overlays -= src
+				del(src)
+
+
 /atom/Click(location,control,params)
 
 	params = params2list(params)
@@ -74,12 +90,12 @@ client/show_popup_menus = 0
 		else
 			usr << "\red Освободите руку"
 
-	if(usr.client.my_hand_active == "right")
-		if(usr.client.rhand_items.len == 0)
-			usr.client.rhand_items += src
-			usr.client.draw_item_hand(usr.client.my_hand_active, src)
-		else
-			usr << "\red Освободите руку"
+		if(usr.client.my_hand_active == "right")
+			if(usr.client.rhand_items.len == 0)
+				usr.client.rhand_items += src
+				usr.client.draw_item_hand(usr.client.my_hand_active, src)
+			else
+				usr << "\red Освободите руку"
 
 
 

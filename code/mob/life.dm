@@ -55,11 +55,13 @@
 	if(oxygen < 20)
 		usr << "“ут ты это, ну умер."
 		icon_state = "dead"
+		lying()
 		signal = 1
 
 	if(temperature < -30 || temperature > 100)
 		usr << "“ут ты это, ну умер."
 		icon_state = "dead"
+		lying()
 		signal = 1
 
 	if(stamina == 0)
