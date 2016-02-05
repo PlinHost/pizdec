@@ -2,6 +2,7 @@
 	var/brute_resist = 0
 	var/temperature_resist = 0
 	var/shock_resist = 0
+	var/pass = 0
 
 /obj/items
 	icon = 'icons/main_items.dmi'

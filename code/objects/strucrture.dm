@@ -32,20 +32,22 @@ obj/structure/hatch
 	density = 1
 	layer = 6
 	alpha = 128
-/*
+
 	act_by_item(var/obj/items/I)
-		usr << "\blue Ты кладешь предмет на стол"
-		if(usr.client.hand == 1)
-			I = usr.client.my_rhand_contents
-			new I(src.loc)
-			usr.client.my_rhand_contents = 0
-			usr.client.R.overlays.Cut()
-		if(usr.client.hand == 0)
-			I = usr.client.my_lhand_contents
-			new I(src.loc)
-			usr.client.my_lhand_contents = 0
-			usr.client.L.overlays.Cut()
-*/
+		for(I in usr.contents)
+			if(usr.client.my_hand_active == "left")
+				if(istype(I, usr.client.lhand_items[1]))
+					I.Move(src.loc)
+					usr << "\bold Вы положили [I] на [src]"
+					usr.client.L.overlays.Cut()
+					usr.client.lhand_items.Cut()
+
+			if(usr.client.my_hand_active == "right")
+				if(istype(I, usr.client.rhand_items[1]))
+					I.Move(src.loc)
+					usr << "\bold Вы положили [I] на [src]"
+					usr.client.R.overlays.Cut()
+					usr.client.rhand_items.Cut()
 
 /obj/structure/table/surgery
 	icon = 'icons/surgery.dmi'

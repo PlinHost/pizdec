@@ -83,6 +83,8 @@ var/global/list/ultraboy = list()
 
 
 /obj/explode/New()
+	personal_id += 1
+	my_id = personal_id
 	BOOM()
 
 /obj/lobby_marker
@@ -106,6 +108,7 @@ var/global/list/ultraboy = list()
 	EXPLODE = T.plasma / 10
 	EXPLODE = round(EXPLODE) //сила взрыва во взрывоединицах
 
+	force_wave(rand(0,T.oxygen), EXPLODE)
 	for(var/mob/M in range(15,src))
 		M << "Ты слышишь смачный бабах"
 	for(var/turf/simulated/floor/EPTAHULI in range(src,EXPLODE))

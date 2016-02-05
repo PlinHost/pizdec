@@ -33,6 +33,7 @@
 #include "code\objects\medical.dm"
 #include "code\objects\strucrture.dm"
 #include "code\objects\machine\door.dm"
+#include "code\objects\machine\laser.dm"
 #include "code\objects\machine\vendings.dm"
 #include "code\other\math.dm"
 #include "code\other\topic.dm"

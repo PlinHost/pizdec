@@ -2,6 +2,8 @@ client/show_popup_menus = 0
 
 /atom/proc/act()
 
+/atom/proc/hit()
+
 /atom/proc/act_by_item(var/obj/items/I)
 
 /atom/proc/act_self(var/obj/items/I)
