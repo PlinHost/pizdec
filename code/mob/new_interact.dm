@@ -1,5 +1,7 @@
 client/show_popup_menus = 0
 
+/atom/proc/pew()
+
 /atom/proc/act()
 
 /atom/proc/hit()
@@ -60,6 +62,21 @@ client/show_popup_menus = 0
 						if(istype(O, usr.client.lhand_items[1]))
 
 							act_by_item(O)
+
+		if(get_dist(src,usr) > 1)
+			if(usr.client.my_hand_active == "right")
+				if(usr.client.rhand_items.len != 0)
+					for(var/obj/items/weapon/gun/G in usr.contents)
+						if(istype(G, usr.client.rhand_items[1]))
+							var/obj/items/weapon/gun/GUN = usr.client.rhand_items[1]
+							GUN.pew()
+
+			if(usr.client.my_hand_active == "left")
+				if(usr.client.lhand_items.len != 0)
+					for(var/obj/items/weapon/gun/G in usr.contents)
+						if(istype(G, usr.client.lhand_items[1]))
+							var/obj/items/weapon/gun/GUN = usr.client.lhand_items[1]
+							GUN.pew()
 
 		if(src in usr.client.screen)
 			if(usr.client.my_hand_active == "right")

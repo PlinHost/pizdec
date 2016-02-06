@@ -165,6 +165,9 @@ var/global/list/turf/simulated/floor/FUCK = list()
 			if(R.frequency > 50 && R.force > 5)
 				temperature += 1
 
+
+		temperature_exchange()
+
 		//sleep(2)
 		//chem()
 		sleep(1)

@@ -5,6 +5,7 @@ obj/structure/window
 	density = 1
 	opacity = 0
 	pass_gas = 0
+	pass = 1
 	freq = 21
 	layer = 8
 
@@ -15,6 +16,7 @@ obj/structure/hatch
 	density = 1
 	opacity = 0
 	pass_gas = 1
+	pass = 1
 	layer = 7
 
 /obj/structure/window/act_by_item(var/obj/items/I)

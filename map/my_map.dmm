@@ -137,7 +137,7 @@
 "cG" = (/obj/electro/cable/output,/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/obj/machinery/atmos/pipe/pipemainfold{tag = "icon-pipe_tr (NORTH)"; icon_state = "pipe_tr"; dir = 1},/turf/simulated/floor/plating,/area/light_for_me)
 "cH" = (/obj/machinery/generator,/turf/simulated/floor/plating,/area/light_for_me)
 "cI" = (/turf/simulated/floor,/area/light_for_me)
-"cJ" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/turf/simulated/floor,/area/light_for_me)
+"cJ" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/items/weapon/gun/lasergun,/turf/simulated/floor,/area/light_for_me)
 "cK" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area/light_for_me)
 "cL" = (/obj/machinery/atmos/pipe{tag = "icon-pipe (NORTH)"; icon_state = "pipe"; dir = 1},/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area/light_for_me)
 "cM" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/radio/intercom{id = 8; pixel_y = 32},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area/light_for_me)

@@ -1,8 +1,15 @@
+#define LASER_POWER 700
+//Температура
+
+#define ADVANCE_LASER_POINT 0.25
+
 /obj/machinery/laser
 	icon = 'icons/shaitan_machine.dmi'
 	icon_state = "laser"
 
 	act()
+		for(var/mob/M in range(5,src))
+			M << "\red <b>Пиу-пиу!</b>"
 		if(dir == 1)
 			var/turf/T = locate(x, y+1, z)
 			var/obj/beam/B = new(T)
@@ -37,11 +44,13 @@
 			if(istype(loc, /turf/simulated/wall))
 				hit = 1
 				loc.hit()
+				loc.heat(LASER_POWER, ADVANCE_LASER_POINT)
 
 			for(var/atom/A in loc)
 				if(A.density == 1 && A.pass != 1)
 					hit = 1
 					A.hit()
+					A.heat(LASER_POWER, ADVANCE_LASER_POINT)
 
 			sleep(1)
 			if(dir == 2)

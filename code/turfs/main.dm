@@ -41,6 +41,7 @@
 	opacity = 1
 	luminosity = 0
 	pass_gas = 0
+	temperature = 21
 	var/ISSCRDRI = 0
 	var/ISWRN = 0
 
