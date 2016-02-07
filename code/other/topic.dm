@@ -1,4 +1,4 @@
-/client/Topic(href)
+/client/Topic(href,href_list[])
 	if(href == "lesorub" && usr.client.ouch == 1)
 		usr.loc = lesorub[rand(1,lesorub.len)]
 		usr.client.create_hud()
@@ -140,9 +140,27 @@
 				if(M.powernet == P.powernet)
 					M.marker = 0
 
-
 	if(href == "off")
 		for(var/obj/electro/powerbox/P in range(1,usr))
 			for(var/obj/machinery/M in world)
 				if(M.powernet == P.powernet)
 					M.marker = 1
+
+	//VENDING
+
+	else
+		for(var/obj/machinery/vending/V in range(1,usr))
+			if(V.myclick == 1)
+				var/l = href_list["my_item"]
+				var/what = text2num(href_list["my_what"])
+				if(V.items_num[what] > 0)
+					V.items_num[what] -= 1
+					new l(V.loc)
+					usr << "\blue <b>Автомат выдал вам [V.my_items[what]]</b>"
+
+				if(V.items_num[what] == 0)
+					usr << "\red <b>В автомате закончились все [V.my_items[what]]</b>"
+
+				winshow(usr,"my_text",0)
+				V.myclick = 0
+	//VENDING

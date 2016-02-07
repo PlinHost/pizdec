@@ -14,31 +14,49 @@
 	var/amount = 3
 	density = 1
 	icon = 'icons/vending.dmi'
+	var/list/obj/items/my_items = list()
+	var/list/obj/items/my_types= list()
+	var/list/items_num = list()
+	var/products
+	var/myclick = 0
+	var/my_text
 
-	proc/give_me_my_potato()
-		for(var/mob/M in range(5,src))
-			M << "[src] выплюнул свой продукт."
-		if(amount > 0)
-			amount -= 1
-			new my_product(src.loc)
+	New()
+		sleep(4)
+		for(var/i = 1, i <= my_items.len, i++)
+			var/type = my_items[i]
+			my_items[i] = new type
 
-/*	act_by_item(var/obj/items/I)
-		if(I == /obj/items/coin)
-			usr << "\blue Получи приз!"
-			give_me_my_potato()
-			if(usr.client.hand == 1)
-				usr.client.R.overlays.Cut()
-				usr.client.my_rhand_contents = 0
-			else
-				usr.client.L.overlays.Cut()
-				usr.client.my_lhand_contents = 0
-*/
+			//type = my_items[i]
+
+
+		for(var/g = 1, g <= my_items.len, g++)
+			products += "<br><a href='?buy;my_item=[my_types[g]];my_what=[g];iam=[src.type]'>[my_items[g]]</a>"
+
+	act()
+		myclick = 1
+
+		my_text = {"
+		<html>
+		<head><title>Автомат</title></head>
+		<body>
+		Товары:
+		[products]
+		<br>
+
+		</body>
+		</html>
+		"}
+
+		usr << browse(my_text,"window=my_text;can_close=0")
+
 /obj/machinery/vending/bar
 	icon_state = "bartender_3000"
 	name = "bartender_3000"
-	my_product = /obj/items/drink/beer
 
-/obj/machinery/vending/ballon
+/obj/machinery/vending/tools
 	icon_state = "ballon_vend"
-	name = "FIREFIGHT"
-	my_product = /obj/items/fire_ballon
+	name = "tools master"
+	my_items = list(/obj/items/tools/wrench, /obj/items/tools/screwdriver, /obj/items/tools/radiotest)
+	my_types = list(/obj/items/tools/wrench, /obj/items/tools/screwdriver, /obj/items/tools/radiotest)
+	items_num = list(3, 3, 3)

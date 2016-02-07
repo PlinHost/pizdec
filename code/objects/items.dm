@@ -29,6 +29,7 @@
 	my_id = personal_id
 
 /obj/items/tools/wrench
+	name = "wrench"
 	icon = 'icons/tools.dmi'
 	icon_state = "wrench"
 	brute_damage = 15
