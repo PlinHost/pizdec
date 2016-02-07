@@ -217,3 +217,12 @@
 					if(O.hit_points > 1 && O.burn_points < 100)
 						O.hit_points -= I.brute_damage
 						O.burn_points += I.burn_damage
+
+		if(istype(I,/obj/items/weapon/stunbaton))
+			var/obj/items/weapon/stunbaton/S = I
+			if(usr.client.act == "help")
+				src << "\red <b>Вы чувствуете мощный разярд тока!</b>"
+				usr.client.D.act()
+				lying()
+				sleep(S.force)
+				unlying()

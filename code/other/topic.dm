@@ -44,6 +44,13 @@
 		usr.client.mygender = 0
 		usr.client.time_to_change = 1
 		usr << "\blue Подождите немного..."
+
+	if(href == "right")
+		usr.client.dir = NORTH
+
+	if(href == "left")
+		usr.client.dir = SOUTH
+
 /*
 	///CHEM DISPENSER
 	if(href == "blood")

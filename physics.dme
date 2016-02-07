@@ -36,6 +36,7 @@
 #include "code\objects\machine\laser.dm"
 #include "code\objects\machine\vendings.dm"
 #include "code\objects\weapon\gun.dm"
+#include "code\objects\weapon\melee.dm"
 #include "code\other\math.dm"
 #include "code\other\topic.dm"
 #include "code\physics_plus\heat.dm"

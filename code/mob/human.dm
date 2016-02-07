@@ -207,6 +207,12 @@ var/html = {"
 <a href=?ass>Ассистент</a>
 <a href=?ultra>Авантюрист</a>
 
+<br>
+Левша или правша?
+<br>
+<a href=?right>Правша</a>
+<a href=?left>Левша</a>
+
 </body>
 </html>
 "}
