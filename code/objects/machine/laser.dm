@@ -37,6 +37,9 @@
 /obj/beam
 	icon = 'icons/shaitan_machine.dmi'
 	icon_state = "beam"
+	var/brute_damage = 0
+	var/burn_damage = 20
+	var/attack_zone = 0
 
 	proc/fly()
 		var/hit = 0
@@ -51,6 +54,84 @@
 					hit = 1
 					A.hit()
 					A.heat(LASER_POWER, ADVANCE_LASER_POINT)
+
+				if(istype(A, /mob/human))
+					if(attack_zone != 0)
+						switch(attack_zone)
+							if("head")
+								for(var/obj/items/organs/head/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("chest")
+								for(var/obj/items/organs/chest/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("r_leg")
+								for(var/obj/items/organs/r_leg/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("l_leg")
+								for(var/obj/items/organs/l_leg/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("r_arm")
+								for(var/obj/items/organs/r_arm/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("l_arm")
+								for(var/obj/items/organs/l_arm/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+					if(attack_zone == 0)
+						attack_zone = pick("head", "chest", "r_leg", "l_leg", "r_arm", "l_arm")
+						switch(attack_zone)
+							if("head")
+								for(var/obj/items/organs/head/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("chest")
+								for(var/obj/items/organs/chest/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("r_leg")
+								for(var/obj/items/organs/r_leg/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("l_leg")
+								for(var/obj/items/organs/l_leg/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("r_arm")
+								for(var/obj/items/organs/r_arm/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
+
+							if("l_arm")
+								for(var/obj/items/organs/l_arm/O in A)
+									if(O.hit_points > 1 && O.burn_points < 100)
+										O.hit_points -= brute_damage
+										O.burn_points += burn_damage
 
 			sleep(1)
 			if(dir == 2)

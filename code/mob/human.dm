@@ -496,22 +496,23 @@ client
 						usr.client.L.overlays.Cut()
 */
 mob/human/Move()
-	..()
-	for(var/obj/A in range(2,usr))
-		if(A.pull == 1 && A.puller == usr)
-			A.Move(oldloc)
+	if(signal != 1)
+		..()
+		for(var/obj/A in range(2,usr))
+			if(A.pull == 1 && A.puller == usr)
+				A.Move(oldloc)
 
-	if(usr.client.r_int == "walk")
-		step_size = 32
-		see_in_night()
-	else
-		var/turf/T = src.loc
-		if(!(istype(T, /turf/simulated/floor/downbitch)) || !(istype(T, /turf/simulated/floor/upbitch)))
-			step_size = pick(64, 32)
-			if(stamina > 0)
-				stamina -= 1
-	oldloc = usr.loc
-	return
+		if(usr.client.r_int == "walk")
+			step_size = 32
+			see_in_night()
+		else
+			var/turf/T = src.loc
+			if(!(istype(T, /turf/simulated/floor/downbitch)) || !(istype(T, /turf/simulated/floor/upbitch)))
+				step_size = pick(64, 32)
+				if(stamina > 0)
+					stamina -= 1
+		oldloc = usr.loc
+		return
 
 mob/human/proc/hello_bitch()
 	usr.client.ouch = 1

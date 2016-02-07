@@ -199,7 +199,7 @@
 "dQ" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/turf/simulated/floor/plating,/area/light_for_me)
 "dR" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor/plating,/area/light_for_me)
 "dS" = (/turf/simulated/wall,/area)
-"dT" = (/obj/start,/turf/simulated/floor{icon = 'icons/lobby.dmi'; pixel_x = -224; pixel_y = -224},/area)
+"dT" = (/obj/start,/turf/simulated/floor{icon = 'icons/lobby.dmi'; layer = 100; pixel_x = -224; pixel_y = -224},/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
