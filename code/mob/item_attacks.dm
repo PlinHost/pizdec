@@ -221,7 +221,7 @@
 		if(istype(I,/obj/items/weapon/stunbaton))
 			var/obj/items/weapon/stunbaton/S = I
 			if(usr.client.act == "help")
-				src << "\red <b>Вы чувствуете мощный разярд тока!</b>"
+				src << "\red <b>Вы чувствуете мощный разр&#255;д тока!</b>"
 				usr.client.D.act()
 				lying()
 				sleep(S.force)

@@ -229,6 +229,7 @@ client
 	icon_state = "human"
 	layer = 6
 	weight = 70
+	var/sound/S
 	var/lying = 0
 	var/stop = 0
 	var/state_of_health = "normal"
@@ -383,12 +384,17 @@ client
 			overlays += C
 
 /mob/human/process() //как Life(), епта
+	S = new()
+	S.file = 'sound/lobby.mid'
+	usr << S
 	spawn while(1)
 		//if(src == usr)
 		if(usr.client.ouch == 0)
+			S.volume = 0
+			usr << S
 			usr.client.D.iam = src
-			if(usr.client.U.overlays.len == 0) //йобаний сором
-				usr.client.uniform_items.Cut() //розумніші нічого не придумав, розумничка
+			if(usr.client.U.overlays.len == 0)
+				usr.client.uniform_items.Cut()
 
 			if(usr.client.C.overlays.len == 0)
 				usr.client.clothes_items.Cut()
@@ -404,7 +410,7 @@ client
 		var/turf/T = locate(x,y,z)
 		sleep(0.5)
 
-
+		organ_damage_calculate()
 		for(var/obj/O in usr.contents)
 			usr.client.my_weight += O.weight
 
