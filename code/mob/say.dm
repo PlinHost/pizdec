@@ -10,4 +10,6 @@
 		M << "[usr] [t]"
 
 /mob/human/verb/ooc(t as text)
-	 world << "\blue OOC [usr]: [t]"
+	world << "\blue OOC [usr]: [t]"
+	for(var/datum/Kate/K in unit)
+		K.process(t)

@@ -250,6 +250,7 @@ client
 	var/my_gend = 1
 	var/oldloc
 	var/my_weight
+	var/database/query/memory
 
 	Stat()
 		statpanel("State")
@@ -387,6 +388,12 @@ client
 	S = new()
 	S.file = 'sound/lobby.mid'
 	usr << S
+	//var/FT = "data/chicken.epta"
+
+	//text2file("HELLO",FT)
+
+	objects += src
+
 	spawn while(1)
 		//if(src == usr)
 		if(usr.client.ouch == 0)

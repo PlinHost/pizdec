@@ -42,6 +42,7 @@ var/list/global/machines = list()
 	process()
 
 /obj/machinery/light/New()
+	objects += src
 	on = 0
 	process()
 

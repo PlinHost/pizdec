@@ -8,6 +8,7 @@
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 #define FILE_DIR "icons"
+#define FILE_DIR "sound"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
@@ -19,6 +20,7 @@
 #include "code\atmos\fire.dm"
 #include "code\atmos\main.dm"
 #include "code\atmos\pipes.dm"
+#include "code\Kate_core\main.dm"
 #include "code\light\area.dm"
 #include "code\light\main.dm"
 #include "code\mob\clothes.dm"

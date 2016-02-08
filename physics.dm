@@ -35,4 +35,6 @@ world
 	New()
 		new /datum/anal_controller()
 		new /datum/power_master()
+		sleep(1)
+		new /datum/Kate()
 		name = "Physics Simulator 3000"
