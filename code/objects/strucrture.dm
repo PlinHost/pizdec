@@ -1,6 +1,8 @@
-obj/structure/window
-	name = "window"
+/obj/structure
 	icon = 'icons/structure.dmi'
+
+/obj/structure/window
+	name = "window"
 	icon_state = "windows"
 	density = 1
 	opacity = 0
@@ -9,9 +11,8 @@ obj/structure/window
 	freq = 21
 	layer = 8
 
-obj/structure/hatch
+/obj/structure/hatch
 	name = "hatch"
-	icon = 'icons/structure.dmi'
 	icon_state = "hatch"
 	density = 1
 	opacity = 0
@@ -25,7 +26,6 @@ obj/structure/hatch
 
 /obj/structure/stool
 	name = "stool"
-	icon = 'icons/structure.dmi'
 	icon_state = "stool"
 
 /obj/structure/table

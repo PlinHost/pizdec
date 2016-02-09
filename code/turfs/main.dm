@@ -33,13 +33,13 @@
 	name = "simulated"
 	oxygen = 500 //500 газоединиц
 	nitrogen = 35
+	luminosity = 0
 
 /turf/simulated/wall
 	name = "wall"
 	icon_state = "wall"
 	density = 1
 	opacity = 1
-	luminosity = 0
 	pass_gas = 0
 	temperature = 21
 	var/ISSCRDRI = 0
@@ -66,7 +66,6 @@
 				return
 
 /turf/simulated/floor/whore
-	icon = 'icons/turfs.dmi'
 	icon_state = "belck"
 	oxygen = 500 //500 газоединиц
 	nitrogen = 35
@@ -74,17 +73,14 @@
 /turf/simulated/floor
 	name = "floor"
 	icon_state = "floor"
-	luminosity = 0
 
 /turf/simulated/floor/upbitch
 	name = "floor"
 	icon_state = "up"
-	luminosity = 0
 
 /turf/simulated/floor/downbitch
 	name = "floor"
 	icon_state = "down"
-	luminosity = 0
 
 /*
 /mob/human/proc/my_chem()
@@ -132,21 +128,15 @@
 /turf/simulated/floor/plating
 	name = "plating"
 	icon_state = "plating"
-	luminosity = 0
 
 /turf/simulated/floor/bar
 	name = "bar"
 	icon_state = "bar"
-	luminosity = 0
 
 /turf/simulated/floor/cafe
 	name = "bar"
 	icon_state = "cafe"
-	luminosity = 0
 
 /turf/simulated/floor/wood
 	name = "wood"
 	icon_state = "wood"
-	luminosity = 0
-
-
