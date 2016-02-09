@@ -4,10 +4,13 @@
 var/global/list/unit = list()
 var/global/list/objects = list()
 
+/atom
+	var/processing = 0
+
 /datum/Kate
 	var/name = "Kate"
 	var/list/priority = list()
-	var/list/important_words_1 = list("укажи","запомни", "нагрузка", "бьенд")
+	var/list/important_words_1 = list("укажи","запомни", "нагрузка", "бьенд", "ВСЕ")
 	var/list/important_words_2 = list("место","тип","ЭТО","НЕ")
 	var/list/parameters = list("яркость","имя","температура")
 	var/list/rules = list()
@@ -126,6 +129,19 @@ var/global/list/objects = list()
 
 														if(in_cycle == 0)
 															world << "\blue <b>Тип - [A.type]</b>"
+
+						if("ВСЕ")
+							if(findtext(my_noun,"АКТИВНЫЕ")!=0)
+								var/sum = 0
+								for(var/g = 1, g <= objects.len, g++)
+									var/atom/A = objects[g]
+									if(A.processing == 1)
+										world << "<b>[A] - (processing); здесь - [A.x];[A.y];[A.z]; тип - [A.type]</b>"
+										sum += 1
+
+								world << "\red <b>Количество активных, обрабатываемых объектов равно [sum]</b>"
+								if(sum > 100)
+									world << "\red <b>Kate рекомендует вам оптимизировать ваш проект.</b>"
 
 						if("нагрузка")
 							world << "\blue <b>Процессор загружен на - [world.cpu]%</b>"

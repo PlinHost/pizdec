@@ -7,6 +7,7 @@
 
 var/global/DERVENPOWER = 0
 var/global/list/smes = list()
+var/global/list/wires = list()
 
 #define LENGTH 2 //длина тайла предположим метра 2, соответственно длина провода тоже 2 метра (константна€ величина, неизмен€ема€)
 
@@ -153,6 +154,8 @@ var/global/list/smes = list()
 					C.voltage = S.full_charge/(C.resistance * C.sq * LENGTH)
 
 /obj/electro/battery/smes/process()
+	processing = 1
+	objects += src
 	spawn while(1)
 		sleep(1)
 		for(var/obj/machinery/generator/S in world)
@@ -180,8 +183,11 @@ var/global/list/smes = list()
 	world << "[charge]"
 
 /obj/electro/transformator/process()
+	processing = 1
+	objects += src
 	spawn while(1)
 		sleep(1)
+		processing = 1
 		for(var/obj/electro/cable/C in world)
 			if(mode == 0)
 				if(C.powernet == powernet)
@@ -219,9 +225,17 @@ var/global/list/smes = list()
 
 		//world << "myloc ([x],[y])"
 
+//‘илософский вопрос, что лучше несколько тыс€ч зацикленных проводов или один зацикленный контроллер обрабатывающий несколько тыс€ч проводов?
+//¬торой вариант мне кажетс€ более привлекательным, хот€ наверное лучше без этого всего как-нибудь обойтись
+//Ќо € пока не втыкаю как
+
 /obj/electro/cable/process()
+	processing = 1
+	objects += src
+	wires += src
 	spawn while(1)
 		sleep(2)
+		objects += src
 		amperage = voltage / resistance
 
 		if(voltage > power_limit)
@@ -387,6 +401,8 @@ var/global/list/smes = list()
 	amperage += 500
 
 /obj/machinery/generator/process()
+	processing = 1
+	objects += src
 	spawn while(1)
 		sleep(5)
 		if(amperage > 0)
@@ -402,8 +418,11 @@ var/global/list/smes = list()
 	return
 
 /obj/machinery/generator/rad_gen/process()
+	processing = 1
+	objects += src
 	spawn while(1)
 		sleep(1.5)
+		processing = 1
 		icon_state = "rad_gen_off"
 		if(amperage > 0)
 			amperage -= 50

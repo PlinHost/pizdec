@@ -21,6 +21,8 @@ var/global/GASWAGEN_NET = 0//
 	atmosnet = 0
 
 /obj/machinery/atmos/pipe/pipemainfold/process() // используется для подключения дополнительного коннектора, также соединения атмососетей
+	processing = 1
+	objects += src
 	spawn while(1)
 		sleep(1)
 		for(var/obj/machinery/atmos/A in range(1,src))
@@ -41,6 +43,8 @@ var/global/GASWAGEN_NET = 0//
 	world << "[atmosnet]"
 
 /obj/machinery/atmos/pipe/process()
+	processing = 1
+	objects += src
 	spawn while(1)
 		sleep(1)
 

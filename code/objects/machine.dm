@@ -38,10 +38,13 @@ var/list/global/machines = list()
 /obj/machinery/New()
 	on = 0
 	personal_id += 1
+	processing = 1
+	objects += src
 	my_id = personal_id
 	process()
 
 /obj/machinery/light/New()
+	processing = 1
 	objects += src
 	on = 0
 	process()
