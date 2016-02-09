@@ -12,13 +12,14 @@
 	var/burn_damage = 0
 	var/shock_damage = 0
 
-/obj/items/tools/screwdriver
+/obj/items/tools
 	icon = 'icons/tools.dmi'
+
+/obj/items/tools/screwdriver
 	icon_state = "screwdriver"
 	brute_damage = 5
 
 /obj/items/tools/power/welding_tool
-	icon = 'icons/tools.dmi'
 	icon_state = "welder"
 	brute_damage = 1
 	burn_damage = 5
@@ -30,12 +31,10 @@
 
 /obj/items/tools/wrench
 	name = "wrench"
-	icon = 'icons/tools.dmi'
 	icon_state = "wrench"
 	brute_damage = 15
 
 /obj/items/tools/radiotest
-	icon = 'icons/tools.dmi'
 	icon_state = "radiotest"
 	brute_damage = 1
 
@@ -91,25 +90,21 @@
 			usr << "\blue “ы ничего не делаешь с [src] и это замечательно."
 */
 /obj/items/fire_ballon
-	name = "BALLON"
-	icon = 'icons/main_items.dmi'
+	name = "BOLON"
 	icon_state = "OLOLO_BALLON"
 
 /obj/items/drink/beer
 	name = "BEERBOOM"
-	icon = 'icons/main_items.dmi'
 	icon_state = "alcohol"
 
 /obj/items/gun/carp
 	name = "carpgun"
-	icon = 'icons/main_items.dmi'
 	icon_state = "carpgun"
 	//bullet = /mob/carp
 
 /obj/items/ore
 
 	uranium
-		icon = 'icons/main_items.dmi'
 		icon_state = "uranium"
 
 		process()
