@@ -21,9 +21,12 @@ var/global/personal_id = 0
 						RD.amperage += 150
 						RD.icon_state = "rad_gen_on"
 
+	proc/del_rad_wave()
 		for(var/wave/W in waves)
 			if(W.id == my_id)
 				del(W)
+
+
 
 	proc/force_wave(var/frequency, var/wave_length)
 		var/wave/force/RAD

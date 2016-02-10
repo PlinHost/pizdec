@@ -144,6 +144,7 @@ var/global/list/turf/simulated/floor/FUCK = list()
 		sleep(2)
 
 /datum/anal_controller/proc/turfs_bitchs()
+	sleep(1)
 	for(var/turf/simulated/floor/F in FUCK)
 		F.one_unit(WEST)
 		F.one_unit(EAST)

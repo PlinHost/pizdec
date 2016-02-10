@@ -107,6 +107,8 @@ var/global/list/wires = list()
 /obj/electro/cable/New()
 	power_limit = resistance * LENGTH * sq
 	real_resistance = resistance
+	objects += src
+	wires += src
 	process()
 
 /obj/electro/battery/smes/New()
@@ -148,7 +150,7 @@ var/global/list/wires = list()
 							M.amperage += M.need_amperage
 							S.charge -= M.need_amperage
 
-		for(var/obj/electro/cable/C in world)
+		for(var/obj/electro/cable/C in wires)
 			for(var/obj/electro/battery/smes/S in world)
 				if(C.powernet == S.powernet)
 					C.voltage = S.full_charge/(C.resistance * C.sq * LENGTH)
@@ -226,16 +228,21 @@ var/global/list/wires = list()
 		//world << "myloc ([x],[y])"
 
 //‘илософский вопрос, что лучше несколько тыс€ч зацикленных проводов или один зацикленный контроллер обрабатывающий несколько тыс€ч проводов?
-//¬торой вариант мне кажетс€ более привлекательным, хот€ наверное лучше без этого всего как-нибудь обойтись
+//Ћучше без этого всего как-нибудь обойтись
 //Ќо € пока не втыкаю как
 
+/datum/POWERMASTER
+
+/datum/POWERMASTER/proc/PROCESS()
+
+/datum/POWERMASTER/New()
+	PROCESS()
+
 /obj/electro/cable/process()
-	processing = 1
-	objects += src
-	wires += src
 	spawn while(1)
 		sleep(2)
-		objects += src
+		processing = 1
+		sleep(1)
 		amperage = voltage / resistance
 
 		if(voltage > power_limit)
@@ -306,11 +313,11 @@ var/global/list/wires = list()
 
 			for(var/obj/machinery/S in get_step(src,NORTH))
 				S.powernet = powernet
-				//world << "power[x];[y]"
+					//world << "power[x];[y]"
 
 			for(var/obj/machinery/S in get_step(src,SOUTH))
 				S.powernet = powernet
-				//world << "power[x];[y]"
+					//world << "power[x];[y]"
 
 		if(dir == 4 || dir == 6 || dir == 10 || dir == 9 || dir == 5)
 
@@ -352,11 +359,11 @@ var/global/list/wires = list()
 
 			for(var/obj/machinery/S in get_step(src,EAST))
 				S.powernet = powernet
-				//world << "power[x];[y]"
+						//world << "power[x];[y]"
 
 			for(var/obj/machinery/S in get_step(src,WEST))
 				S.powernet = powernet
-				//world << "power[x];[y]"
+					//world << "power[x];[y]"
 
 		if(zLevel == 1)
 			for(var/obj/electro/cable/A in locate(x,y,z+1))
@@ -372,6 +379,8 @@ var/global/list/wires = list()
 			powernet = 0
 			reset = 0
 			world << "ќЅ–џ¬  јЅ≈Ћя"
+
+		processing = 0
 
 /obj/effects/sparks
 	name = "spaks"
@@ -420,9 +429,16 @@ var/global/list/wires = list()
 /obj/machinery/generator/rad_gen/process()
 	processing = 1
 	objects += src
+	var/ha = 0
 	spawn while(1)
 		sleep(1.5)
 		processing = 1
 		icon_state = "rad_gen_off"
 		if(amperage > 0)
 			amperage -= 50
+
+		ha = pick(0,1)
+		if(ha == 1)
+			for(var/wave/radioactive/RAD in range(1,src))
+				if(RAD.force > 1)
+					amperage += rand(65,75)

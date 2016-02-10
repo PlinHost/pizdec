@@ -1,6 +1,7 @@
 /*
 	These are simple defaults for your project.
  */
+#define DEBUG 1
 
 world
 	fps = 25		// 25 frames per second
@@ -39,4 +40,5 @@ world
 		world << "\blue <b>Инициализаци&#255;, подождите...</b>"
 		sleep(5)
 		new /datum/Kate()
+		new /datum/POWERMASTER()
 		name = "Physics Simulator 3000"

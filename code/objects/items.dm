@@ -107,10 +107,10 @@
 	uranium
 		icon_state = "uranium"
 
-		process()
-			spawn while(1)
-				sleep(1)
-				//world << "HUI"
-				rad_wave(27, 3)
 		New()
-			process()
+			rad_wave(28, 3)
+
+		Move()
+			..()
+			del_rad_wave()
+			rad_wave(28, 3)

@@ -12,6 +12,7 @@
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
+#define DEBUG
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
@@ -54,4 +55,3 @@
 #include "code\waves\main.dm"
 #include "map\my_map.dmm"
 // END_INCLUDE
-
