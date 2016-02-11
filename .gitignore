@@ -3,4 +3,5 @@ Thumbs.db
 *.rsc
 *.dmb
 *.lk
+*.backup
 map/backup
