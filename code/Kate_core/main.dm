@@ -143,6 +143,11 @@ var/global/list/objects = list()
 								if(sum > 100)
 									world << "\red <b>Kate рекомендует вам оптимизировать ваш проект.</b>"
 
+							if(findtext(my_noun,"плохо")!=0) //10 мотиваций из 10
+								var/word1 = pick("Мастер, смотрите внимательнее", "Не занимаетесь хуйней", "Вам есть смысл делать это")
+								var/word2 = pick(":3",":)","<3")
+								world << "\blue <b>[word1] [word2]</b>"
+
 						if("нагрузка")
 							world << "\blue <b>Процессор загружен на - [world.cpu]%</b>"
 							if(world.cpu > 60)

@@ -21,6 +21,7 @@
 #include "code\atmos\fire.dm"
 #include "code\atmos\main.dm"
 #include "code\atmos\pipes.dm"
+#include "code\chemistry\New.dm"
 #include "code\Kate_core\main.dm"
 #include "code\light\area.dm"
 #include "code\light\main.dm"

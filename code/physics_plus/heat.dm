@@ -95,5 +95,8 @@
 	typer = "Melts"
 	weight = 70
 
+/turf/simulated/wall/shuttle
+	icon_state = "shuttle"
+
 	act()
 		world << "[my_temp]"

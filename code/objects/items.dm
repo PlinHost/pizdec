@@ -102,6 +102,35 @@
 	icon_state = "carpgun"
 	//bullet = /mob/carp
 
+/obj/items/bomb
+	icon_state = "bomb"
+	icon = 'icons/main_items.dmi'
+	var
+		plasmaINSIDE = 30
+
+	act_self()
+		var/turf/T = usr.loc
+		T.plasma += plasmaINSIDE
+		var/EXP
+		EXP = T.plasma/10
+		EXP = round(EXP)
+
+		if(T.oxygen > 100 && T.plasma > 10)
+			usr << "Бах-бах!"
+			new /obj/explode(usr.loc)
+
+		for(src in usr.contents)
+			if(usr.client.my_hand_active == "left")
+				if(istype(src, usr.client.lhand_items[1]))
+					usr.client.L.overlays.Cut()
+					usr.client.lhand_items.Cut()
+					del(src)
+
+			if(usr.client.my_hand_active == "right")
+				if(istype(src, usr.client.rhand_items[1]))
+					usr.client.R.overlays.Cut()
+					usr.client.rhand_items.Cut()
+					del(src)
 /obj/items/ore
 
 	uranium

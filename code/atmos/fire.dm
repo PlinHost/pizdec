@@ -108,12 +108,12 @@ var/global/list/ultraboy = list()
 	EXPLODE = T.plasma / 10
 	EXPLODE = round(EXPLODE) //сила взрыва во взрывоединицах
 
-	force_wave(rand(0,T.oxygen/10), EXPLODE)
+	force_wave(rand(round(T.oxygen/10 - pick(10,15,5)),T.oxygen/10), EXPLODE)
 	for(var/mob/M in range(15,src))
 		M << "Ты слышишь смачный бабах"
 	for(var/turf/simulated/floor/EPTAHULI in range(src,EXPLODE))
 		destroy = rand(0,100)
-		if(destroy < 30)
+		if(destroy < 45)
 			for(var/atom/A in EPTAHULI)
 				if(!(istype(A, /obj/explode)))
 					del(A)

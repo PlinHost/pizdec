@@ -15,6 +15,10 @@
 	var/turf/simulated/floor/D = src.loc
 	D.act()
 
+/light/act_by_item(var/obj/items/I)
+	var/turf/simulated/floor/D = src.loc
+	D.act_by_item(I)
+
 
 /turf/simulated/floor/proc/fuck_light()
 	light = new(src)

@@ -28,6 +28,10 @@
 	name = "stool"
 	icon_state = "stool"
 
+/obj/structure/toilet
+	icon = 'icons/trash.dmi'
+	icon_state = "toilet"
+
 /obj/structure/table
 	name = "table"
 	icon = 'icons/table.dmi'

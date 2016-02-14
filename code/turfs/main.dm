@@ -35,6 +35,12 @@
 	nitrogen = 35
 	luminosity = 0
 
+	act_by_item(var/obj/items/I)
+		if(istype(I, /obj/items/unlimited_reagent))
+			var/obj/items/unlimited_reagent/R = I
+			R.spawn_me(src)
+
+
 /turf/simulated/wall
 	name = "wall"
 	icon_state = "wall"

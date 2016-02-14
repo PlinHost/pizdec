@@ -9,6 +9,7 @@
 /obj/items/meat
 	icon_state = "meat"
 
+
 /obj/machinery/vending
 	var/my_product = /obj/items/potato
 	var/amount = 3
