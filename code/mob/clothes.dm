@@ -3,86 +3,86 @@
 #define UNIFORM_LAYER 27
 #define SHOES_LAYER 26
 
-/obj/items/clothes
+/obj/item/clothing
 	icon = 'icons/clothes.dmi'
 
 //// —‹ﬁ“€ ////
 
-/obj/items/clothes/suit
+/obj/item/clothing/suit
 	layer = SUIT_LAYER
 
-/obj/items/clothes/suit/SYN
+/obj/item/clothing/suit/SYN
 	name = "space_suit"
 	icon_state = "syndi"
 	weight = 34
 
-/obj/items/clothes/suit/SPACE
+/obj/item/clothing/suit/SPACE
 	name = "space_suit"
 	icon_state = "space"
 	weight = 34
 
 //// √ŒÀŒ¬¿ ////
 
-/obj/items/clothes/head
+/obj/item/clothing/head
 	layer = HEAD_LAYER
 
-/obj/items/clothes/head/HELMET
+/obj/item/clothing/head/HELMET
 	name = "space_helmet"
 	icon_state = "space_helm"
 
-/obj/items/clothes/head/HELMET_SYN
+/obj/item/clothing/head/HELMET_SYN
 	name = "space_helmet"
 	icon_state = "syndi_helm"
 
 //// ”Õ»‘Œ–Ã¿ ////
 
-/obj/items/clothes/uniform
+/obj/item/clothing/uniform
 	layer = UNIFORM_LAYER
 
-/obj/items/clothes/uniform/BLACK
+/obj/item/clothing/uniform/BLACK
 	name = "blacksuit"
 	icon_state = "blacksuit"
 
-/obj/items/clothes/uniform/CHATERED
+/obj/item/clothing/uniform/CHATERED
 	name = "checkered"
 	icon_state = "checkered"
 
 //// Œ¡”¬‹ ////
 
-/obj/items/clothes/shoes
+/obj/item/clothing/shoes
 	layer = SHOES_LAYER
 
-/obj/items/clothes/shoes/BLACK
+/obj/item/clothing/shoes/BLACK
 	name = "black shoes"
 	icon_state = "bl"
 
-/obj/items/clothes/shoes/COOL
+/obj/item/clothing/shoes/COOL
 	name = "warmboots"
 	icon_state = "wr"
 
 //ON BODY, BITCH!
 
-/obj/items/body
+/obj/item/body
 	icon = 'icons/clothes.dmi'
 
-/obj/items/body/head
+/obj/item/body/head
 	layer = HEAD_LAYER
 
-/obj/items/body/head/HELMET
+/obj/item/body/head/HELMET
 	name = "space_helmet"
 	icon_state = "space_h"
 
-/obj/items/body/head/HELMET_SYN
+/obj/item/body/head/HELMET_SYN
 	name = "space_helmet"
 	icon_state = "syndi_h"
 
-/obj/items/body/shoes
+/obj/item/body/shoes
 	layer = SHOES_LAYER
 
-/obj/items/body/shoes/BLACK
+/obj/item/body/shoes/BLACK
 	name = "black shoes"
 	icon_state = "black"
 
-/obj/items/body/shoes/COOL
+/obj/item/body/shoes/COOL
 	name = "warmboots"
 	icon_state = "warmboots"

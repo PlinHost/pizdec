@@ -59,37 +59,37 @@
 					if(attack_zone != 0)
 						switch(attack_zone)
 							if("head")
-								for(var/obj/items/organs/head/O in A)
+								for(var/obj/item/organs/head/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("chest")
-								for(var/obj/items/organs/chest/O in A)
+								for(var/obj/item/organs/chest/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("r_leg")
-								for(var/obj/items/organs/r_leg/O in A)
+								for(var/obj/item/organs/r_leg/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("l_leg")
-								for(var/obj/items/organs/l_leg/O in A)
+								for(var/obj/item/organs/l_leg/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("r_arm")
-								for(var/obj/items/organs/r_arm/O in A)
+								for(var/obj/item/organs/r_arm/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("l_arm")
-								for(var/obj/items/organs/l_arm/O in A)
+								for(var/obj/item/organs/l_arm/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
@@ -98,37 +98,37 @@
 						attack_zone = pick("head", "chest", "r_leg", "l_leg", "r_arm", "l_arm")
 						switch(attack_zone)
 							if("head")
-								for(var/obj/items/organs/head/O in A)
+								for(var/obj/item/organs/head/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("chest")
-								for(var/obj/items/organs/chest/O in A)
+								for(var/obj/item/organs/chest/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("r_leg")
-								for(var/obj/items/organs/r_leg/O in A)
+								for(var/obj/item/organs/r_leg/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("l_leg")
-								for(var/obj/items/organs/l_leg/O in A)
+								for(var/obj/item/organs/l_leg/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("r_arm")
-								for(var/obj/items/organs/r_arm/O in A)
+								for(var/obj/item/organs/r_arm/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage
 
 							if("l_arm")
-								for(var/obj/items/organs/l_arm/O in A)
+								for(var/obj/item/organs/l_arm/O in A)
 									if(O.hit_points > 1 && O.burn_points < 100)
 										O.hit_points -= brute_damage
 										O.burn_points += burn_damage

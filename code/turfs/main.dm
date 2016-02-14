@@ -35,9 +35,9 @@
 	nitrogen = 35
 	luminosity = 0
 
-	act_by_item(var/obj/items/I)
-		if(istype(I, /obj/items/unlimited_reagent))
-			var/obj/items/unlimited_reagent/R = I
+	act_by_item(var/obj/item/I)
+		if(istype(I, /obj/item/unlimited_reagent))
+			var/obj/item/unlimited_reagent/R = I
 			R.spawn_me(src)
 
 
@@ -52,8 +52,8 @@
 	var/ISWRN = 0
 
 
-	act_by_item(var/obj/items/tools/I)
-		if(istype(I, /obj/items/tools/screwdriver))
+	act_by_item(var/obj/item/tools/I)
+		if(istype(I, /obj/item/tools/screwdriver))
 			if(ISSCRDRI == 0)
 				ISSCRDRI = 1
 				usr << "Вы открутили внешние креплени&#255; от стены"
@@ -64,7 +64,7 @@
 				usr << "Вы прикрутили внешние креплени&#255; от стены"
 				return
 
-		if(istype(I, /obj/items/tools/wrench))
+		if(istype(I, /obj/item/tools/wrench))
 			if(ISSCRDRI == 1 && ISWRN == 0)
 				ISWRN = 1
 				usr << "Вы открутили все болты и разобрали стену"

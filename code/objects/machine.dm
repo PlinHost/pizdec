@@ -107,7 +107,7 @@ var/list/global/machines = list()
 		if(I == /mob/carp)
 			usr << "\red HRUM-HRUM "
 
-			new /obj/items/meat(src.loc)
+			new /obj/item/meat(src.loc)
 
 			if(usr.client.hand == 1)
 				usr.client.my_rhand_contents = 0

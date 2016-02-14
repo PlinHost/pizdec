@@ -11,7 +11,7 @@
 	freq = 21
 	layer = 8
 
-/obj/structure/hatch
+/obj/structure/grille
 	name = "hatch"
 	icon_state = "hatch"
 	density = 1
@@ -20,8 +20,8 @@
 	pass = 1
 	layer = 7
 
-/obj/structure/window/act_by_item(var/obj/items/I)
-	if(istype(I, /obj/items/fire_ballon))
+/obj/structure/window/act_by_item(var/obj/item/I)
+	if(istype(I, /obj/item/fire_ballon))
 		usr << "Ты разбиваешь стекло"
 
 /obj/structure/stool
@@ -39,7 +39,7 @@
 	layer = 6
 	alpha = 128
 
-	act_by_item(var/obj/items/I)
+	act_by_item(var/obj/item/I)
 		for(I in usr.contents)
 			if(usr.client.my_hand_active == "left")
 				if(istype(I, usr.client.lhand_items[1]))
@@ -76,30 +76,30 @@
 	icon_state = "closed"
 	density = 1
 	var/open = 0
-	var/list/obj/items/container = list()
+	var/list/obj/item/container = list()
 
 	act()
 		if(open == 0)
 			open = 1
 			icon_state = "open"
 			usr << "\blue Ты открываешь [src]"
-			for(var/obj/items/IT in contents)
+			for(var/obj/item/IT in contents)
 				IT.Move(src.loc)
 		else
 			open = 0
 			icon_state = "closed"
 			var/turf/T = src.loc
-			for(var/obj/items/IT in T)
+			for(var/obj/item/IT in T)
 				IT.Move(src)
 			usr << "\blue Ты закрываешь [src]"
 			return
 	New()
 		open = 0
 		sleep(1)
-		for(var/obj/items/IT in src.loc)
+		for(var/obj/item/IT in src.loc)
 			IT.Move(src)
 
-	act_by_item(var/obj/items/I)
+	act_by_item(var/obj/item/I)
 		for(I in usr.contents)
 			if(usr.client.my_hand_active == "left")
 				if(istype(I, usr.client.lhand_items[1]))

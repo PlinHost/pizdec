@@ -382,10 +382,12 @@ var/global/list/wires = list()
 
 		processing = 0
 
-/obj/effects/sparks
+/obj/effect/sparks
 	name = "spaks"
 	icon = 'icons/HICH_VOLTAGE.dmi'
 	icon_state = "sparks"
+
+/obj/decor
 
 /obj/decor/cable_part
 	name = "cable"
@@ -393,7 +395,7 @@ var/global/list/wires = list()
 	icon_state = "cable_part"
 
 /obj/electro/cable/Del()
-	var/obj/effects/sparks/S = new(src.loc)
+	var/obj/effect/sparks/S = new(src.loc)
 	new /obj/decor/cable_part(src.loc)
 	sleep(5)
 	del(S)

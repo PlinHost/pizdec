@@ -1,4 +1,4 @@
-/obj/items/weapon/gun/lasergun
+/obj/item/weapon/gun/lasergun
 	icon = 'icons/gun.dmi'
 	icon_state = "advancelaser"
 

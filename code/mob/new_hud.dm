@@ -2,9 +2,10 @@
 #define LHAND 0
 
 obj
-	hud
+	screen
 		layer = 25
 		icon = 'icons/screen.dmi'
+		icon_state = "screen"
 		var/active = 0
 		var/time_to_swap = 0
 		var/time_to_drop = 0
@@ -225,9 +226,9 @@ obj
 				C.screen+=src
 			var/client/C
 
-			act_by_item(var/obj/items/clothes/uniform/I)
+			act_by_item(var/obj/item/clothing/uniform/I)
 				if(usr.client.uniform_items.len == 0)
-					if(istype(I,/obj/items/clothes/uniform))
+					if(istype(I,/obj/item/clothing/uniform))
 
 						usr.overlays += I
 						usr.client.uniform_items += I
@@ -295,16 +296,16 @@ obj
 				screen_loc="1,0"
 				C.screen+=src
 
-			act_by_item(var/obj/items/clothes/uniform/I)
+			act_by_item(var/obj/item/clothing/uniform/I)
 				if(usr.client.foot_items.len == 0)
-					if(istype(I,/obj/items/clothes/shoes))
+					if(istype(I,/obj/item/clothing/shoes))
 
-						if(istype(I, /obj/items/clothes/shoes/BLACK))
-							var/obj/items/body/shoes/BLACK/H = new
+						if(istype(I, /obj/item/clothing/shoes/BLACK))
+							var/obj/item/body/shoes/BLACK/H = new
 							usr.overlays += H
 
-						if(istype(I, /obj/items/clothes/shoes/COOL))
-							var/obj/items/body/shoes/COOL/H = new
+						if(istype(I, /obj/item/clothing/shoes/COOL))
+							var/obj/item/body/shoes/COOL/H = new
 							usr.overlays += H
 
 						usr.client.foot_items += I
@@ -323,12 +324,12 @@ obj
 
 			proc/undress_my_uniform_baby()
 				usr.client.F.overlays.Cut()
-				if(istype(usr.client.foot_items[1], /obj/items/clothes/shoes/BLACK))
-					var/obj/items/body/shoes/BLACK/H = new
+				if(istype(usr.client.foot_items[1], /obj/item/clothing/shoes/BLACK))
+					var/obj/item/body/shoes/BLACK/H = new
 					usr.overlays -= H
 
-				if(istype(usr.client.foot_items[1], /obj/items/clothes/shoes/COOL))
-					var/obj/items/body/shoes/COOL/H = new
+				if(istype(usr.client.foot_items[1], /obj/item/clothing/shoes/COOL))
+					var/obj/item/body/shoes/COOL/H = new
 					usr.overlays -= H
 
 			proc/add_to_rhand()
@@ -360,16 +361,16 @@ obj
 				C.screen+=src
 
 
-			act_by_item(var/obj/items/clothes/uniform/I)
+			act_by_item(var/obj/item/clothing/uniform/I)
 				if(usr.client.head_items.len == 0)
-					if(istype(I,/obj/items/clothes/head))
+					if(istype(I,/obj/item/clothing/head))
 
-						if(istype(I, /obj/items/clothes/head/HELMET))
-							var/obj/items/body/head/HELMET/H = new
+						if(istype(I, /obj/item/clothing/head/HELMET))
+							var/obj/item/body/head/HELMET/H = new
 							usr.overlays += H
 
-						if(istype(I, /obj/items/clothes/head/HELMET_SYN))
-							var/obj/items/body/head/HELMET_SYN/H = new
+						if(istype(I, /obj/item/clothing/head/HELMET_SYN))
+							var/obj/item/body/head/HELMET_SYN/H = new
 							usr.overlays += H
 
 						usr.client.head_items += I
@@ -388,12 +389,12 @@ obj
 
 			proc/undress_my_uniform_baby()
 				usr.client.H.overlays.Cut()
-				if(istype(usr.client.head_items[1], /obj/items/clothes/head/HELMET))
-					var/obj/items/body/head/HELMET/H = new
+				if(istype(usr.client.head_items[1], /obj/item/clothing/head/HELMET))
+					var/obj/item/body/head/HELMET/H = new
 					usr.overlays -= H
 
-				if(istype(usr.client.head_items[1], /obj/items/clothes/head/HELMET_SYN))
-					var/obj/items/body/head/HELMET_SYN/H = new
+				if(istype(usr.client.head_items[1], /obj/item/clothing/head/HELMET_SYN))
+					var/obj/item/body/head/HELMET_SYN/H = new
 					usr.overlays -= H
 
 			proc/add_to_rhand()
@@ -418,18 +419,18 @@ obj
 						if(usr.client.my_hand_active == "right")
 							add_to_rhand()
 
-		clothes
-			icon_state = "clothes"
+		clothing
+			icon_state = "clothing"
 			New(client/C)
 				screen_loc="5,-1"
 				C.screen+=src
 
-			act_by_item(var/obj/items/clothes/I)
-				if(usr.client.clothes_items.len == 0)
-					if(istype(I,/obj/items/clothes/suit))
+			act_by_item(var/obj/item/clothing/I)
+				if(usr.client.clothing_items.len == 0)
+					if(istype(I,/obj/item/clothing/suit))
 
 						usr.overlays += I
-						usr.client.clothes_items += I
+						usr.client.clothing_items += I
 						usr.client.C.overlays += I
 
 						if(usr.client.my_hand_active == "right")
@@ -445,17 +446,17 @@ obj
 
 			proc/undress_my_uniform_baby()
 				usr.client.C.overlays.Cut()
-				usr.overlays -= usr.client.clothes_items[1]
+				usr.overlays -= usr.client.clothing_items[1]
 
 			proc/add_to_rhand()
 
 
-				usr.client.R.overlays += usr.client.clothes_items[1]
-				usr.client.rhand_items += usr.client.clothes_items[1]
+				usr.client.R.overlays += usr.client.clothing_items[1]
+				usr.client.rhand_items += usr.client.clothing_items[1]
 
 			proc/add_to_lhand()
-				usr.client.L.overlays += usr.client.clothes_items[1]
-				usr.client.lhand_items += usr.client.clothes_items[1]
+				usr.client.L.overlays += usr.client.clothing_items[1]
+				usr.client.lhand_items += usr.client.clothing_items[1]
 
 			act()
 				if(istype(usr,/mob/human))
@@ -517,35 +518,35 @@ obj
 
 client
 
-	var/obj/hud/humanhead/HH
-	var/obj/hud/humanchest/HC
-	var/obj/hud/humangroin/HG
-	var/obj/hud/humanright_leg/HRL
-	var/obj/hud/humanleft_leg/HLL
-	var/obj/hud/humanright_arm/HRA
-	var/obj/hud/humanleft_arm/HLA
+	var/obj/screen/humanhead/HH
+	var/obj/screen/humanchest/HC
+	var/obj/screen/humangroin/HG
+	var/obj/screen/humanright_leg/HRL
+	var/obj/screen/humanleft_leg/HLL
+	var/obj/screen/humanright_arm/HRA
+	var/obj/screen/humanleft_arm/HLA
 	var/my_pull_eba = 0
 	var/can_get = 35
 	var/my_weight = 0
 
-	var/obj/hud/lhand/L
-	var/obj/hud/rhand/R
-	var/obj/hud/drop/D
+	var/obj/screen/lhand/L
+	var/obj/screen/rhand/R
+	var/obj/screen/drop/D
 
-	var/obj/hud/clothes/C
-	var/obj/hud/uniform/U
-	var/obj/hud/head/H
-	var/obj/hud/gloves/G
-	var/obj/hud/foot/F
-	var/obj/hud/mask/M
-	var/obj/hud/ear/E
+	var/obj/screen/clothing/C
+	var/obj/screen/uniform/U
+	var/obj/screen/head/H
+	var/obj/screen/gloves/G
+	var/obj/screen/foot/F
+	var/obj/screen/mask/M
+	var/obj/screen/ear/E
 
-	var/obj/hud/shit/S
-	var/obj/hud/shit2/S2
-	var/obj/hud/shit3/S3
+	var/obj/screen/shit/S
+	var/obj/screen/shit2/S2
+	var/obj/screen/shit3/S3
 
-	var/obj/hud/act_intent/ACT
-	var/obj/hud/run_intent/RUN
+	var/obj/screen/act_intent/ACT
+	var/obj/screen/run_intent/RUN
 	var/ouch = 0
 
 	var/hand = RHAND
@@ -553,12 +554,12 @@ client
 	var/r_int = "walk"
 
 	var/my_hand_active = "left"
-	var/list/obj/items/rhand_items = list()
-	var/list/obj/items/lhand_items = list()
-	var/list/obj/items/uniform_items = list()
-	var/list/obj/items/clothes_items = list()
-	var/list/obj/items/head_items = list()
-	var/list/obj/items/foot_items = list()
+	var/list/obj/item/rhand_items = list()
+	var/list/obj/item/lhand_items = list()
+	var/list/obj/item/uniform_items = list()
+	var/list/obj/item/clothing_items = list()
+	var/list/obj/item/head_items = list()
+	var/list/obj/item/foot_items = list()
 
 	var/cloth_epta = 0
 	var/helmet_epta = 0
@@ -601,7 +602,7 @@ client
 		ACT = new(src)
 		RUN = new(src)
 
-	proc/draw_item_hand(var/hand, var/obj/items/I)
+	proc/draw_item_hand(var/hand, var/obj/item/I)
 		if(hand == "left")
 			L.overlays += I
 

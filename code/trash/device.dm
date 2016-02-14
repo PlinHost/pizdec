@@ -19,7 +19,7 @@ var/global/datum/trash_net/t_net = new()
 	world << "[trashnet]"
 
 /*
-/obj/machinery/trash/disposal/act_by_item(var/obj/items/I)
+/obj/machinery/trash/disposal/act_by_item(var/obj/item/I)
 	if(usr.client.hand == 1)
 		usr.client.R.overlays.Cut()
 		usr.client.my_rhand_contents = 0

@@ -85,7 +85,7 @@
 		if(amount == 0)
 			del(src)
 
-/obj/items/container
+/obj/item/container
 	name = "container"
 	icon_state = "container"
 	icon = 'icons/chem.dmi'
@@ -94,7 +94,7 @@
 	var/cur_val = 0
 	var/max = 100
 
-/obj/items/container/proc/check_react(var/chem1, var/chem2)
+/obj/item/container/proc/check_react(var/chem1, var/chem2)
 	var/mycheck1 = 0
 
 	for(var/datum/reagents/R in chemical)
@@ -114,23 +114,23 @@ proc/react(var/chem1, var/chem2)
 	world << "PISH-PISH"
 
 
-/obj/items/food
+/obj/item/food
 
-/obj/items/food/pill
+/obj/item/food/pill
 	icon_state = "pill"
 	icon = 'icons/chem.dmi'
 	var/cur_val = 0
 	var/max = 100
 	var/list/datum/reagents/chemical = list()
 
-/obj/items/food/pill/proc/my_val()
+/obj/item/food/pill/proc/my_val()
 	cur_val = 0
 	for(var/i = 1, i <= chemical.len, i++)
 		var/datum/reagents/RG = chemical[i]
 		cur_val += RG.amount
 
 
-/obj/items/container/proc/my_val()
+/obj/item/container/proc/my_val()
 	cur_val = 0
 	for(var/i = 1, i <= chemical.len, i++)
 		var/datum/reagents/RG = chemical[i]
@@ -150,7 +150,7 @@ proc/react(var/chem1, var/chem2)
 	icon_state = "dispenser"
 	density = 1
 	var
-		list/obj/items/container/cont = list()
+		list/obj/item/container/cont = list()
 		list/datum/reagents/chemical = list()
 		cur_val = 0
 
@@ -210,7 +210,7 @@ proc/react(var/chem1, var/chem2)
 	chemical += CL
 	chemical += CU
 
-/obj/machinery/chem/chemdispenser/act_by_item(var/obj/items/container/I)
+/obj/machinery/chem/chemdispenser/act_by_item(var/obj/item/container/I)
 	if(usr.client.hand == 1)
 		usr.client.R.overlays.Cut()
 		usr.client.my_rhand_contents = 0
@@ -275,10 +275,10 @@ proc/react(var/chem1, var/chem2)
 	icon = 'icons/chem.dmi'
 	icon_state = "solid_machine"
 
-/obj/machinery/chem/solid_machine/act_by_item(var/obj/items/container/I)
+/obj/machinery/chem/solid_machine/act_by_item(var/obj/item/container/I)
 	usr << "\blue Сублимаци&#255;..."
 	sleep(3)
-	var/obj/items/food/pill/P = new()
+	var/obj/item/food/pill/P = new()
 	if(usr.client.hand == 1)
 		usr.client.R.overlays.Cut()
 		usr.client.my_rhand_contents = 0
@@ -292,7 +292,7 @@ proc/react(var/chem1, var/chem2)
 		del(I)
 	world << "[P.cur_val]"
 	world << "[P.chemical.len]"
-	var/obj/items/container/CON = new()
+	var/obj/item/container/CON = new()
 	CON.Move(src.loc)
 	P.Move(src.loc)
 
@@ -300,10 +300,10 @@ proc/react(var/chem1, var/chem2)
 	icon = 'icons/chem.dmi'
 	icon_state = "liquid_machine"
 
-/obj/machinery/chem/liquid_machine/act_by_item(var/obj/items/food/pill/I)
+/obj/machinery/chem/liquid_machine/act_by_item(var/obj/item/food/pill/I)
 	usr << "\blue Превращение в жидкость..."
 	sleep(3)
-	var/obj/items/container/P = new()
+	var/obj/item/container/P = new()
 	if(usr.client.hand == 1)
 		usr.client.R.overlays.Cut()
 		usr.client.my_rhand_contents = 0
@@ -319,7 +319,7 @@ proc/react(var/chem1, var/chem2)
 	world << "[P.chemical.len]"
 	P.Move(src.loc)
 
-/obj/machinery/chem/gasification_machine/act_by_item(var/obj/items/container/I)
+/obj/machinery/chem/gasification_machine/act_by_item(var/obj/item/container/I)
 	usr << "\blue Газификаци&#255;..."
 	sleep(3)
 	if(usr.client.hand == 1)
@@ -333,7 +333,7 @@ proc/react(var/chem1, var/chem2)
 			chemical += I.chemical[i]
 		my_val()
 		del(I)
-	var/obj/items/container/CON = new()
+	var/obj/item/container/CON = new()
 	CON.Move(src.loc)
 	world << "[cur_val]"
 	world << "[chemical.len]"
@@ -455,7 +455,7 @@ proc/react(var/chem1, var/chem2)
 proc/dispense_chem(usr, var/chem)
 	for(var/obj/machinery/chem/chemdispenser/CH in range(1,usr))
 		for(var/i = 1, i <= CH.cont.len, i++)
-			var/obj/items/container/CONTA = CH.cont[i]
+			var/obj/item/container/CONTA = CH.cont[i]
 			for(var/j = 1, j <= CH.chemical.len, j++)
 				var/datum/reagents/RG = CH.chemical[j]
 				if(RG.name == chem) //NY CHO DATUMOMRAZ, SUCK MY DICK???
@@ -506,7 +506,7 @@ proc/dispense_chem(usr, var/chem)
 proc/get_container(usr)
 	for(var/obj/machinery/chem/chemdispenser/CH in range(1,usr))
 		for(var/i = 1, i <= CH.cont.len, i++)
-			var/obj/items/container/CONTA = CH.cont[i]
+			var/obj/item/container/CONTA = CH.cont[i]
 			world << "[CONTA.cur_val]"
 			world << "[CONTA.chemical.len]"
 			CONTA.Move(CH.loc)
@@ -515,7 +515,7 @@ proc/get_container(usr)
 proc/create_reagent()
 	for(var/obj/machinery/chem/chemdispenser/CH in range(1,usr))
 		for(var/i = 1, i <= CH.cont.len, i++)
-			var/obj/items/container/CONTA = CH.cont[i]
+			var/obj/item/container/CONTA = CH.cont[i]
 			world << "[CONTA.cur_val]"
 			world << "[CONTA.chemical.len]"
 			CONTA.Move(CH.loc)

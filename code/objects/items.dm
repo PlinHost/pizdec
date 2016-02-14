@@ -4,7 +4,7 @@
 	var/shock_resist = 0
 	var/pass = 0
 
-/obj/items
+/obj/item
 	icon = 'icons/main_items.dmi'
 	layer = 26
 	weight = 2
@@ -12,29 +12,29 @@
 	var/burn_damage = 0
 	var/shock_damage = 0
 
-/obj/items/tools
+/obj/item/tools
 	icon = 'icons/tools.dmi'
 
-/obj/items/tools/screwdriver
+/obj/item/tools/screwdriver
 	icon_state = "screwdriver"
 	brute_damage = 5
 
-/obj/items/tools/power/welding_tool
+/obj/item/tools/power/welding_tool
 	icon_state = "welder"
 	brute_damage = 1
 	burn_damage = 5
 	weight = 10
 
-/obj/items/New()
+/obj/item/New()
 	personal_id += 1
 	my_id = personal_id
 
-/obj/items/tools/wrench
+/obj/item/tools/wrench
 	name = "wrench"
 	icon_state = "wrench"
 	brute_damage = 15
 
-/obj/items/tools/radiotest
+/obj/item/tools/radiotest
 	icon_state = "radiotest"
 	brute_damage = 1
 
@@ -48,7 +48,7 @@
 
 /*	act()
 		if(usr.client.hand == 1)
-			var/obj/items/M = src
+			var/obj/item/M = src
 			M.layer = 25
 			usr.client.R.overlays += M
 			usr << "Ты берешь [src.name] в правую руку!"
@@ -57,7 +57,7 @@
 
 			//del(src)
 		if(usr.client.hand == 0)
-			var/obj/items/M = src
+			var/obj/item/M = src
 			M.layer = 25
 			usr.client.L.overlays += M
 			usr << "Ты берешь [src.name] в левую руку!"
@@ -89,20 +89,20 @@
 		else
 			usr << "\blue Ты ничего не делаешь с [src] и это замечательно."
 */
-/obj/items/fire_ballon
+/obj/item/fire_ballon
 	name = "BOLON"
 	icon_state = "OLOLO_BALLON"
 
-/obj/items/drink/beer
+/obj/item/drink/beer
 	name = "BEERBOOM"
 	icon_state = "alcohol"
 
-/obj/items/gun/carp
+/obj/item/gun/carp
 	name = "carpgun"
 	icon_state = "carpgun"
 	//bullet = /mob/carp
 
-/obj/items/bomb
+/obj/item/bomb
 	icon_state = "bomb"
 	icon = 'icons/main_items.dmi'
 	var
@@ -117,7 +117,7 @@
 
 		if(T.oxygen > 100 && T.plasma > 10)
 			usr << "Бах-бах!"
-			new /obj/explode(usr.loc)
+			new /obj/effect/explode(usr.loc)
 
 		for(src in usr.contents)
 			if(usr.client.my_hand_active == "left")
@@ -131,7 +131,7 @@
 					usr.client.R.overlays.Cut()
 					usr.client.rhand_items.Cut()
 					del(src)
-/obj/items/ore
+/obj/item/ore
 
 	uranium
 		icon_state = "uranium"

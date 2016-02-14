@@ -25,7 +25,7 @@
 			if(istype(T, /turf/space))
 				del(src)
 
-			for(var/obj/items/IT in T)
+			for(var/obj/item/IT in T)
 				if(T.water > 10)
 					IT.alpha = 128
 				else

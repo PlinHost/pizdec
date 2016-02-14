@@ -5,18 +5,18 @@ var/global/list/ass = list()
 var/global/list/hunt = list()
 var/global/list/ultraboy = list()
 
-/obj/fire
+/obj/effect/fire
 	name = "fire"
 	icon = 'icons/effects.dmi'
 	icon_state = "fire"
 
-	act_by_item(var/obj/items/I)
+	act_by_item(var/obj/item/I)
 
-		if(I == /obj/items/fire_ballon)
+		if(I == /obj/item/fire_ballon)
 			usr << "\blue ѕшык-пшыыык! ќгонь умирает!"
 			del(src)
 
-/obj/explode
+/obj/effect/explode
 	name = "explode"
 	icon = 'icons/effects.dmi'
 	icon_state = "explode"
@@ -73,16 +73,12 @@ var/global/list/ultraboy = list()
 	icon_state = "start2"
 	layer = 7
 
-
-
 /obj/start/New()
 	layer = 1
 	var/turf/T = src.loc
 	landmarks += T
 
-
-
-/obj/explode/New()
+/obj/effect/explode/New()
 	personal_id += 1
 	my_id = personal_id
 	BOOM()
@@ -93,17 +89,17 @@ var/global/list/ultraboy = list()
 	y -= 1
 	new /obj/lobb_y(src.loc)
 
-/obj/smoke
+/obj/effect/smoke
 	name = "smoke"
 	icon = 'icons/effects.dmi'
 	icon_state = "smoke"
 	opacity = 1
 
-/obj/smoke/New()
+/obj/effect/smoke/New()
 	sleep(6)
 	del(src)
 
-/obj/explode/proc/BOOM()
+/obj/effect/explode/proc/BOOM()
 	var/turf/T = src.loc
 	EXPLODE = T.plasma / 10
 	EXPLODE = round(EXPLODE) //сила взрыва во взрывоединицах
@@ -115,20 +111,20 @@ var/global/list/ultraboy = list()
 		destroy = rand(0,100)
 		if(destroy < 45)
 			for(var/atom/A in EPTAHULI)
-				if(!(istype(A, /obj/explode)))
+				if(!(istype(A, /obj/effect/explode)))
 					del(A)
 			del(EPTAHULI)
 		else
-			new /obj/smoke(EPTAHULI)
+			new /obj/effect/smoke(EPTAHULI)
 	del(src)
 
 
-/obj/fire/New()
+/obj/effect/fire/New()
 	process()
 
 /turf
 
-/obj/fire/process()
+/obj/effect/fire/process()
 	var/SAD
 	spawn while(1)
 		sleep(3)
@@ -143,7 +139,7 @@ var/global/list/ultraboy = list()
 								EPTAHULI.CO2 += 1
 								EPTAHULI.temperature += 1
 								if(SAD < 2)
-									new /obj/fire(EPTAHULI)
+									new /obj/effect/fire(EPTAHULI)
 									SAD += 1
 
 						if(EPTAHULI.oxygen > 100 && EPTAHULI.plasma > 5) //выделение тепла при сжигании кислорода и плазмы
@@ -151,7 +147,7 @@ var/global/list/ultraboy = list()
 							EPTAHULI.oxygen -= 1
 							EPTAHULI.plasma -= 1
 							EPTAHULI.CO2 += 1
-							new /obj/fire(EPTAHULI)
+							new /obj/effect/fire(EPTAHULI)
 
 						if(EPTAHULI.oxygen < 100)
 							del(src)
@@ -168,9 +164,9 @@ var/global/list/ultraboy = list()
 	if(T.oxygen > 100 && T.plasma > 5)
 
 		usr << "ѕых-пых, ¬—ѕџ’»¬ј≈“ ѕЋјћя!"
-		new /obj/fire(T)
+		new /obj/effect/fire(T)
 
 	if(T.oxygen > 100 && T.plasma > 10)
 		usr << "Ѕах-бах!"
-		new /obj/explode(src.loc)
+		new /obj/effect/explode(src.loc)
 	//if(T.oxygen > 500 && T.plasma > 10)

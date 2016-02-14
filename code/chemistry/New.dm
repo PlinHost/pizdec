@@ -81,7 +81,7 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 	RK.react()
 
 	if(RK.state == "solid")
-		var/obj/items/solid_reagents/SR = new(RK.loc)
+		var/obj/item/solid_reagents/SR = new(RK.loc)
 		RK.move_reagent(RK.amount, SR)
 		SR.icon = RK.icon
 		SR.icon_state = RK.state
@@ -96,7 +96,7 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 		A.amount = amount_new
 		amount -= amount_new
 
-/obj/items/unlimited_reagent
+/obj/item/unlimited_reagent
 	icon = 'icons/main_items.dmi'
 	icon_state = "magic"
 	var/reag_type = /reagent/water
@@ -107,9 +107,9 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 	potassium
 		reag_type = /reagent/potassium
 
-/obj/items/solid_reagents
+/obj/item/solid_reagents
 
-	act_by_item(var/obj/items/solid_reagents/SR)
+	act_by_item(var/obj/item/solid_reagents/SR)
 		var/shit = 0
 		for(var/reagent/R in contents)
 			for(var/reagent/R2 in SR.contents)
@@ -144,6 +144,7 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 		for(var/reagent/R in contents)
 			if(R.amount > 80 )
 				curcraft += "<br><a href='?reag;my_craft=/obj/structure/stool;'>стул</a>"
+				curcraft += "<br><a href='?reag;my_craft=/obj/item/weapon/stunbaton;'>дубинка</a>"
 
 		var/my_text
 		my_text = {"
@@ -157,4 +158,4 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 		</html>
 		"}
 
-		usr << browse(my_text,"window=my_text")
+		usr << browse(my_text,"window=my_text;can_close=0")

@@ -1,22 +1,22 @@
-/obj/items/potato
+/obj/item/potato
 
-/obj/items/coin
+/obj/item/coin
 	icon_state = "coin"
 
-/obj/items/surgery/saw
+/obj/item/surgery/saw
 	icon_state = "saw"
 
-/obj/items/meat
+/obj/item/meat
 	icon_state = "meat"
 
 
 /obj/machinery/vending
-	var/my_product = /obj/items/potato
+	var/my_product = /obj/item/potato
 	var/amount = 3
 	density = 1
 	icon = 'icons/vending.dmi'
-	var/list/obj/items/my_items = list()
-	var/list/obj/items/my_types= list()
+	var/list/obj/item/my_items = list()
+	var/list/obj/item/my_types= list()
 	var/list/items_num = list()
 	var/products
 	var/myclick = 0
@@ -58,6 +58,6 @@
 /obj/machinery/vending/tools
 	icon_state = "ballon_vend"
 	name = "tools master"
-	my_items = list(/obj/items/tools/wrench, /obj/items/tools/screwdriver, /obj/items/tools/radiotest)
-	my_types = list(/obj/items/tools/wrench, /obj/items/tools/screwdriver, /obj/items/tools/radiotest)
+	my_items = list(/obj/item/tools/wrench, /obj/item/tools/screwdriver, /obj/item/tools/radiotest)
+	my_types = list(/obj/item/tools/wrench, /obj/item/tools/screwdriver, /obj/item/tools/radiotest)
 	items_num = list(3, 3, 3)

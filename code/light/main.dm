@@ -15,7 +15,7 @@
 	var/turf/simulated/floor/D = src.loc
 	D.act()
 
-/light/act_by_item(var/obj/items/I)
+/light/act_by_item(var/obj/item/I)
 	var/turf/simulated/floor/D = src.loc
 	D.act_by_item(I)
 

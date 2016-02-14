@@ -1,30 +1,30 @@
-/obj/items
+/obj/item
 	var/medical_power = 0
 
-/obj/items/medical
+/obj/item/medical
 	icon = 'icons/medbay.dmi'
 
-/obj/items/medical/brute/gel
+/obj/item/medical/brute/gel
 	icon_state = "medgel"
 	name = "medgel"
 	medical_power = 5
 
-/obj/items/medical/brute/gel/advance
+/obj/item/medical/brute/gel/advance
 	icon_state = "medgel_advance"
 	name = "medgel+"
 	medical_power = 10
 
-/obj/items/medical/brute/gel/super
+/obj/item/medical/brute/gel/super
 	icon_state = "medgel_super"
 	name = "medgel super"
 	medical_power = 25
 
-/obj/items/medical/burn/gel
+/obj/item/medical/burn/gel
 	icon_state = "firegel"
 	name = "firegel"
 	medical_power = 25
 
-/obj/items/medical/pill/force
+/obj/item/medical/pill/force
 	icon_state = "pill"
 	name = "FORCE"
 	medical_power = 10

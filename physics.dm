@@ -42,3 +42,31 @@ world
 		new /datum/Kate()
 		new /datum/POWERMASTER()
 		name = "Physics Simulator 3000"
+
+/area
+	icon = 'icons/decoration.dmi'
+	icon_state = "area"
+
+/mob
+	icon = 'icons/decoration.dmi'
+	icon_state = "mob"
+
+/obj/decor
+	icon = 'icons/decoration.dmi'
+	icon_state = "decor"
+
+/obj/electro
+	icon = 'icons/decoration.dmi'
+	icon_state = "electro"
+
+/obj/effect
+	icon = 'icons/decoration.dmi'
+	icon_state = "effect"
+
+/obj/machinery
+	icon = 'icons/decoration.dmi'
+	icon_state = "machinery"
+
+/obj
+	icon = 'icons/decoration.dmi'
+	icon_state = "obj"

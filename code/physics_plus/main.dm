@@ -37,7 +37,7 @@ var/global/personal_id = 0
 			RAD.speed = wave_length
 			RAD.force = (get_dist(src, RAD)*-1) + wave_length
 
-			for(var/obj/items/I in RAD.loc)
+			for(var/obj/item/I in RAD.loc)
 				if(RAD.x > x && RAD.y == y)
 					while(RAD.force > 0 && RAD.force > round(I.weight/10)) //одна единица силы может сдвинуть с места 10 кг
 						RAD.force -= 1
