@@ -171,7 +171,7 @@
 				winshow(usr,"my_text",0)
 				V.myclick = 0
 
-		for(var/obj/item/solid_reagents/SR in usr.contents)
+		for(var/obj/item/other/solid_reagents/SR in usr.contents)
 			var/l = href_list["my_craft"]
 			l = new l()
 			var/atom/movable/A = l

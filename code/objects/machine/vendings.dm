@@ -1,17 +1,10 @@
-/obj/item/potato
-
-/obj/item/coin
+/obj/item/other/coin
 	icon_state = "coin"
 
 /obj/item/surgery/saw
 	icon_state = "saw"
 
-/obj/item/meat
-	icon_state = "meat"
-
-
 /obj/machinery/vending
-	var/my_product = /obj/item/potato
 	var/amount = 3
 	density = 1
 	icon = 'icons/vending.dmi'

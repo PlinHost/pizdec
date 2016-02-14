@@ -45,55 +45,11 @@
 			usr << "\blue Частота [R.frequency]"
 			usr << "\blue Длина волны [R.length]"
 
-
-/*	act()
-		if(usr.client.hand == 1)
-			var/obj/item/M = src
-			M.layer = 25
-			usr.client.R.overlays += M
-			usr << "Ты берешь [src.name] в правую руку!"
-			//usr.contents += M
-			//usr.client.my_rhand_contents = M.type
-
-			//del(src)
-		if(usr.client.hand == 0)
-			var/obj/item/M = src
-			M.layer = 25
-			usr.client.L.overlays += M
-			usr << "Ты берешь [src.name] в левую руку!"
-			//usr.contents += M
-			//usr.client.my_lhand_contents = M.type
-			//del(src)
-*/
-/*
-/mob
-	act()
-		if(!(istype(src, /mob/human)))
-			if(usr.client.act == "grab")
-				usr << "\red Ты хватаешь [src]"
-				if(usr.client.hand == 1)
-					var/mob/M = src
-					M.layer = 25
-					usr.client.R.overlays += M
-					usr << "Ты берешь [src.name] в правую руку!"
-					usr.client.my_rhand_contents = M.type
-					del(src)
-				if(usr.client.hand == 0)
-					var/mob/M = src
-					M.layer = 25
-					usr.client.L.overlays += M
-					usr << "Ты берешь [src.name] в левую руку!"
-					usr.client.my_lhand_contents = M.type
-					del(src)
-
-		else
-			usr << "\blue Ты ничего не делаешь с [src] и это замечательно."
-*/
 /obj/item/fire_ballon
 	name = "BOLON"
 	icon_state = "OLOLO_BALLON"
 
-/obj/item/drink/beer
+/obj/item/other/drink/beer
 	name = "BEERBOOM"
 	icon_state = "alcohol"
 
@@ -102,7 +58,7 @@
 	icon_state = "carpgun"
 	//bullet = /mob/carp
 
-/obj/item/bomb
+/obj/item/other/bomb
 	icon_state = "bomb"
 	icon = 'icons/main_items.dmi'
 	var

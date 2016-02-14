@@ -81,7 +81,7 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 	RK.react()
 
 	if(RK.state == "solid")
-		var/obj/item/solid_reagents/SR = new(RK.loc)
+		var/obj/item/other/solid_reagents/SR = new(RK.loc)
 		RK.move_reagent(RK.amount, SR)
 		SR.icon = RK.icon
 		SR.icon_state = RK.state
@@ -107,9 +107,9 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 	potassium
 		reag_type = /reagent/potassium
 
-/obj/item/solid_reagents
+/obj/item/other/solid_reagents
 
-	act_by_item(var/obj/item/solid_reagents/SR)
+	act_by_item(var/obj/item/other/solid_reagents/SR)
 		var/shit = 0
 		for(var/reagent/R in contents)
 			for(var/reagent/R2 in SR.contents)

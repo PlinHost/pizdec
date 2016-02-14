@@ -8,6 +8,8 @@
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 #define FILE_DIR "icons"
+#define FILE_DIR "icons/effects"
+#define FILE_DIR "icons/obj"
 #define FILE_DIR "sound"
 // END_FILE_DIR
 
