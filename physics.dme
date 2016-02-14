@@ -54,5 +54,5 @@
 #include "code\trash\main.dm"
 #include "code\turfs\main.dm"
 #include "code\waves\main.dm"
-#include "map\backup\my_map.dmm"
+#include "map\my_map.dmm"
 // END_INCLUDE
