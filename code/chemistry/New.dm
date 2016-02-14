@@ -8,7 +8,7 @@
 		amount = 0
 
 	proc
-		react()
+		react(var/reagent/HANDATTACK)
 			var/old_amount
 			if(amount > 0)
 				for(var/reagent/R in loc)
@@ -25,8 +25,48 @@
 									if(amount <= 0)
 										del(src)
 
+							if("potassium")
+								if(name == "water")
+									world << "BOOM"
+									old_amount = amount
+									amount -= R.amount*2 //2 единицы калия на 1 воды
+									R.amount -= old_amount
+									if(R.amount <= 0)
+										del(R)
+									if(amount <= 0)
+										del(src)
+
+//FOR HAND
+
+				if(HANDATTACK)
+					switch(HANDATTACK.name)
+						if("water")
+							if(name == "potassium")
+								world << "BOOM"
+								old_amount = HANDATTACK.amount
+								HANDATTACK.amount -= amount*2 //2 единицы калия на 1 воды
+								amount -= old_amount
+								if(HANDATTACK.amount <= 0)
+									del(HANDATTACK)
+								if(amount <= 0)
+									del(src)
+
+						if("potassium")
+							if(name == "water")
+								world << "BOOM"
+								old_amount = amount
+								amount -= HANDATTACK.amount*2 //2 единицы калия на 1 воды
+								HANDATTACK.amount -= old_amount
+								if(HANDATTACK.amount <= 0)
+									del(HANDATTACK)
+								if(amount <= 0)
+									del(src)
+		react_on_mob(var/mob)
+			return
+
 	water
 		name = "water"
+		color = "blue"
 
 	potassium
 		name = "potassium"
@@ -40,6 +80,22 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 	RK.icon_state = state
 	RK.react()
 
+	if(RK.state == "solid")
+		var/obj/items/solid_reagents/SR = new(RK.loc)
+		RK.move_reagent(RK.amount, SR)
+		SR.icon = RK.icon
+		SR.icon_state = RK.state
+		SR.color = RK.color
+
+/reagent/proc/move_reagent(var/amount_new, var/atom/M)
+	if(amount_new >= amount)
+		Move(M)
+	else
+		var/reagent/A = src
+		new A(M)
+		A.amount = amount_new
+		amount -= amount_new
+
 /obj/items/unlimited_reagent
 	icon = 'icons/main_items.dmi'
 	icon_state = "magic"
@@ -51,4 +107,54 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 	potassium
 		reag_type = /reagent/potassium
 
+/obj/items/solid_reagents
 
+	act_by_item(var/obj/items/solid_reagents/SR)
+		var/shit = 0
+		for(var/reagent/R in contents)
+			for(var/reagent/R2 in SR.contents)
+				R.react(R2)
+
+		for(var/reagent/R2 in SR.contents)
+			shit = 1
+
+		if(shit == 0)
+			for(SR in usr.contents)
+				if(usr.client.my_hand_active == "left")
+					if(istype(SR, usr.client.lhand_items[1]))
+						usr.client.L.overlays.Cut()
+						usr.client.lhand_items.Cut()
+						del(SR)
+
+				if(usr.client.my_hand_active == "right")
+					if(istype(SR, usr.client.rhand_items[1]))
+						usr.client.R.overlays.Cut()
+						usr.client.rhand_items.Cut()
+						del(SR)
+		shit = 0
+
+		for(var/reagent/R in contents)
+			shit = 1
+
+		if(shit == 0)
+			del(src)
+
+	act_self()
+		var/curcraft
+		for(var/reagent/R in contents)
+			if(R.amount > 80 )
+				curcraft += "<br><a href='?reag;my_craft=/obj/structure/stool;'>стул</a>"
+
+		var/my_text
+		my_text = {"
+		<html>
+		<head><title>КРАФТ</title></head>
+		<body>
+		КРАФТ:
+		[curcraft]
+
+		</body>
+		</html>
+		"}
+
+		usr << browse(my_text,"window=my_text")
