@@ -50,6 +50,7 @@ var/list/global/machines = list()
 	process()
 
 /obj/machinery/light/check()
+	sleep(1)
 	if(on == 1)
 		luminosity = 5
 		if(pam_pam == 0)
@@ -60,6 +61,7 @@ var/list/global/machines = list()
 			luminosity = 0
 			dark()
 			pam_pam = 0
+	sleep(1)
 
 /obj/machinery/proc/check()
 
@@ -80,7 +82,7 @@ var/list/global/machines = list()
 				if(S.power > 0)
 					S.power -= 1
 
-					if(istype(src, /obj/machinery/light) || istype(src, /obj/machinery/door) || istype(src, /obj/machinery/firedoor) || istype(src, /obj/machinery/computer))
+					if(istype(src, /obj/machinery/light) || istype(src, /obj/machinery/airlock) || istype(src, /obj/machinery/firedoor) || istype(src, /obj/machinery/computer))
 						on = 1
 				else
 					on = 0

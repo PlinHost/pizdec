@@ -3,7 +3,7 @@
 
 var/global/datum/atmos_net/a_net = new()
 
-/obj/machinery/atmos
+/obj/machinery/atmospherics
 	var/oxygen = 0
 	var/nitrogen = 0
 	var/plasma = 0
@@ -11,48 +11,60 @@ var/global/datum/atmos_net/a_net = new()
 	icon = 'icons/atmos.dmi'
 	density = 1
 
+/obj/machinery/portable_atmospherics
+	var/oxygen = 0
+	var/nitrogen = 0
+	var/plasma = 0
+	var/list/datum/reagents/chemical = list()
+	icon = 'icons/atmos.dmi'
+	density = 1
+
+	var/atmosnet = 0 //трубосети, нужны, чтобы создавать независимые друг от друга атмосокоммуникации
+	var/reset
+	var/zLevel = 0
+
 /obj/machinery/lighter
 	icon = 'icons/atmos.dmi'
 	density = 0
 	icon_state = "lighter"
 
 
-/obj/machinery/atmos/canister
+/obj/machinery/portable_atmospherics/canister
 	var/open = 0
 	var/connected = 0
 	var/id // Плохое дервенорешение
 	var/list/chemistry = list("blood")
 	weight = 20
 
-/obj/machinery/atmos/canister/oxygen
+/obj/machinery/portable_atmospherics/canister/oxygen
 	oxygen = 500
 	nitrogen = 0
 	plasma = 0
 	icon_state = "canister_o"
 
-/obj/machinery/atmos/canister/plasma
+/obj/machinery/portable_atmospherics/canister/plasma
 	oxygen = 0
 	nitrogen = 0
 	plasma = 500
 	icon_state = "canister_p"
 
-/obj/machinery/atmos/canister/nitrogen
+/obj/machinery/portable_atmospherics/canister/nitrogen
 	oxygen = 0
 	nitrogen = 500
 	plasma = 0
 	icon_state = "canister_n"
 
-/obj/machinery/atmos/canister/empty
+/obj/machinery/portable_atmospherics/canister/empty
 	oxygen = 0
 	nitrogen = 0
 	plasma = 0
 	icon_state = "canister_empty"
 
-/obj/machinery/atmos/canister/act()
+/obj/machinery/portable_atmospherics/canister/act()
 	var/turf/T = src.loc
 	world << "oxygen [oxygen]; plasma [plasma]; nitrogen [nitrogen]; atmosnet [atmosnet];"
 	if(connected == 0 && open == 0)
-		for(var/obj/machinery/atmos/connector/C in T)
+		for(var/obj/machinery/atmospherics/connector/C in T)
 			if(T)
 				atmosnet = C.atmosnet
 				connected = 1
@@ -60,7 +72,7 @@ var/global/datum/atmos_net/a_net = new()
 				return
 
 	if(connected == 1 && open == 1)
-		for(var/obj/machinery/atmos/connector/C in T)
+		for(var/obj/machinery/atmospherics/connector/C in T)
 			if(T)
 				atmosnet = C.atmosnet
 				connected = 0
@@ -77,12 +89,12 @@ var/global/datum/atmos_net/a_net = new()
 		usr << "Ты закрыл канистру"
 		return
 
-/obj/machinery/atmos/canister/New()
+/obj/machinery/portable_atmospherics/canister/New()
 	//id = rand(1,999)
 	a_net.canisters += src
 	process()
 
-/obj/machinery/atmos/canister/process()
+/obj/machinery/portable_atmospherics/canister/process()
 	spawn while(1)
 		sleep(1)
 		for(var/turf/simulated/floor/F in range(1, src))
@@ -102,7 +114,7 @@ var/global/datum/atmos_net/a_net = new()
 							F.oxygen += 1
 							oxygen -= 1
 
-		for(var/obj/machinery/atmos/canister/Z in a_net.canisters)
+		for(var/obj/machinery/portable_atmospherics/canister/Z in a_net.canisters)
 			if(Z.connected == 1 && Z.atmosnet == atmosnet)
 				if(Z != src)
 					//world << "Найдена канистра [Z.id]"
@@ -140,46 +152,46 @@ var/global/datum/atmos_net/a_net = new()
 					//for(var/datum/reagents/REG in chemical)
 					//	move_one_unit(Z, REG)
 
-/obj/machinery/atmos/colder
+/obj/machinery/atmospherics/colder
 	icon_state = "cold"
 	use_power = 1
 	on = 0
 
-/obj/machinery/atmos/hater
+/obj/machinery/atmospherics/hater
 	icon_state = "hate"
 	use_power = 1
 	on = 0
 
-/obj/machinery/atmos/connector/New()
+/obj/machinery/atmospherics/connector/New()
 	GASWAGEN_NET++
 	atmosnet = GASWAGEN_NET
 	process()
 
 
-/obj/machinery/atmos/connector
+/obj/machinery/atmospherics/connector
 	icon_state = "connector"
 	on = 0
 
-/obj/machinery/atmos/connector/process()
+/obj/machinery/atmospherics/connector/process()
 	spawn while(1)
 		sleep(2)
-		for(var/obj/machinery/atmos/pipe/P in range(1, src))
+		for(var/obj/machinery/atmospherics/pipe/P in range(1, src))
 			if(P.atmosnet != 0)
 				atmosnet = P.atmosnet
 
-/obj/machinery/atmos/outer
+/obj/machinery/atmospherics/outer
 	icon_state = "out"
 	density = 0
 	layer = 3
 
-/obj/machinery/atmos/outer/process()
+/obj/machinery/atmospherics/outer/process()
 	spawn while(1)
 		sleep(2)
 		atmosnet = 0
 		icon_state = "out"
-		for(var/obj/machinery/atmos/pipe/P in range(1, src))
+		for(var/obj/machinery/atmospherics/pipe/P in range(1, src))
 			atmosnet = P.atmosnet
-		for(var/obj/machinery/atmos/canister/C in world)
+		for(var/obj/machinery/portable_atmospherics/canister/C in world)
 			if(C.connected == 1 && C.atmosnet == atmosnet)
 				for(var/turf/simulated/floor/F in range(1, src))
 					for(var/atom/A in F)
@@ -213,29 +225,29 @@ var/global/datum/atmos_net/a_net = new()
 								sleep(2)
 
 
-/obj/machinery/atmos/outer/New()
+/obj/machinery/atmospherics/outer/New()
 	process()
 
-/obj/machinery/atmos/outer/act()
+/obj/machinery/atmospherics/outer/act()
 	world << "[atmosnet]"
 
-/obj/machinery/atmos/inner
+/obj/machinery/atmospherics/inner
 	icon_state = "in"
 	density = 0
 	layer = 2.3
 
-/obj/machinery/atmos/inner/New()
+/obj/machinery/atmospherics/inner/New()
 	process()
 
 
-/obj/machinery/atmos/inner/process()
+/obj/machinery/atmospherics/inner/process()
 	spawn while(1)
 		sleep(2)
 		atmosnet = 0
 		icon_state = "in"
-		for(var/obj/machinery/atmos/pipe/P in range(1, src))
+		for(var/obj/machinery/atmospherics/pipe/P in range(1, src))
 			atmosnet = P.atmosnet
-		for(var/obj/machinery/atmos/canister/C in world)
+		for(var/obj/machinery/portable_atmospherics/canister/C in world)
 			if(C.connected == 1 && C.atmosnet == atmosnet)
 				for(var/turf/simulated/floor/F in range(1, src))
 					for(var/atom/A in F)
@@ -263,7 +275,7 @@ var/global/datum/atmos_net/a_net = new()
 								C.plasma += 1
 
 
-/obj/machinery/atmos/colder/act()
+/obj/machinery/atmospherics/colder/act()
 	if(on == 1)
 		on = 0
 		usr << "Вы выключили кондиционер"
@@ -273,7 +285,7 @@ var/global/datum/atmos_net/a_net = new()
 		usr << "Вы включили кондиционер"
 		return
 
-/obj/machinery/atmos/hater/act()
+/obj/machinery/atmospherics/hater/act()
 	if(on == 1)
 		on = 0
 		usr << "Вы выключили обогреватель"
@@ -283,7 +295,7 @@ var/global/datum/atmos_net/a_net = new()
 		usr << "Вы включили обогреватель"
 		return
 
-/obj/machinery/atmos/colder/check()
+/obj/machinery/atmospherics/colder/check()
 	if(on == 1)
 		for(var/turf/simulated/floor/F in range(1, src))
 			for(var/atom/A in F)
@@ -294,7 +306,7 @@ var/global/datum/atmos_net/a_net = new()
 	if(on == 0)
 		return
 
-/obj/machinery/atmos/hater/check()
+/obj/machinery/atmospherics/hater/check()
 	if(on == 1)
 		for(var/turf/simulated/floor/F in range(1, src))
 			for(var/atom/A in F)

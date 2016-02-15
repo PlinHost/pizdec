@@ -3,7 +3,7 @@
 
 obj
 	screen
-		layer = 25
+		layer = 28
 		icon = 'icons/screen.dmi'
 		icon_state = "screen"
 		var/active = 0
@@ -420,7 +420,7 @@ obj
 							add_to_rhand()
 
 		clothing
-			icon_state = "clothing"
+			icon_state = "clothes"
 			New(client/C)
 				screen_loc="5,-1"
 				C.screen+=src

@@ -340,9 +340,9 @@ proc/react(var/chem1, var/chem2)
 
 	var/fuck = 0
 	var/atmosnet = 0
-	for(var/obj/machinery/atmos/pipe/P in range(1, src))
+	for(var/obj/machinery/atmospherics/pipe/P in range(1, src))
 		atmosnet = P.atmosnet
-	for(var/obj/machinery/atmos/canister/C in world)
+	for(var/obj/machinery/portable_atmospherics/canister/C in world)
 		if(C.connected == 1 && C.atmosnet == atmosnet)
 			if(C.chemical.len < 1)
 				for(var/i = 1, i <= chemical.len, i++)
@@ -367,8 +367,8 @@ proc/react(var/chem1, var/chem2)
 					C.chemical += REAG
 
 
-/obj/machinery/atmos/outer/proc/chem_to_turfs()
-	for(var/obj/machinery/atmos/canister/C in world)
+/obj/machinery/atmospherics/outer/proc/chem_to_turfs()
+	for(var/obj/machinery/portable_atmospherics/canister/C in world)
 		if(C.connected == 1 && C.atmosnet == atmosnet)
 			for(var/i = 1, i <= C.chemical.len, i++)
 				var/datum/reagents/RG = C.chemical[i]
