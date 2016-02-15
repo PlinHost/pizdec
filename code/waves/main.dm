@@ -16,7 +16,7 @@ var/global/list/wave/waves = list()
 	var/frequency = 0
 	var/wave_length = 0
 	var/id = 0
-	icon = 'icons/shaitan_machine.dmi'
+	icon = 'icons/obj/shaitan_machine.dmi'
 
 	proc/del_all_waves()
 		for(var/wave/W in waves)
@@ -218,7 +218,7 @@ var/global/list/wave/waves = list()
 	var/frequency = 0
 	var/wave_length = 0
 	var/id = 0
-	icon = 'icons/shaitan_machine.dmi'
+	icon = 'icons/obj/shaitan_machine.dmi'
 
 /obj/machinery/sound/transmitter
 	frequency = 27
@@ -328,7 +328,7 @@ var/global/list/wave/waves = list()
 	var/frequency = 27
 	var/wave_length = 3
 	var/id = 0
-	icon = 'icons/shaitan_machine.dmi'
+	icon = 'icons/obj/shaitan_machine.dmi'
 
 /obj/machinery/forcewave/transmitter
 	use_power = 1

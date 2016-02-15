@@ -1,12 +1,12 @@
 /obj/water/water1
 	name = "water"
-	icon = 'icons/water.dmi'
+	icon = 'icons/effects/water.dmi'
 	icon_state = "water1"
 	layer = 2.5
 
 /obj/water
 	name = "water"
-	icon = 'icons/water.dmi'
+	icon = 'icons/effects/water.dmi'
 	icon_state = "water"
 	layer = 5
 	var/limit = 0

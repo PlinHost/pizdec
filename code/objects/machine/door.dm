@@ -3,7 +3,7 @@ var/global/list/doors = list()
 
 /obj/machinery/airlock
 	name = "door"
-	icon = 'icons/door.dmi'
+	icon = 'icons/obj/door.dmi'
 	icon_state = "door_close"
 	density = 1
 	on = 0
@@ -23,7 +23,7 @@ var/global/list/doors = list()
 
 /obj/machinery/firedoor
 	name = "firedoor"
-	icon = 'icons/door.dmi'
+	icon = 'icons/obj/door.dmi'
 	icon_state = "firedoor_open"
 	density = 0
 	on = 1

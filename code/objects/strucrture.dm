@@ -1,5 +1,5 @@
 /obj/structure
-	icon = 'icons/structure.dmi'
+	icon = 'icons/obj/structure.dmi'
 
 /obj/structure/window
 	name = "window"
@@ -29,12 +29,12 @@
 	icon_state = "stool"
 
 /obj/structure/toilet
-	icon = 'icons/trash.dmi'
+	icon = 'icons/obj/trash.dmi'
 	icon_state = "toilet"
 
 /obj/structure/table
 	name = "table"
-	icon = 'icons/table.dmi'
+	icon = 'icons/obj/table.dmi'
 	density = 1
 	layer = 6
 	alpha = 128
@@ -56,7 +56,7 @@
 					usr.client.rhand_items.Cut()
 
 /obj/structure/table/surgery
-	icon = 'icons/surgery.dmi'
+	icon = 'icons/obj/surgery.dmi'
 	icon_state = "table"
 	alpha = 255
 
@@ -67,12 +67,12 @@
 
 /obj/structure/closet/crate
 	name = "crate"
-	icon = 'icons/crate.dmi'
+	icon = 'icons/obj/crate.dmi'
 	icon_state = "closed"
 
 /obj/structure/closet
 	name = "closet"
-	icon = 'icons/closet.dmi'
+	icon = 'icons/obj/closet.dmi'
 	icon_state = "closed"
 	density = 1
 	var/open = 0
@@ -123,7 +123,7 @@
 /*
 obj/structure/hatch
 	name = "hatch"
-	icon = 'icons/structure.dmi'
+	icon = 'icons/obj/structure.dmi'
 	icon_state = "hatch"
 	pass_gas = 0
 */

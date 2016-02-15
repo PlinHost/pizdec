@@ -6,7 +6,7 @@ var/global/datum/trash_net/t_net = new()
 
 /obj/machinery/trash
 	var/water = 0
-	icon = 'icons/trash.dmi'
+	icon = 'icons/obj/trash.dmi'
 	density = 1
 
 /obj/machinery/trash/disposal

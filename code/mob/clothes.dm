@@ -4,16 +4,7 @@
 #define SHOES_LAYER 26
 
 /obj/item/clothing
-	icon = 'icons/clothes.dmi'
-	var/on_mob_sprite
-	var/on_mob_sprite_lying
-
-	New()
-		on_mob_sprite = "[icon_state]_onme"
-		on_mob_sprite_lying = "[icon_state]_onme_l"
-
-	act_self()
-		world << "[on_mob_sprite]"
+	icon = 'icons/obj/clothes.dmi'
 
 //// бмовл ////
 
@@ -72,7 +63,7 @@
 //ON BODY, BITCH!
 
 /obj/item/body
-	icon = 'icons/clothes.dmi'
+	icon = 'icons/obj/clothes.dmi'
 
 /obj/item/body/head
 	layer = HEAD_LAYER

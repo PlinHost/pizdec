@@ -30,7 +30,7 @@ var/global/list/wires = list()
 
 /obj/electro/powerbox
 	name = "powerbox"
-	icon = 'icons/power.dmi'
+	icon = 'icons/obj/power.dmi'
 	icon_state = "apc"
 	var/powernet = 0
 	alpha = 128
@@ -40,7 +40,7 @@ var/global/list/wires = list()
 
 /obj/electro/transformator
 	name = "transformator"
-	icon = 'icons/HICH_VOLTAGE.dmi'
+	icon = 'icons/obj/HICH_VOLTAGE.dmi'
 	icon_state = "transformator"
 	var/powernet = 0
 	density = 1
@@ -64,7 +64,7 @@ var/global/list/wires = list()
 		sq = 1 //площадь сечения
 
 	name = "cable"
-	icon = 'icons/physics_cable.dmi'
+	icon = 'icons/obj/physics_cable.dmi'
 	var/powernet = 0
 	var/reset = 0
 	var/zLevel = 0
@@ -384,14 +384,14 @@ var/global/list/wires = list()
 
 /obj/effect/sparks
 	name = "spaks"
-	icon = 'icons/HICH_VOLTAGE.dmi'
+	icon = 'icons/obj/HICH_VOLTAGE.dmi'
 	icon_state = "sparks"
 
 /obj/decor
 
 /obj/decor/cable_part
 	name = "cable"
-	icon = 'icons/HICH_VOLTAGE.dmi'
+	icon = 'icons/obj/HICH_VOLTAGE.dmi'
 	icon_state = "cable_part"
 
 /obj/electro/cable/Del()

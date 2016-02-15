@@ -9,7 +9,7 @@ var/global/TRASHWAGEN_NET = 0//
 	var/zLevel = 0
 
 /obj/machinery/trash/pipe
-	icon = 'icons/trash.dmi'
+	icon = 'icons/obj/trash.dmi'
 	name = "pipe"
 	icon_state = "pipe"
 	density = 0
