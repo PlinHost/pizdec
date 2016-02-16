@@ -8,7 +8,7 @@ var/global/datum/atmos_net/a_net = new()
 	var/nitrogen = 0
 	var/plasma = 0
 	var/list/datum/reagents/chemical = list()
-	icon = 'icons/atmos.dmi'
+	icon = 'icons/obj/atmos.dmi'
 	density = 1
 
 /obj/machinery/portable_atmospherics
@@ -16,7 +16,7 @@ var/global/datum/atmos_net/a_net = new()
 	var/nitrogen = 0
 	var/plasma = 0
 	var/list/datum/reagents/chemical = list()
-	icon = 'icons/atmos.dmi'
+	icon = 'icons/obj/atmos.dmi'
 	density = 1
 
 	var/atmosnet = 0 //трубосети, нужны, чтобы создавать независимые друг от друга атмосокоммуникации
@@ -24,7 +24,7 @@ var/global/datum/atmos_net/a_net = new()
 	var/zLevel = 0
 
 /obj/machinery/lighter
-	icon = 'icons/atmos.dmi'
+	icon = 'icons/obj/atmos.dmi'
 	density = 0
 	icon_state = "lighter"
 

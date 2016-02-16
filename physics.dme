@@ -56,5 +56,6 @@
 #include "code\trash\main.dm"
 #include "code\turfs\main.dm"
 #include "code\waves\main.dm"
+#include "interface\interface.dmf"
 #include "map\my_map.dmm"
 // END_INCLUDE

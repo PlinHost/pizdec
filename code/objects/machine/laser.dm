@@ -4,7 +4,7 @@
 #define ADVANCE_LASER_POINT 0.25
 
 /obj/machinery/laser
-	icon = 'icons/shaitan_machine.dmi'
+	icon = 'icons/obj/shaitan_machine.dmi'
 	icon_state = "laser"
 
 	act()
@@ -35,7 +35,7 @@
 			B.fly()
 
 /obj/beam
-	icon = 'icons/shaitan_machine.dmi'
+	icon = 'icons/obj/shaitan_machine.dmi'
 	icon_state = "beam"
 	var/brute_damage = 0
 	var/burn_damage = 20

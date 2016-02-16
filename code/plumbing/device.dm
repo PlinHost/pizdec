@@ -5,7 +5,7 @@ var/global/datum/plumbing_net/p_net = new()
 
 /obj/machinery/plumbing
 	var/water = 0
-	icon = 'icons/plumbing.dmi'
+	icon = 'icons/obj/plumbing.dmi'
 	density = 1
 
 /obj/machinery/plumbing/canister

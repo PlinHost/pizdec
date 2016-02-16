@@ -8,7 +8,7 @@ var/list/global/machines = list()
 
 /obj/machinery/recharger
 	name = "recharger"
-	icon = 'icons/shaitan_machine.dmi'
+	icon = 'icons/obj/shaitan_machine.dmi'
 	icon_state = "recharger"
 	need_amperage = 35
 	on = 0
@@ -22,7 +22,7 @@ var/list/global/machines = list()
 
 /obj/machinery/light
 	name = "light"
-	icon = 'icons/light.dmi'
+	icon = 'icons/obj/light.dmi'
 	icon_state = "light"
 	luminosity = 0
 	layer = 4
@@ -50,7 +50,6 @@ var/list/global/machines = list()
 	process()
 
 /obj/machinery/light/check()
-	sleep(1)
 	if(on == 1)
 		luminosity = 5
 		if(pam_pam == 0)
@@ -61,7 +60,6 @@ var/list/global/machines = list()
 			luminosity = 0
 			dark()
 			pam_pam = 0
-	sleep(1)
 
 /obj/machinery/proc/check()
 
@@ -82,7 +80,7 @@ var/list/global/machines = list()
 				if(S.power > 0)
 					S.power -= 1
 
-					if(istype(src, /obj/machinery/light) || istype(src, /obj/machinery/airlock) || istype(src, /obj/machinery/firedoor) || istype(src, /obj/machinery/computer))
+					if(istype(src, /obj/machinery/light) || istype(src, /obj/machinery/door) || istype(src, /obj/machinery/firedoor) || istype(src, /obj/machinery/computer))
 						on = 1
 				else
 					on = 0
@@ -93,7 +91,7 @@ var/list/global/machines = list()
 ////////////////////////////////////////////////////////////
 
 /obj/machinery/computer
-	icon = 'icons/computer.dmi'
+	icon = 'icons/obj/computer.dmi'
 	icon_state = "computer"
 	name = "computer"
 	use_power = 1
