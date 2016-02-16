@@ -4,7 +4,7 @@
 #define SHOES_LAYER 26
 
 /obj/item/clothing
-	icon = 'icons/obj/clothes.dmi'
+	//icon = 'icons/obj/clothes.dmi'
 
 
 //// бмовл ////
@@ -54,7 +54,7 @@
 	layer = SHOES_LAYER
 
 /obj/item/clothing/shoes/BLACK
-	name = "black shoes"
+	name = "black_shoes"
 	icon_state = "bl"
 
 /obj/item/clothing/shoes/COOL

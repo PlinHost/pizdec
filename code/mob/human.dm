@@ -350,7 +350,6 @@ client
 				overlays += H
 
 		if(usr.client.head_items.len > 0)
-
 			if(istype(usr.client.head_items[1],/obj/item/clothing/head/HELMET_SYN))
 				var/obj/item/body/head/HELMET_SYN/HS = new()
 				overlays -= HS

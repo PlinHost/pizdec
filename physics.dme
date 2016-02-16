@@ -31,6 +31,7 @@
 #include "code\mob\human.dm"
 #include "code\mob\item_attacks.dm"
 #include "code\mob\life.dm"
+#include "code\mob\new_clothing.dm"
 #include "code\mob\new_hud.dm"
 #include "code\mob\new_interact.dm"
 #include "code\mob\organs.dm"

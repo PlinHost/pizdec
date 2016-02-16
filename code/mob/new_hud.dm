@@ -3,7 +3,7 @@
 
 obj
 	screen
-		layer = 28
+		layer = 25
 		icon = 'icons/screen.dmi'
 		icon_state = "screen"
 		var/active = 0
@@ -230,9 +230,13 @@ obj
 				if(usr.client.uniform_items.len == 0)
 					if(istype(I,/obj/item/clothing/uniform))
 
-						usr.overlays += I
+						I.wear(usr)
 						usr.client.uniform_items += I
-						usr.client.U.overlays += I
+
+						var/cloth = I.type
+						cloth = new cloth()
+
+						usr.client.U.overlays += cloth
 
 						if(usr.client.my_hand_active == "right")
 							usr.client.rhand_items -= I
@@ -296,20 +300,17 @@ obj
 				screen_loc="1,0"
 				C.screen+=src
 
-			act_by_item(var/obj/item/clothing/uniform/I)
+			act_by_item(var/obj/item/clothing/I)
 				if(usr.client.foot_items.len == 0)
 					if(istype(I,/obj/item/clothing/shoes))
 
-						if(istype(I, /obj/item/clothing/shoes/BLACK))
-							var/obj/item/body/shoes/BLACK/H = new
-							usr.overlays += H
+						I.wear(usr)
 
-						if(istype(I, /obj/item/clothing/shoes/COOL))
-							var/obj/item/body/shoes/COOL/H = new
-							usr.overlays += H
+						var/cloth = I.type
+						cloth = new cloth()
 
 						usr.client.foot_items += I
-						usr.client.F.overlays += I
+						usr.client.F.overlays += cloth
 
 						if(usr.client.my_hand_active == "right")
 							usr.client.rhand_items -= I
@@ -361,20 +362,15 @@ obj
 				C.screen+=src
 
 
-			act_by_item(var/obj/item/clothing/uniform/I)
+			act_by_item(var/obj/item/clothing/I)
 				if(usr.client.head_items.len == 0)
 					if(istype(I,/obj/item/clothing/head))
 
-						if(istype(I, /obj/item/clothing/head/HELMET))
-							var/obj/item/body/head/HELMET/H = new
-							usr.overlays += H
-
-						if(istype(I, /obj/item/clothing/head/HELMET_SYN))
-							var/obj/item/body/head/HELMET_SYN/H = new
-							usr.overlays += H
-
+						I.wear(usr)
+						var/cloth = I.type
+						cloth = new cloth()
 						usr.client.head_items += I
-						usr.client.H.overlays += I
+						usr.client.H.overlays += cloth
 
 						if(usr.client.my_hand_active == "right")
 							usr.client.rhand_items -= I
@@ -429,9 +425,13 @@ obj
 				if(usr.client.clothing_items.len == 0)
 					if(istype(I,/obj/item/clothing/suit))
 
-						usr.overlays += I
+						I.wear(usr)
+
+						var/cloth = I.type
+						cloth = new cloth()
+
 						usr.client.clothing_items += I
-						usr.client.C.overlays += I
+						usr.client.C.overlays += cloth
 
 						if(usr.client.my_hand_active == "right")
 							usr.client.rhand_items -= I
