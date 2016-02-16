@@ -35,7 +35,6 @@
 #include "code\mob\new_interact.dm"
 #include "code\mob\organs.dm"
 #include "code\mob\say.dm"
-#include "code\mob\shit.dm"
 #include "code\objects\items.dm"
 #include "code\objects\machine.dm"
 #include "code\objects\medical.dm"
@@ -57,5 +56,6 @@
 #include "code\trash\main.dm"
 #include "code\turfs\main.dm"
 #include "code\waves\main.dm"
+#include "interface\interface.dmf"
 #include "map\my_map.dmm"
 // END_INCLUDE

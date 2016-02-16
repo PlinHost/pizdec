@@ -9,7 +9,7 @@ var/global/WATERWAGEN_NET = 0//
 	var/list/datum/reagents/chemical = list()
 
 /obj/machinery/plumbing/pipe
-	icon = 'icons/plumbing.dmi'
+	icon = 'icons/obj/plumbing.dmi'
 	name = "pipe"
 	icon_state = "pipe"
 	density = 0

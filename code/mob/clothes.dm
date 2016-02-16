@@ -4,7 +4,8 @@
 #define SHOES_LAYER 26
 
 /obj/item/clothing
-	icon = 'icons/clothes.dmi'
+	icon = 'icons/obj/clothes.dmi'
+
 
 //// бмовл ////
 
@@ -63,7 +64,7 @@
 //ON BODY, BITCH!
 
 /obj/item/body
-	icon = 'icons/clothes.dmi'
+	icon = 'icons/obj/clothes.dmi'
 
 /obj/item/body/head
 	layer = HEAD_LAYER

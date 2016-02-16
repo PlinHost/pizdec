@@ -7,7 +7,7 @@ var/global/list/ultraboy = list()
 
 /obj/effect/fire
 	name = "fire"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "fire"
 
 	act_by_item(var/obj/item/I)
@@ -18,14 +18,14 @@ var/global/list/ultraboy = list()
 
 /obj/effect/explode
 	name = "explode"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "explode"
 	var/destroy = 0
 	var/EXPLODE = 0
 
 /obj/start
 	name = "start"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "start"
 	layer = 7
 
@@ -51,25 +51,25 @@ var/global/list/ultraboy = list()
 
 /obj/prof/ass
 	name = "start"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
 	layer = 7
 
 /obj/prof/hunt
 	name = "start"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
 	layer = 7
 
 /obj/prof/lesorub
 	name = "start"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
 	layer = 7
 
 /obj/prof/ultraboy
 	name = "start"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
 	layer = 7
 
@@ -91,7 +91,7 @@ var/global/list/ultraboy = list()
 
 /obj/effect/smoke
 	name = "smoke"
-	icon = 'icons/effects.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "smoke"
 	opacity = 1
 

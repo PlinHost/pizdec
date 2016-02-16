@@ -97,7 +97,7 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 		amount -= amount_new
 
 /obj/item/unlimited_reagent
-	icon = 'icons/main_items.dmi'
+	icon = 'icons/obj/main_items.dmi'
 	icon_state = "magic"
 	var/reag_type = /reagent/water
 
