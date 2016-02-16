@@ -35,6 +35,7 @@
 #include "code\mob\new_interact.dm"
 #include "code\mob\organs.dm"
 #include "code\mob\say.dm"
+#include "code\mob\shit.dm"
 #include "code\objects\items.dm"
 #include "code\objects\machine.dm"
 #include "code\objects\medical.dm"
