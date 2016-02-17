@@ -95,6 +95,10 @@
 	typer = "Melts"
 	weight = 70
 
+/turf/simulated/wall/r_wall
+	MAXTEMP = 5000
+	icon_state = "r_wall"
+
 /turf/simulated/wall/shuttle
 	icon_state = "shuttle"
 

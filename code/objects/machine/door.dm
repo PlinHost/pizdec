@@ -1,7 +1,7 @@
 var/global/DOOR_ID = 1
 var/global/list/doors = list()
 
-/obj/machinery/airlock
+/obj/machinery/door/airlock
 	name = "door"
 	icon = 'icons/obj/door.dmi'
 	icon_state = "door_close"
@@ -15,7 +15,7 @@ var/global/list/doors = list()
 	need_amperage = 20
 	var/id
 
-/obj/machinery/airlock/New()
+/obj/machinery/door/airlock/New()
 	id = DOOR_ID
 	DOOR_ID += 1
 	doors += src
@@ -49,7 +49,7 @@ var/global/list/doors = list()
 			opacity = 0
 			pass_gas = 1
 
-/obj/machinery/airlock/act()
+/obj/machinery/door/airlock/act()
 	world << "[powernet]"
 	if(on == 1)
 		if(close == 1)
@@ -67,14 +67,14 @@ var/global/list/doors = list()
 	else
 		usr << "Дверь обeсточена"
 
-/obj/machinery/airlock/proc/open()
+/obj/machinery/door/airlock/proc/open()
 	icon_state = "door_open"
 	close = 0
 	density = 0
 	opacity = 0
 	pass_gas = 1
 
-/obj/machinery/airlock/proc/close()
+/obj/machinery/door/airlock/proc/close()
 	icon_state = "door_close"
 	close = 1
 	density = 1
