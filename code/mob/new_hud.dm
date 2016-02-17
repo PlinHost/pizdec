@@ -250,8 +250,9 @@ obj
 						return
 
 			proc/undress_my_uniform_baby()
+				var/obj/item/clothing/I = usr.client.uniform_items[1]
+				I.undress(usr)
 				usr.client.U.overlays.Cut()
-				usr.overlays -= usr.client.uniform_items[1]
 
 			proc/add_to_rhand()
 
@@ -264,17 +265,7 @@ obj
 				usr.client.lhand_items += usr.client.uniform_items[1]
 
 			act()
-				if(istype(usr,/mob/human))
-					var/mob/human/H = usr
-					if(H.lying == 0)
-						undress_my_uniform_baby()
-						if(usr.client.my_hand_active == "left")
-							add_to_lhand()
-
-
-						if(usr.client.my_hand_active == "right")
-							add_to_rhand()
-
+				usr.client.U.undress_my_uniform_baby()
 
 		mask
 			icon_state = "mask"
@@ -324,14 +315,9 @@ obj
 						return
 
 			proc/undress_my_uniform_baby()
+				var/obj/item/clothing/I = usr.client.foot_items[1]
+				I.undress(usr)
 				usr.client.F.overlays.Cut()
-				if(istype(usr.client.foot_items[1], /obj/item/clothing/shoes/BLACK))
-					var/obj/item/body/shoes/BLACK/H = new
-					usr.overlays -= H
-
-				if(istype(usr.client.foot_items[1], /obj/item/clothing/shoes/COOL))
-					var/obj/item/body/shoes/COOL/H = new
-					usr.overlays -= H
 
 			proc/add_to_rhand()
 
@@ -344,16 +330,7 @@ obj
 				usr.client.lhand_items += usr.client.foot_items[1]
 
 			act()
-				if(istype(usr,/mob/human))
-					var/mob/human/H = usr
-					if(H.lying == 0)
-						undress_my_uniform_baby()
-						if(usr.client.my_hand_active == "left")
-							add_to_lhand()
-
-
-						if(usr.client.my_hand_active == "right")
-							add_to_rhand()
+				usr.client.F.undress_my_uniform_baby()
 
 		head
 			icon_state = "head"
@@ -384,14 +361,10 @@ obj
 						return
 
 			proc/undress_my_uniform_baby()
+				var/obj/item/clothing/I = usr.client.head_items[1]
+				I.undress(usr)
 				usr.client.H.overlays.Cut()
-				if(istype(usr.client.head_items[1], /obj/item/clothing/head/HELMET))
-					var/obj/item/body/head/HELMET/H = new
-					usr.overlays -= H
 
-				if(istype(usr.client.head_items[1], /obj/item/clothing/head/HELMET_SYN))
-					var/obj/item/body/head/HELMET_SYN/H = new
-					usr.overlays -= H
 
 			proc/add_to_rhand()
 
@@ -404,16 +377,7 @@ obj
 				usr.client.lhand_items += usr.client.head_items[1]
 
 			act()
-				if(istype(usr,/mob/human))
-					var/mob/human/H = usr
-					if(H.lying == 0)
-						undress_my_uniform_baby()
-						if(usr.client.my_hand_active == "left")
-							add_to_lhand()
-
-
-						if(usr.client.my_hand_active == "right")
-							add_to_rhand()
+				usr.client.H.undress_my_uniform_baby()
 
 		clothing
 			icon_state = "clothes"
@@ -445,8 +409,9 @@ obj
 						return
 
 			proc/undress_my_uniform_baby()
+				var/obj/item/clothing/I = usr.client.clothing_items[1]
+				I.undress(usr)
 				usr.client.C.overlays.Cut()
-				usr.overlays -= usr.client.clothing_items[1]
 
 			proc/add_to_rhand()
 
@@ -459,16 +424,8 @@ obj
 				usr.client.lhand_items += usr.client.clothing_items[1]
 
 			act()
-				if(istype(usr,/mob/human))
-					var/mob/human/H = usr
-					if(H.lying == 0)
-						undress_my_uniform_baby()
-						if(usr.client.my_hand_active == "left")
-							add_to_lhand()
+				usr.client.C.undress_my_uniform_baby()
 
-
-						if(usr.client.my_hand_active == "right")
-							add_to_rhand()
 		act_intent
 			icon_state = "help"
 			New(client/C)
