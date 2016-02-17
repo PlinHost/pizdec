@@ -54,5 +54,14 @@
 				if(M.client.my_hand_active == "left")
 					M.client.lhand_items += src
 					M.client.L.overlays += src
-		lying_me()
+
+		lying_me(var/mob/human/M)
+			//icon = 'icons/obj/clothing_lying.dmi'
+			M.overlays -= src
 			icon = 'icons/obj/clothing_lying.dmi'
+			M.overlays += src
+
+		unlying_me(var/mob/human/M)
+			M.overlays -= src
+			icon = 'icons/obj/clothing_mob.dmi'
+			M.overlays += src

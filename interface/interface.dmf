@@ -113,9 +113,27 @@ menu "menu"
 		group = "size"
 		is-disabled = false
 		saved-params = "is-checked"
+	elem "icon16"
+		name = "&16x16"
+		command = ".winset \"mapwindow.map.icon-size=16\""
+		category = "&Icons"
+		is-checked = false
+		can-check = true
+		group = "size"
+		is-disabled = false
+		saved-params = "is-checked"
 	elem "icon32"
 		name = "&32x32"
 		command = ".winset \"mapwindow.map.icon-size=32\""
+		category = "&Icons"
+		is-checked = false
+		can-check = true
+		group = "size"
+		is-disabled = false
+		saved-params = "is-checked"
+	elem "icon48"
+		name = "&48x48"
+		command = ".winset \"mapwindow.map.icon-size=48\""
 		category = "&Icons"
 		is-checked = false
 		can-check = true
@@ -129,15 +147,6 @@ menu "menu"
 		is-checked = false
 		can-check = true
 		group = "size"
-		is-disabled = false
-		saved-params = "is-checked"
-	elem 
-		name = ""
-		command = ""
-		category = "&Icons"
-		is-checked = false
-		can-check = false
-		group = ""
 		is-disabled = false
 		saved-params = "is-checked"
 	elem "textmode"
