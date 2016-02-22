@@ -33,7 +33,6 @@
 	name = "simulated"
 	oxygen = 500 //500 газоединиц
 	nitrogen = 35
-	luminosity = 0
 
 	act_by_item(var/obj/item/I)
 		if(istype(I, /obj/item/unlimited_reagent))

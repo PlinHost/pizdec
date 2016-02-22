@@ -344,6 +344,7 @@ client
 
 	spawn while(1)
 		//if(src == usr)
+		sleep(1)
 		if(usr.client.ouch == 0)
 			S.volume = 0
 			usr << S
@@ -382,6 +383,8 @@ client
 			//var/larm = 0
 			//var/chest = 0
 			//var/head = 0
+
+		sleep(1)
 
 		if(usr.client.time_to_change == 1)
 			if(usr.client.mygender == 0 && usr.client.mymcolor != "chocolate")
@@ -471,7 +474,7 @@ mob/human/Move()
 
 		if(usr.client.r_int == "walk")
 			step_size = 32
-			see_in_night()
+			//see_in_night()
 		else
 			var/turf/T = src.loc
 			if(!(istype(T, /turf/simulated/floor/downbitch)) || !(istype(T, /turf/simulated/floor/upbitch)))

@@ -272,6 +272,8 @@ var/global/list/wires = list()
 					P.powernet = 0
 			del(src)
 
+		sleep(1)
+
 
 		if(dir == 2 || dir == 6 || dir == 10 || dir == 9 || dir == 5)
 

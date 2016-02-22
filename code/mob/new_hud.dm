@@ -3,7 +3,7 @@
 
 obj
 	screen
-		layer = 25
+		layer = 60
 		icon = 'icons/screen.dmi'
 		icon_state = "screen"
 		var/active = 0
@@ -16,7 +16,7 @@ obj
 		humanhead
 			icon_state = "head"
 			icon = 'big_screen.dmi'
-			layer = 25
+			layer = 60
 			New(client/C)
 				screen_loc="13,10"
 				C.screen+=src
@@ -34,7 +34,7 @@ obj
 		humanchest
 			icon_state = "chest"
 			icon = 'big_screen.dmi'
-			layer = 25
+			layer = 60
 			New(client/C)
 				screen_loc="13,10"
 				C.screen+=src
@@ -52,7 +52,7 @@ obj
 		humanright_leg
 			icon_state = "right_leg"
 			icon = 'big_screen.dmi'
-			layer = 25
+			layer = 60
 			New(client/C)
 				screen_loc="13,10"
 				C.screen+=src
@@ -70,7 +70,7 @@ obj
 		humanleft_leg
 			icon_state = "left_leg"
 			icon = 'big_screen.dmi'
-			layer = 25
+			layer = 60
 			New(client/C)
 				screen_loc="13,10"
 				C.screen+=src
@@ -88,7 +88,7 @@ obj
 		humanleft_arm
 			icon_state = "left_arm"
 			icon = 'big_screen.dmi'
-			layer = 25
+			layer = 60
 			New(client/C)
 				screen_loc="13,10"
 				C.screen+=src
@@ -107,7 +107,7 @@ obj
 		humanright_arm
 			icon_state = "right_arm"
 			icon = 'big_screen.dmi'
-			layer = 25
+			layer = 60
 			New(client/C)
 				screen_loc="13,10"
 				C.screen+=src
@@ -125,7 +125,7 @@ obj
 		humangroin
 			icon_state = "groin"
 			icon = 'big_screen.dmi'
-			layer = 25
+			layer = 60
 			New(client/C)
 				screen_loc="13,10"
 				C.screen+=src
@@ -141,14 +141,14 @@ obj
 				usr.client.HLA.icon_state = "left_arm"
 		shit
 			icon_state = "shit"
-			layer = 23
+			layer = 22
 			New(client/C)
 				screen_loc="1,-1 to 13,-1"
 				C.screen+=src
 
 		shit2
 			icon_state = "shit2"
-			layer = 23
+			layer = 22
 			New(client/C)
 				screen_loc="13,-1 to 13,10"
 				C.screen+=src
@@ -161,7 +161,7 @@ obj
 				C.screen+=src
 
 		lhand
-
+			layer = 23
 			icon_state = "lhand_active"
 			active = 1
 			New(client/C)
@@ -186,6 +186,7 @@ obj
 						return
 
 		rhand
+			layer = 23
 			icon_state = "rhand"
 			New(client/C)
 				screen_loc="8,-1"
@@ -268,24 +269,28 @@ obj
 				usr.client.U.undress_my_uniform_baby()
 
 		mask
+			layer = 23
 			icon_state = "mask"
 			New(client/C)
 				screen_loc="3,-1"
 				C.screen+=src
 
 		ear
+			layer = 23
 			icon_state = "ear"
 			New(client/C)
 				screen_loc="2,-1"
 				C.screen+=src
 
 		gloves
+			layer = 23
 			icon_state = "gloves"
 			New(client/C)
 				screen_loc="1,-1"
 				C.screen+=src
 
 		foot
+			layer = 23
 			icon_state = "foot"
 			New(client/C)
 				screen_loc="1,0"
@@ -333,6 +338,7 @@ obj
 				usr.client.F.undress_my_uniform_baby()
 
 		head
+			layer = 23
 			icon_state = "head"
 			New(client/C)
 				screen_loc="2,0"
@@ -380,6 +386,7 @@ obj
 				usr.client.H.undress_my_uniform_baby()
 
 		clothing
+			layer = 23
 			icon_state = "clothes"
 			New(client/C)
 				screen_loc="5,-1"

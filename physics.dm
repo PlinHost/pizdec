@@ -7,7 +7,7 @@ world
 	fps = 25		// 25 frames per second
 	icon_size = 32	// 32x32 icon size by default
 
-	view = 6		// show up to 6 tiles outward from center (13x13 view)
+	view = 7		// show up to 6 tiles outward from center (13x13 view)
 	hub = "S_Sting.Physics"	//Кей.Название, реально похуй что сюда писать
 
 
@@ -38,6 +38,7 @@ world
 		new /datum/anal_controller()
 		new /datum/power_master()
 		sleep(1)
+		sd_SetDarkIcon('icons/effects/SD_lum.dmi',11)
 		world << "\blue <b>Инициализаци&#255;, подождите...</b>"
 		sleep(5)
 		new /datum/Kate()
@@ -47,6 +48,7 @@ world
 /area
 	icon = 'icons/decoration.dmi'
 	icon_state = "area"
+	mouse_opacity = 0
 
 /mob
 	icon = 'icons/decoration.dmi'

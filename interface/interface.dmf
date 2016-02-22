@@ -228,15 +228,15 @@ window "mainwindow"
 		lock = none
 	elem "input"
 		type = INPUT
-		pos = 3,420
-		size = 517x20
+		pos = 3,415
+		size = 517x25
 		anchor1 = 0,100
 		anchor2 = 100,100
 		font-family = ""
-		font-size = 0
+		font-size = 12
 		font-style = ""
 		text-color = #000000
-		background-color = #d3b5b5
+		background-color = #c0c0c0
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
@@ -252,8 +252,8 @@ window "mainwindow"
 		no-command = false
 	elem "saybutton"
 		type = BUTTON
-		pos = 520,420
-		size = 40x20
+		pos = 520,416
+		size = 40x24
 		anchor1 = 100,100
 		anchor2 = none
 		font-family = ""
@@ -280,8 +280,8 @@ window "mainwindow"
 		button-type = pushbox
 	elem "macrobutton"
 		type = BUTTON
-		pos = 560,420
-		size = 30x20
+		pos = 560,416
+		size = 30x24
 		anchor1 = 100,100
 		anchor2 = none
 		font-family = ""
@@ -308,8 +308,8 @@ window "mainwindow"
 		button-type = pushbox
 	elem "hostb"
 		type = BUTTON
-		pos = 590,420
-		size = 47x20
+		pos = 590,415
+		size = 47x25
 		anchor1 = 100,100
 		anchor2 = none
 		font-family = ""
@@ -338,7 +338,7 @@ window "mainwindow"
 window "mapwindow"
 	elem "mapwindow"
 		type = MAIN
-		pos = none
+		pos = 281,-40
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
@@ -378,7 +378,7 @@ window "mapwindow"
 	elem "map"
 		type = MAP
 		pos = 0,0
-		size = 0x0
+		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = ""
@@ -406,7 +406,7 @@ window "mapwindow"
 window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
-		pos = none
+		pos = 281,-40
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
@@ -446,14 +446,14 @@ window "outputwindow"
 	elem "output"
 		type = OUTPUT
 		pos = 0,0
-		size = 0x0
+		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		font-family = ""
+		font-family = "Verdana"
 		font-size = 0
 		font-style = ""
 		text-color = #000000
-		background-color = #ffffff
+		background-color = none
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
@@ -473,7 +473,7 @@ window "outputwindow"
 window "rpane"
 	elem "rpane"
 		type = MAIN
-		pos = none
+		pos = 281,-40
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
@@ -513,7 +513,7 @@ window "rpane"
 	elem "rpanewindow"
 		type = CHILD
 		pos = 0,0
-		size = 0x0
+		size = 640x499
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = ""
@@ -545,7 +545,7 @@ window "rpane"
 		font-family = ""
 		font-size = 0
 		font-style = ""
-		text-color = none
+		text-color = #000000
 		background-color = none
 		is-visible = false
 		is-disabled = false
@@ -573,7 +573,7 @@ window "rpane"
 		font-family = ""
 		font-size = 0
 		font-style = ""
-		text-color = none
+		text-color = #000000
 		background-color = none
 		is-visible = false
 		is-disabled = false
@@ -601,7 +601,7 @@ window "rpane"
 		font-family = ""
 		font-size = 0
 		font-style = ""
-		text-color = none
+		text-color = #000000
 		background-color = none
 		is-visible = false
 		is-disabled = false
@@ -624,7 +624,7 @@ window "rpane"
 window "browserwindow"
 	elem "browserwindow"
 		type = MAIN
-		pos = none
+		pos = 281,-40
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
@@ -664,14 +664,14 @@ window "browserwindow"
 	elem "browser"
 		type = BROWSER
 		pos = 0,0
-		size = 0x0
+		size = 640x499
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = ""
 		font-size = 0
 		font-style = ""
 		text-color = #000000
-		background-color = #ffffff
+		background-color = none
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
@@ -691,8 +691,8 @@ window "browserwindow"
 window "infowindow"
 	elem "infowindow"
 		type = MAIN
-		pos = none
-		size = 640x480
+		pos = 281,-40
+		size = 612x480
 		anchor1 = none
 		anchor2 = none
 		font-family = ""
@@ -731,14 +731,14 @@ window "infowindow"
 	elem "info"
 		type = INFO
 		pos = 0,0
-		size = 0x0
+		size = 612x499
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = ""
 		font-size = 0
 		font-style = ""
 		text-color = #000000
-		background-color = #ffffff
+		background-color = none
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
@@ -751,7 +751,7 @@ window "infowindow"
 		highlight-color = #00aa00
 		tab-text-color = #000000
 		tab-background-color = none
-		tab-font-family = ""
+		tab-font-family = "DejaVu Sans"
 		tab-font-size = 0
 		tab-font-style = ""
 		allow-html = false

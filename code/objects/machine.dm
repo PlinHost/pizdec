@@ -50,15 +50,18 @@ var/list/global/machines = list()
 	process()
 
 /obj/machinery/light/check()
+	sleep(1)
 	if(on == 1)
 		luminosity = 5
 		if(pam_pam == 0)
-			lumina()
+			//lumina()
+			sd_SetLuminosity(5)
+			sd_ApplyLum()
 			pam_pam = 1
 	else
 		if(pam_pam == 1)
-			luminosity = 0
-			dark()
+			sd_StripLum()
+			//dark()
 			pam_pam = 0
 
 /obj/machinery/proc/check()
@@ -66,8 +69,9 @@ var/list/global/machines = list()
 /obj/machinery/process()
 	machines += src
 	spawn while(1)
+		sleep(2)
 		check()
-		sleep(4)
+		sleep(2)
 		if(use_power == 1)
 			if(amperage >= need_amperage && marker == 0)
 				on = 1

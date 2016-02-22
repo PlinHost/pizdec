@@ -85,7 +85,6 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 		RK.move_reagent(RK.amount, SR)
 		SR.icon = RK.icon
 		SR.icon_state = RK.state
-		SR.color = RK.color
 
 /reagent/proc/move_reagent(var/amount_new, var/atom/M)
 	if(amount_new >= amount)
@@ -138,24 +137,3 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 
 		if(shit == 0)
 			del(src)
-
-	act_self()
-		var/curcraft
-		for(var/reagent/R in contents)
-			if(R.amount > 80 )
-				curcraft += "<br><a href='?reag;my_craft=/obj/structure/stool;'>стул</a>"
-				curcraft += "<br><a href='?reag;my_craft=/obj/item/weapon/stunbaton;'>дубинка</a>"
-
-		var/my_text
-		my_text = {"
-		<html>
-		<head><title>КРАФТ</title></head>
-		<body>
-		КРАФТ:
-		[curcraft]
-
-		</body>
-		</html>
-		"}
-
-		usr << browse(my_text,"window=my_text;can_close=0")

@@ -26,7 +26,7 @@
 #include "code\chemistry\New.dm"
 #include "code\Kate_core\main.dm"
 #include "code\light\area.dm"
-#include "code\light\main.dm"
+#include "code\light\PORTING\SD_DYNAMIC.dm"
 #include "code\mob\clothes.dm"
 #include "code\mob\human.dm"
 #include "code\mob\item_attacks.dm"

@@ -54,13 +54,8 @@
 		//if(LG.on == 1)
 		//	LG.lumina()
 
-/atom/proc/lumina()
-	var/turf/simulated/floor/Q = get_step(src, NORTH)
-	var/turf/simulated/floor/W = get_step(src, SOUTH)
-	var/turf/simulated/floor/E = get_step(src, WEST)
-	var/turf/simulated/floor/R = get_step(src, EAST)
-	var/turf/simulated/floor/T = src.loc
 
+/atom/proc/one_lumen(var/turf/simulated/floor/Q)
 	for(var/light/L in Q)
 		L.icon_state = "1"
 		for(var/light/LI in range(1,Q))
@@ -84,89 +79,23 @@
 												LIGHT4.icon_state = "6"
 
 
-	for(var/light/L in W)
-		L.icon_state = "1"
-		for(var/light/LI in range(1,W))
-			if(LI.icon_state != "1")
-				LI.icon_state = "2"
-				var/turf/A = LI.loc
-				for(var/light/LIGHT in range(1,A))
-					if(LIGHT.icon_state != "1" && LIGHT.icon_state != "2")
-						LIGHT.icon_state = "3"
-						var/turf/B = LIGHT.loc
-						for(var/light/LIGHT2 in range(1,B))
-							if(LIGHT2.icon_state != "1" && LIGHT2.icon_state != "2" && LIGHT2.icon_state != "3")
-								LIGHT2.icon_state = "4"
-								var/turf/C = LIGHT2.loc
-								for(var/light/LIGHT3 in range(1,C))
-									if(LIGHT3.icon_state != "1" && LIGHT3.icon_state != "2" && LIGHT3.icon_state != "3" && LIGHT3.icon_state != "4")
-										LIGHT3.icon_state = "5"
-										var/turf/D = LIGHT3.loc
-										for(var/light/LIGHT4 in range(1,D))
-											if(LIGHT4.icon_state != "1" && LIGHT4.icon_state != "2" && LIGHT4.icon_state != "3" && LIGHT4.icon_state != "4" && LIGHT4.icon_state != "5")
-												LIGHT4.icon_state = "6"
-	for(var/light/L in E)
-		L.icon_state = "1"
-		for(var/light/LI in range(1,E))
-			if(LI.icon_state != "1")
-				LI.icon_state = "2"
-				var/turf/A = LI.loc
-				for(var/light/LIGHT in range(1,A))
-					if(LIGHT.icon_state != "1" && LIGHT.icon_state != "2")
-						LIGHT.icon_state = "3"
-						var/turf/B = LIGHT.loc
-						for(var/light/LIGHT2 in range(1,B))
-							if(LIGHT2.icon_state != "1" && LIGHT2.icon_state != "2" && LIGHT2.icon_state != "3")
-								LIGHT2.icon_state = "4"
-								var/turf/C = LIGHT2.loc
-								for(var/light/LIGHT3 in range(1,C))
-									if(LIGHT3.icon_state != "1" && LIGHT3.icon_state != "2" && LIGHT3.icon_state != "3" && LIGHT3.icon_state != "4")
-										LIGHT3.icon_state = "5"
-										var/turf/D = LIGHT3.loc
-										for(var/light/LIGHT4 in range(1,D))
-											if(LIGHT4.icon_state != "1" && LIGHT4.icon_state != "2" && LIGHT4.icon_state != "3" && LIGHT4.icon_state != "4" && LIGHT4.icon_state != "5")
-												LIGHT4.icon_state = "6"
-	for(var/light/L in R)
-		L.icon_state = "1"
-		for(var/light/LI in range(1,R))
-			if(LI.icon_state != "1")
-				LI.icon_state = "2"
-				var/turf/A = LI.loc
-				for(var/light/LIGHT in range(1,A))
-					if(LIGHT.icon_state != "1" && LIGHT.icon_state != "2")
-						LIGHT.icon_state = "3"
-						var/turf/B = LIGHT.loc
-						for(var/light/LIGHT2 in range(1,B))
-							if(LIGHT2.icon_state != "1" && LIGHT2.icon_state != "2" && LIGHT2.icon_state != "3")
-								LIGHT2.icon_state = "4"
-								var/turf/C = LIGHT2.loc
-								for(var/light/LIGHT3 in range(1,C))
-									if(LIGHT3.icon_state != "1" && LIGHT3.icon_state != "2" && LIGHT3.icon_state != "3" && LIGHT3.icon_state != "4")
-										LIGHT3.icon_state = "5"
-										var/turf/D = LIGHT3.loc
-										for(var/light/LIGHT4 in range(1,D))
-											if(LIGHT4.icon_state != "1" && LIGHT4.icon_state != "2" && LIGHT4.icon_state != "3" && LIGHT4.icon_state != "4" && LIGHT4.icon_state != "5")
-												LIGHT4.icon_state = "6"
-	for(var/light/L in T)
-		L.icon_state = "1"
-		for(var/light/LI in range(1,T))
-			if(LI.icon_state != "1")
-				LI.icon_state = "2"
-				var/turf/A = LI.loc
-				for(var/light/LIGHT in range(1,A))
-					if(LIGHT.icon_state != "1" && LIGHT.icon_state != "2")
-						LIGHT.icon_state = "3"
-						var/turf/B = LIGHT.loc
-						for(var/light/LIGHT2 in range(1,B))
-							if(LIGHT2.icon_state != "1" && LIGHT2.icon_state != "2" && LIGHT2.icon_state != "3")
-								LIGHT2.icon_state = "4"
-								var/turf/C = LIGHT2.loc
-								for(var/light/LIGHT3 in range(1,C))
-									if(LIGHT3.icon_state != "1" && LIGHT3.icon_state != "2" && LIGHT3.icon_state != "3" && LIGHT3.icon_state != "4")
-										LIGHT3.icon_state = "5"
-										var/turf/D = LIGHT3.loc
-										for(var/light/LIGHT4 in range(1,D))
-											if(LIGHT4.icon_state != "1" && LIGHT4.icon_state != "2" && LIGHT4.icon_state != "3" && LIGHT4.icon_state != "4" && LIGHT4.icon_state != "5")
-												LIGHT4.icon_state = "6"
+/atom/proc/lumina()
+	sleep(1)
+	var/turf/simulated/floor/Q = get_step(src, NORTH)
+	var/turf/simulated/floor/W = get_step(src, SOUTH)
+	var/turf/simulated/floor/E = get_step(src, WEST)
+	var/turf/simulated/floor/R = get_step(src, EAST)
+	var/turf/simulated/floor/T = src.loc
+
+	one_lumen(Q)
+
+	one_lumen(W)
+
+	one_lumen(E)
+
+	one_lumen(R)
+
+	one_lumen(T)
+
 	for(var/light/L in T)
 		L.icon_state = "1"

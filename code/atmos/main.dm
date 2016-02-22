@@ -12,6 +12,7 @@ var/global/list/turf/simulated/floor/FUCK = list()
 	nitrogen = 0
 	plasma = 0
 	temperature = -100
+	luminosity = 1
 
 /atom
 	var/pass_gas = 1
@@ -42,6 +43,7 @@ var/global/list/turf/simulated/floor/FUCK = list()
 
 
 /turf/simulated/floor/proc/one_unit(var/fuck)
+	sleep(1)
 	var/bitch = 0
 	var/dick = 1
 	var/bick = 0
@@ -141,7 +143,6 @@ var/global/list/turf/simulated/floor/FUCK = list()
 	spawn while(1)
 		sleep(2)
 		turfs_bitchs()
-		sleep(2)
 
 /datum/anal_controller/proc/turfs_bitchs()
 	sleep(1)
@@ -150,10 +151,11 @@ var/global/list/turf/simulated/floor/FUCK = list()
 		F.one_unit(EAST)
 		F.one_unit(SOUTH)
 		F.one_unit(NORTH)
+	sleep(1)
 
 
 /turf/simulated/floor/process()
-	spawn while(1)
+	spawn while(2)
 		sleep(4)
 		cur_gas = nitrogen + plasma + oxygen + water
 		//if(cur_gas > gas_max)
@@ -186,8 +188,9 @@ mob/verb/block_test()
 //	my_val()
 //	my_LIGHT_state = 1
 	world << "nitrogen [nitrogen]; plasma [plasma]; oxygen [oxygen]; temperature [temperature]; blood [blood] ; water [water]"
+	usr << "brightness:[sd_lumcount]"
 
 /turf/simulated/floor/New()
 	FUCK += src
-	fuck_light()
+	//fuck_light()
 	process()
