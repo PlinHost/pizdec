@@ -18,7 +18,7 @@ obj
 			icon = 'big_screen.dmi'
 			layer = 60
 			New(client/C)
-				screen_loc="13,10"
+				screen_loc="14,14"
 				C.screen+=src
 
 			act()
@@ -36,7 +36,7 @@ obj
 			icon = 'big_screen.dmi'
 			layer = 60
 			New(client/C)
-				screen_loc="13,10"
+				screen_loc="14,14"
 				C.screen+=src
 
 			act()
@@ -54,7 +54,7 @@ obj
 			icon = 'big_screen.dmi'
 			layer = 60
 			New(client/C)
-				screen_loc="13,10"
+				screen_loc="14,14"
 				C.screen+=src
 
 			act()
@@ -72,7 +72,7 @@ obj
 			icon = 'big_screen.dmi'
 			layer = 60
 			New(client/C)
-				screen_loc="13,10"
+				screen_loc="14,14"
 				C.screen+=src
 
 			act()
@@ -90,7 +90,7 @@ obj
 			icon = 'big_screen.dmi'
 			layer = 60
 			New(client/C)
-				screen_loc="13,10"
+				screen_loc="14,14"
 				C.screen+=src
 
 			act()
@@ -109,7 +109,7 @@ obj
 			icon = 'big_screen.dmi'
 			layer = 60
 			New(client/C)
-				screen_loc="13,10"
+				screen_loc="14,14"
 				C.screen+=src
 
 			act()
@@ -127,7 +127,7 @@ obj
 			icon = 'big_screen.dmi'
 			layer = 60
 			New(client/C)
-				screen_loc="13,10"
+				screen_loc="14,14"
 				C.screen+=src
 
 			act()
@@ -143,21 +143,21 @@ obj
 			icon_state = "shit"
 			layer = 22
 			New(client/C)
-				screen_loc="1,-1 to 13,-1"
+				screen_loc="1,0 to 14,0"
 				C.screen+=src
 
 		shit2
 			icon_state = "shit2"
 			layer = 22
 			New(client/C)
-				screen_loc="13,-1 to 13,10"
+				screen_loc="14,0 to 14,15"
 				C.screen+=src
 
 		shit3
 			icon_state = "shit3"
 			layer = 27
 			New(client/C)
-				screen_loc="13,-1"
+				screen_loc="14,0"
 				C.screen+=src
 
 		lhand
@@ -165,7 +165,7 @@ obj
 			icon_state = "lhand_active"
 			active = 1
 			New(client/C)
-				screen_loc="7,-1"
+				screen_loc="7,0"
 				C.screen+=src
 			var/client/C
 
@@ -189,7 +189,7 @@ obj
 			layer = 23
 			icon_state = "rhand"
 			New(client/C)
-				screen_loc="8,-1"
+				screen_loc="8,0"
 				C.screen+=src
 			var/client/C
 
@@ -213,7 +213,7 @@ obj
 			icon_state = "drop"
 			var/mob/human/iam
 			New(client/C)
-				screen_loc="9,-1"
+				screen_loc="9,0"
 				C.screen+=src
 
 			Click()
@@ -223,7 +223,7 @@ obj
 		uniform
 			icon_state = "uniform"
 			New(client/C)
-				screen_loc="4,-1"
+				screen_loc="4,0"
 				C.screen+=src
 			var/client/C
 
@@ -234,9 +234,9 @@ obj
 						I.wear(usr)
 						usr.client.uniform_items += I
 
-						var/cloth = I.type
+						var/obj/cloth = I.type
 						cloth = new cloth()
-
+						cloth.layer = 60
 						usr.client.U.overlays += cloth
 
 						if(usr.client.my_hand_active == "right")
@@ -272,28 +272,28 @@ obj
 			layer = 23
 			icon_state = "mask"
 			New(client/C)
-				screen_loc="3,-1"
+				screen_loc="3,0"
 				C.screen+=src
 
 		ear
 			layer = 23
 			icon_state = "ear"
 			New(client/C)
-				screen_loc="2,-1"
+				screen_loc="2,0"
 				C.screen+=src
 
 		gloves
 			layer = 23
 			icon_state = "gloves"
 			New(client/C)
-				screen_loc="1,-1"
+				screen_loc="1,0"
 				C.screen+=src
 
 		foot
-			layer = 23
+			layer = 60
 			icon_state = "foot"
 			New(client/C)
-				screen_loc="1,0"
+				screen_loc="1,1"
 				C.screen+=src
 
 			act_by_item(var/obj/item/clothing/I)
@@ -302,8 +302,9 @@ obj
 
 						I.wear(usr)
 
-						var/cloth = I.type
+						var/obj/cloth = I.type
 						cloth = new cloth()
+						cloth.layer = 60
 
 						usr.client.foot_items += I
 						usr.client.F.overlays += cloth
@@ -338,10 +339,10 @@ obj
 				usr.client.F.undress_my_uniform_baby()
 
 		head
-			layer = 23
+			layer = 60
 			icon_state = "head"
 			New(client/C)
-				screen_loc="2,0"
+				screen_loc="2,1"
 				C.screen+=src
 
 
@@ -350,8 +351,10 @@ obj
 					if(istype(I,/obj/item/clothing/head))
 
 						I.wear(usr)
-						var/cloth = I.type
+						var/obj/cloth = I.type
 						cloth = new cloth()
+						cloth.layer = 60
+
 						usr.client.head_items += I
 						usr.client.H.overlays += cloth
 
@@ -389,7 +392,7 @@ obj
 			layer = 23
 			icon_state = "clothes"
 			New(client/C)
-				screen_loc="5,-1"
+				screen_loc="5,0"
 				C.screen+=src
 
 			act_by_item(var/obj/item/clothing/I)
@@ -398,8 +401,9 @@ obj
 
 						I.wear(usr)
 
-						var/cloth = I.type
+						var/obj/cloth = I.type
 						cloth = new cloth()
+						cloth.layer = 60
 
 						usr.client.clothing_items += I
 						usr.client.C.overlays += cloth
@@ -436,7 +440,7 @@ obj
 		act_intent
 			icon_state = "help"
 			New(client/C)
-				screen_loc="11,-1"
+				screen_loc="11,0"
 				C.screen+=src
 
 			act()
@@ -458,7 +462,7 @@ obj
 		run_intent
 			icon_state = "walk"
 			New(client/C)
-				screen_loc="12,-1"
+				screen_loc="13,0"
 				C.screen+=src
 
 			act()

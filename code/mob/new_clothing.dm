@@ -35,6 +35,7 @@
 /obj/item/clothing
 	icon = 'icons/obj/clothing.dmi'
 	var/icon_for_mob = 'icons/obj/clothing_mob.dmi'
+	var/old_layer = 0
 
 	proc
 		wear(var/mob/human/M)

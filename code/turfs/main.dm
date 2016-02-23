@@ -34,10 +34,10 @@
 	oxygen = 500 //500 газоединиц
 	nitrogen = 35
 
-	act_by_item(var/obj/item/I)
-		if(istype(I, /obj/item/unlimited_reagent))
-			var/obj/item/unlimited_reagent/R = I
-			R.spawn_me(src)
+	//act_by_item(var/obj/item/I)
+		//if(istype(I, /obj/item/unlimited_reagent))
+		//	var/obj/item/unlimited_reagent/R = I
+		//	R.spawn_me(src)
 
 
 /turf/simulated/wall

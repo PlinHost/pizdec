@@ -171,13 +171,4 @@
 				winshow(usr,"my_text",0)
 				V.myclick = 0
 
-		for(var/obj/item/other/solid_reagents/SR in usr.contents)
-			var/l = href_list["my_craft"]
-			l = new l()
-			var/atom/movable/A = l
-			A.color = SR.color
-			A.Move(usr.loc)
-			for(var/reagent/R2 in SR.contents)
-				R2.amount -= 80
-
 	//VENDING

@@ -242,7 +242,6 @@ client
 	var/max_pulse = 80
 	var/signal = 0
 	var/a_hole_in_the_ceiling = 0
-	var/list/datum/reagents/chemical = list()
 	var/reagents_max = 100
 	var/cur_val = 0
 	var/no_way_bro = 0
@@ -365,6 +364,13 @@ client
 
 		var/turf/T = locate(x,y,z)
 		sleep(0.5)
+
+		///***REAGENTS***///
+
+		if(reagents) reagents.metabolize(src)
+
+		///***REAGENTS***///
+
 
 		organ_damage_calculate()
 		for(var/obj/O in usr.contents)

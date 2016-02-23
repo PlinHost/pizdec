@@ -43,7 +43,6 @@ var/global/list/turf/simulated/floor/FUCK = list()
 
 
 /turf/simulated/floor/proc/one_unit(var/fuck)
-	sleep(1)
 	var/bitch = 0
 	var/dick = 1
 	var/bick = 0
@@ -145,7 +144,6 @@ var/global/list/turf/simulated/floor/FUCK = list()
 		turfs_bitchs()
 
 /datum/anal_controller/proc/turfs_bitchs()
-	sleep(1)
 	for(var/turf/simulated/floor/F in FUCK)
 		F.one_unit(WEST)
 		F.one_unit(EAST)
@@ -156,7 +154,6 @@ var/global/list/turf/simulated/floor/FUCK = list()
 
 /turf/simulated/floor/process()
 	spawn while(2)
-		sleep(4)
 		cur_gas = nitrogen + plasma + oxygen + water
 		//if(cur_gas > gas_max)
 

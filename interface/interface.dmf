@@ -235,8 +235,8 @@ window "mainwindow"
 		font-family = ""
 		font-size = 12
 		font-style = ""
-		text-color = #000000
-		background-color = #c0c0c0
+		text-color = #5f5f5f
+		background-color = #e5e5e5
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
@@ -449,8 +449,8 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		font-family = "Verdana"
-		font-size = 0
+		font-family = "@FangSong"
+		font-size = 12
 		font-style = ""
 		text-color = #000000
 		background-color = none

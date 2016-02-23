@@ -7,7 +7,7 @@ world
 	fps = 25		// 25 frames per second
 	icon_size = 32	// 32x32 icon size by default
 
-	view = 7		// show up to 6 tiles outward from center (13x13 view)
+	view = 6		// show up to 6 tiles outward from center (13x13 view)
 	hub = "S_Sting.Physics"	//Кей.Название, реально похуй что сюда писать
 
 

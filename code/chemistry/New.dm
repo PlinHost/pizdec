@@ -71,8 +71,12 @@
 	potassium
 		name = "potassium"
 
+	blood
+		name = "blood"
+		color = "red"
 
-proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
+
+proc/create_reagent(var/atom/myloc, var/amount_new, var/state, var/R)
 	R = new R()
 	var/reagent/RK = R
 	RK.amount = amount_new
@@ -94,6 +98,7 @@ proc/create_reagent(var/turf/simulated/myloc, var/amount_new, var/state, var/R)
 		new A(M)
 		A.amount = amount_new
 		amount -= amount_new
+		react()
 
 /obj/item/unlimited_reagent
 	icon = 'icons/obj/main_items.dmi'
