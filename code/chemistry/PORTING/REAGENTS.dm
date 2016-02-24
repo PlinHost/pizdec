@@ -61,3 +61,147 @@ datum
 					O.hit_points -= 10
 				..()
 				return
+
+		blood
+			name = "blood"
+			id = "blood"
+
+		ethanol
+			name = "ethanol"
+			id = "ethanol"
+
+		cola
+			name = "cola"
+			id = "cola"
+
+		oil
+			name = "oil"
+			id = "oil"
+
+		nutriments
+			name = "nutriments"
+			id = "nutriments"
+
+		lightgas
+			name = "lightgas"
+			id = "lightgas"
+
+		psilocybin
+			name = "psilocybin"
+			id = "psilocybin"
+
+		palladium
+			name = "palladium"
+			id = "palladium"
+
+		phosphorus
+			name = "phosphorus"
+			id = "phosphorus"
+
+		potassium
+			name = "potassium"
+			id = "potassium"
+
+		carbon
+			name = "carbon"
+			id = "carbon"
+
+		water
+			name = "water"
+			id = "water"
+
+		plasma
+			name = "plasma"
+			id = "plasma"
+
+		nitrogen
+			name = "nitrogen"
+			id = "nitrogen"
+
+		oxygen
+			name = "oxygen"
+			id = "oxygen"
+
+		hydrogen
+			name = "hydrogen"
+			id = "hydrogen"
+
+		iron
+			name = "iron"
+			id = "iron"
+
+		copper
+			name = "copper"
+			id = "copper"
+
+		alluminium
+			name = "alluminium"
+			id = "alluminium"
+
+		gold
+			name = "gold"
+			id = "gold"
+
+		mercury
+			name = "mercury"
+			id = "mercury"
+
+		chlorine
+			name = "chlorine"
+			id = "chlorine"
+
+		fluorine
+			name = "fluorine"
+			id = "fluorine"
+
+		radium
+			name = "radium"
+			id = "radium"
+
+		uranium
+			name = "uranium"
+			id = "uranium"
+
+		silver
+			name = "silver"
+			id = "silver"
+
+		silicon
+			name = "silicon"
+			id = "silicon"
+
+		sewage_sample
+			name = "sewage_sample"
+			id = "sewage_sample"
+
+		salt_water
+			name = "salt_water"
+			id = "salt_water"
+
+		orange_juice
+			name = "orange_juice"
+			id = "orange_juice"
+
+		apple_juice
+			name = "apple_juice"
+			id = "apple_juice"
+
+		caffeine
+			name = "caffeine"
+			id = "caffeine"
+
+		tea
+			name = "tea"
+			id = "tea"
+
+		milk
+			name = "milk"
+			id = "milk"
+
+		mutagen
+			name = "mutagen"
+			id = "mutagen"
+
+		purifier
+			name = "purifier"
+			id = "purifier"

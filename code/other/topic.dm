@@ -51,50 +51,40 @@
 	if(href == "left")
 		usr.client.dir = SOUTH
 
-/*
+
 	///CHEM DISPENSER
 	if(href == "blood")
-		dispense_chem(usr, "blood")
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.dispense("blood")
 
-	if(href == "Fe")
-		dispense_chem(usr, "Fe")
+	if(href == "oil")
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.dispense("oil")
 
-	if(href == "Ag")
-		dispense_chem(usr, "Ag")
+	if(href == "eth")
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.dispense("ethanol")
 
-	if(href == "Au")
-		dispense_chem(usr, "Au")
+	if(href == "car")
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.dispense("carbon")
 
-	if(href == "Cu")
-		dispense_chem(usr, "Cu")
+	if(href == "nit")
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.dispense("nitrogen")
 
-	if(href == "Pb")
-		dispense_chem(usr, "Pb")
+	if(href == "oxy")
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.dispense("oxygen")
 
-	if(href == "Po")
-		dispense_chem(usr, "Po")
-
-	if(href == "H")
-		dispense_chem(usr, "H")
-
-	if(href == "O")
-		dispense_chem(usr, "O")
-
-	if(href == "N")
-		dispense_chem(usr, "N")
-
-	if(href == "S")
-		dispense_chem(usr, "S")
-
-	if(href == "K")
-		dispense_chem(usr, "K")
-
-	if(href == "Cl")
-		dispense_chem(usr, "Cl")
+	if(href == "sil")
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.dispense("silicon")
 
 	if(href == "get_")
-		get_container(usr)
-*/
+		for(var/obj/machinery/chemdispenser/D in range(1,usr))
+			D.get_container(usr)
+
 	//RADIO
 
 	if(href == "+freq")

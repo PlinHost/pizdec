@@ -35,3 +35,10 @@
 					reagents.trans_to(usr, reagents.total_volume)
 			del_from_hand()
 			del(src)
+
+	glass
+		icon_state = "container"
+		New()
+			var/datum/reagents/R = new/datum/reagents(200)
+			reagents = R
+			R.my_atom = src

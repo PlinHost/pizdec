@@ -8,6 +8,7 @@
 var/global/DERVENPOWER = 0
 var/global/list/smes = list()
 var/global/list/wires = list()
+var/global/list/generators = list()
 
 #define LENGTH 2 //длина тайла предположим метра 2, соответственно длина провода тоже 2 метра (константная величина, неизменяемая)
 
@@ -143,7 +144,7 @@ var/global/list/wires = list()
 	spawn while(1)
 		sleep(2)
 		for(var/obj/machinery/M in machines)
-			for(var/obj/electro/battery/smes/S in world)
+			for(var/obj/electro/battery/smes/S in smes)
 				if(M.powernet == S.powernet)
 					if(S.charge >= M.need_amperage)
 						if(M.amperage == 0 && M.marker == 0)
@@ -151,7 +152,7 @@ var/global/list/wires = list()
 							S.charge -= M.need_amperage
 
 		for(var/obj/electro/cable/C in wires)
-			for(var/obj/electro/battery/smes/S in world)
+			for(var/obj/electro/battery/smes/S in smes)
 				if(C.powernet == S.powernet)
 					C.voltage = S.full_charge/(C.resistance * C.sq * LENGTH)
 
@@ -160,7 +161,8 @@ var/global/list/wires = list()
 	objects += src
 	spawn while(1)
 		sleep(1)
-		for(var/obj/machinery/generator/S in world)
+		for(var/obj/machinery/generator/S in generators)
+			sleep(1)
 			if(S.powernet == powernet)
 				charge += S.amperage
 				full_charge = charge * work_voltage
@@ -416,10 +418,26 @@ var/global/list/wires = list()
 /obj/machinery/generator/process()
 	processing = 1
 	objects += src
+	generators += src
 	spawn while(1)
 		sleep(5)
 		if(amperage > 0)
 			amperage -= 50
+
+/obj/machinery/generator/solar
+	icon_state = "solar"
+
+/obj/machinery/generator/solar/process()
+	processing = 1
+	objects += src
+	generators += src
+	spawn while(1)
+		sleep(4)
+		if(amperage > 0)
+			amperage -= 50
+
+		amperage += rand(35, 65)
+
 
 /obj/machinery/generator/rad_gen
 	icon_state = "rad_gen_off"
@@ -433,6 +451,7 @@ var/global/list/wires = list()
 /obj/machinery/generator/rad_gen/process()
 	processing = 1
 	objects += src
+	generators += src
 	var/ha = 0
 	spawn while(1)
 		sleep(1.5)
@@ -445,4 +464,4 @@ var/global/list/wires = list()
 		if(ha == 1)
 			for(var/wave/radioactive/RAD in range(1,src))
 				if(RAD.force > 1)
-					amperage += rand(65,75)
+					amperage += rand(65,80)

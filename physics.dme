@@ -24,6 +24,7 @@
 #include "code\atmos\main.dm"
 #include "code\atmos\pipes.dm"
 #include "code\chemistry\PORTING\HOLDER.dm"
+#include "code\chemistry\PORTING\MACHINERY.dm"
 #include "code\chemistry\PORTING\REAGENTS.dm"
 #include "code\chemistry\PORTING\RECIPES.dm"
 #include "code\Kate_core\main.dm"
