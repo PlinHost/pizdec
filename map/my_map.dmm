@@ -15,7 +15,7 @@
 "ao" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor/plating,/area)
 "ap" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor/plating,/area)
 "aq" = (/obj/electro/cable/copper,/obj/machinery/plumbing/pipe,/turf/simulated/floor/plating,/area)
-"ar" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/plumbing/pipe,/turf/simulated/floor/plating,/area)
+"ar" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/plumbing/pipe,/turf/simulated/floor,/area)
 "as" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/turf/simulated/floor/plating,/area)
 "at" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
 "au" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor/plating,/area)
@@ -50,128 +50,128 @@
 "aX" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/trash/disposal,/turf/simulated/floor,/area)
 "aY" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor,/area)
 "aZ" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"ba" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/plumbing/pipe,/turf/simulated/floor,/area)
+"ba" = (/obj/machinery/radio/receiver{pixel_x = -32},/obj/item/weapon/reagent_containers,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
 "bb" = (/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
 "bc" = (/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor/plating,/area)
-"bd" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"be" = (/obj/machinery/trash/pipe,/turf/simulated/wall,/area)
-"bf" = (/obj/structure/stool,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bg" = (/obj/machinery/atmospherics/outer,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bh" = (/obj/structure/grille,/obj/structure/window,/turf/simulated/floor/plating,/area)
-"bi" = (/obj/machinery/trash/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/plating,/area)
-"bj" = (/obj/machinery/trash/pipe/pipemainfold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
-"bk" = (/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
-"bl" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
-"bm" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/prof/hunt,/turf/simulated/floor,/area)
-"bn" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/light,/turf/simulated/floor,/area)
-"bo" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bp" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bq" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe/pipemainfold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/turf/simulated/floor,/area)
-"br" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (WEST)"; icon_state = "pipe"; dir = 8},/turf/simulated/floor,/area)
-"bs" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bt" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bu" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bv" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/trash/pipe/pipemainfold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor,/area)
-"bw" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bx" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/plumbing/sink{pixel_y = 32},/obj/machinery/plumbing/pipe,/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"by" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bz" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bA" = (/obj/machinery/trash/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bB" = (/obj/structure/grille,/obj/structure/window,/turf/simulated/wall/r_wall,/area)
-"bC" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe/pipemainfold,/turf/simulated/floor,/area)
-"bD" = (/obj/machinery/firedoor,/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bE" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bF" = (/obj/machinery/plumbing/pipe/pipemainfold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor,/area)
-"bG" = (/obj/machinery/plumbing/pipe/pipemainfold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"bH" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"bI" = (/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bJ" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bK" = (/obj/structure/stool,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bL" = (/obj/machinery/atmospherics/inner,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bM" = (/obj/machinery/trash/disposal,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"bN" = (/obj/structure/table{tag = "icon-tabledir (NORTHEAST)"; icon_state = "tabledir"; dir = 5},/obj/item/weapon/gun/lasergun,/turf/simulated/floor/bar,/area)
-"bO" = (/turf/simulated/floor/bar,/area)
-"bP" = (/obj/item/clothing/shoes/BLACK,/turf/simulated/floor/bar,/area)
-"bQ" = (/obj/structure/closet/crate,/obj/item/clothing/uniform/BLACK,/obj/item/clothing/uniform/BLACK,/obj/item/clothing/uniform/BLACK,/turf/simulated/floor/bar,/area)
-"bR" = (/obj/structure/closet,/obj/item/weapon/stunbaton,/turf/simulated/floor/bar,/area)
-"bS" = (/obj/machinery/atmospherics/connector,/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/floor/plating,/area)
-"bT" = (/obj/machinery/atmospherics/connector,/obj/machinery/portable_atmospherics/canister/empty,/turf/simulated/floor/plating,/area)
-"bU" = (/obj/electro/cable/copper,/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe,/turf/simulated/floor,/area)
-"bV" = (/obj/machinery/plumbing/inner,/obj/electro{layer = 10; pixel_y = -32},/turf/simulated/floor/plating,/area)
-"bW" = (/obj/structure/closet,/obj/item/tools/radiotest,/turf/simulated/floor/plating,/area)
-"bX" = (/obj/machinery/firedoor,/obj/machinery/plumbing/pipe,/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"bY" = (/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"bZ" = (/obj/structure/table{tag = "icon-tabledir (EAST)"; icon_state = "tabledir"; dir = 4},/obj/item/weapon/gun/lasergun,/turf/simulated/floor/bar,/area)
-"ca" = (/obj/machinery/atmospherics/pipe/manifold,/turf/simulated/floor/plating,/area)
-"cb" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
-"cc" = (/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor/plating,/area)
-"cd" = (/obj/machinery/atmospherics/connector,/obj/machinery/portable_atmospherics/canister/nitrogen,/turf/simulated/floor/plating,/area)
-"ce" = (/obj/machinery/atmospherics/pipe,/turf/simulated/floor/plating,/area)
-"cf" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe,/turf/simulated/floor,/area)
-"cg" = (/obj/structure/grille,/obj/structure/window,/obj/machinery/firedoor,/turf/simulated/floor/plating,/area)
-"ch" = (/obj/structure/window,/obj/machinery/firedoor,/turf/simulated/floor/plating,/area)
-"ci" = (/obj/machinery/plumbing/inner,/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"cj" = (/obj/electro/powerbox{pixel_y = 32},/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/turf/simulated/floor/plating,/area)
-"ck" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/turf/simulated/floor/plating,/area)
-"cl" = (/obj/structure/table{tag = "icon-tabledir (EAST)"; icon_state = "tabledir"; dir = 4},/obj/item/weapon/stunbaton,/obj/machinery/light{tag = "icon-light (WEST)"; icon_state = "light"; dir = 8},/turf/simulated/floor/bar,/area)
-"cm" = (/obj/machinery/atmospherics/outer,/turf/simulated/floor/bar,/area)
-"cn" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/bar,/area)
-"co" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor/bar,/area)
-"cp" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/bar,/area)
-"cq" = (/obj/machinery/atmospherics/inner,/turf/simulated/floor/bar,/area)
-"cr" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe,/obj/machinery/light{tag = "icon-light (WEST)"; icon_state = "light"; dir = 8},/turf/simulated/floor,/area)
-"cs" = (/obj/item/ore/uranium,/turf/simulated/floor/plating,/area)
-"ct" = (/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"cu" = (/obj/machinery/atmospherics/inner,/turf/simulated/floor/plating,/area)
-"cv" = (/obj/electro/cable/output{tag = "icon-force (SOUTHEAST)"; icon_state = "force"; dir = 6},/obj/electro/cable/output,/turf/simulated/floor/plating,/area)
-"cw" = (/obj/electro/cable/output{tag = "icon-force (NORTHWEST)"; icon_state = "force"; dir = 9},/obj/electro/transformator,/turf/simulated/floor/plating,/area)
-"cx" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/obj/item/weapon/stunbaton,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/bar,/area)
-"cy" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/bar,/area)
-"cz" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor/bar,/area)
-"cA" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor/bar,/area)
-"cB" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor/plating,/area)
-"cC" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor/plating,/area)
-"cD" = (/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
-"cE" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/turf/simulated/floor/plating,/area)
-"cF" = (/obj/machinery/generator/rad_gen,/turf/simulated/floor/plating,/area)
-"cG" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor/plating,/area)
-"cH" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/firedoor,/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area)
-"cI" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"cJ" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"cK" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/door/airlock,/turf/simulated/floor,/area)
-"cL" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor,/area)
-"cM" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor/plating,/area)
-"cN" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/obj/electro/cable/output{tag = "icon-force (NORTHWEST)"; icon_state = "force"; dir = 9},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor/plating,/area)
-"cO" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor/bar,/area)
-"cP" = (/obj/machinery/door/airlock,/turf/simulated/floor/bar,/area)
-"cQ" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area)
-"cR" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor/plating,/area)
-"cS" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/atmospherics/pipe/manifold,/turf/simulated/floor,/area)
-"cT" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"cU" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"cV" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor,/area)
-"cW" = (/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"cX" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
-"cY" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
-"cZ" = (/obj/electro/cable/output,/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (NORTH)"; icon_state = "pipe_tr"; dir = 1},/turf/simulated/floor/plating,/area)
-"da" = (/obj/machinery/generator,/turf/simulated/floor/plating,/area)
-"db" = (/obj/machinery/radio/receiver{pixel_x = -32},/obj/item/weapon/reagent_containers,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"dc" = (/turf/simulated/floor,/area)
-"dd" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"de" = (/obj/machinery/vending/tools,/turf/simulated/floor,/area)
-"df" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/turf/simulated/floor,/area)
-"dg" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"dh" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"di" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/radio/intercom{id = 8; pixel_y = 32},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"dj" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/prof/ass,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"dk" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"dl" = (/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/electro/cable/copper,/turf/simulated/floor,/area)
-"dm" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"dn" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"do" = (/obj/machinery/radio/receiver{pixel_x = -32},/turf/simulated/floor/plating,/area)
-"dp" = (/obj/electro/cable/output,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor/plating,/area)
-"dq" = (/obj/machinery/atmospherics/outer,/turf/simulated/floor/plating,/area)
-"dr" = (/obj/item/weapon/reagent_containers/poison,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bd" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/plumbing/pipe,/turf/simulated/floor/plating,/area)
+"be" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
+"bf" = (/obj/machinery/trash/pipe,/turf/simulated/wall,/area)
+"bg" = (/obj/item/weapon/reagent_containers/poison,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bh" = (/obj/structure/stool,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bi" = (/obj/machinery/atmospherics/outer,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bj" = (/obj/structure/grille,/obj/structure/window,/turf/simulated/floor/plating,/area)
+"bk" = (/obj/machinery/trash/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/plating,/area)
+"bl" = (/obj/machinery/trash/pipe/pipemainfold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
+"bm" = (/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
+"bn" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
+"bo" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/prof/hunt,/turf/simulated/floor,/area)
+"bp" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/light,/turf/simulated/floor,/area)
+"bq" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"br" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bs" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe/pipemainfold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/turf/simulated/floor,/area)
+"bt" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (WEST)"; icon_state = "pipe"; dir = 8},/turf/simulated/floor,/area)
+"bu" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bv" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bw" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bx" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/trash/pipe/pipemainfold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor,/area)
+"by" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bz" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/plumbing/sink{pixel_y = 32},/obj/machinery/plumbing/pipe,/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bA" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bB" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bC" = (/obj/machinery/trash/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bD" = (/obj/structure/grille,/obj/structure/window,/turf/simulated/wall/r_wall,/area)
+"bE" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe/pipemainfold,/turf/simulated/floor,/area)
+"bF" = (/obj/machinery/firedoor,/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bG" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bH" = (/obj/machinery/plumbing/pipe/pipemainfold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor,/area)
+"bI" = (/obj/machinery/plumbing/pipe/pipemainfold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
+"bJ" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"bK" = (/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bL" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bM" = (/obj/structure/stool,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bN" = (/obj/machinery/atmospherics/inner,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bO" = (/obj/machinery/trash/disposal,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"bP" = (/obj/structure/table{tag = "icon-tabledir (NORTHEAST)"; icon_state = "tabledir"; dir = 5},/obj/item/weapon/gun/lasergun,/turf/simulated/floor/bar,/area)
+"bQ" = (/turf/simulated/floor/bar,/area)
+"bR" = (/obj/item/clothing/shoes/BLACK,/turf/simulated/floor/bar,/area)
+"bS" = (/obj/structure/closet/crate,/obj/item/clothing/uniform/BLACK,/obj/item/clothing/uniform/BLACK,/obj/item/clothing/uniform/BLACK,/turf/simulated/floor/bar,/area)
+"bT" = (/obj/structure/closet,/obj/item/weapon/stunbaton,/turf/simulated/floor/bar,/area)
+"bU" = (/obj/machinery/atmospherics/connector,/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/floor/plating,/area)
+"bV" = (/obj/machinery/atmospherics/connector,/obj/machinery/portable_atmospherics/canister/empty,/turf/simulated/floor/plating,/area)
+"bW" = (/obj/electro/cable/copper,/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe,/turf/simulated/floor,/area)
+"bX" = (/obj/machinery/plumbing/inner,/obj/electro{layer = 10; pixel_y = -32},/turf/simulated/floor/plating,/area)
+"bY" = (/obj/structure/closet,/obj/item/tools/radiotest,/turf/simulated/floor/plating,/area)
+"bZ" = (/obj/machinery/firedoor,/obj/machinery/plumbing/pipe,/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
+"ca" = (/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
+"cb" = (/obj/structure/table{tag = "icon-tabledir (EAST)"; icon_state = "tabledir"; dir = 4},/obj/item/weapon/gun/lasergun,/turf/simulated/floor/bar,/area)
+"cc" = (/obj/machinery/atmospherics/pipe/manifold,/turf/simulated/floor/plating,/area)
+"cd" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
+"ce" = (/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor/plating,/area)
+"cf" = (/obj/machinery/atmospherics/connector,/obj/machinery/portable_atmospherics/canister/nitrogen,/turf/simulated/floor/plating,/area)
+"cg" = (/obj/machinery/atmospherics/pipe,/turf/simulated/floor/plating,/area)
+"ch" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe,/turf/simulated/floor,/area)
+"ci" = (/obj/structure/grille,/obj/structure/window,/obj/machinery/firedoor,/turf/simulated/floor/plating,/area)
+"cj" = (/obj/structure/window,/obj/machinery/firedoor,/turf/simulated/floor/plating,/area)
+"ck" = (/obj/machinery/plumbing/inner,/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
+"cl" = (/obj/electro/powerbox{pixel_y = 32},/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/turf/simulated/floor/plating,/area)
+"cm" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/turf/simulated/floor/plating,/area)
+"cn" = (/obj/structure/table{tag = "icon-tabledir (EAST)"; icon_state = "tabledir"; dir = 4},/obj/item/weapon/stunbaton,/obj/machinery/light{tag = "icon-light (WEST)"; icon_state = "light"; dir = 8},/turf/simulated/floor/bar,/area)
+"co" = (/obj/machinery/atmospherics/outer,/turf/simulated/floor/bar,/area)
+"cp" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/bar,/area)
+"cq" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor/bar,/area)
+"cr" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/bar,/area)
+"cs" = (/obj/machinery/atmospherics/inner,/turf/simulated/floor/bar,/area)
+"ct" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe,/obj/machinery/light{tag = "icon-light (WEST)"; icon_state = "light"; dir = 8},/turf/simulated/floor,/area)
+"cu" = (/obj/item/ore/uranium,/turf/simulated/floor/plating,/area)
+"cv" = (/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
+"cw" = (/obj/machinery/atmospherics/inner,/turf/simulated/floor/plating,/area)
+"cx" = (/obj/electro/cable/output{tag = "icon-force (SOUTHEAST)"; icon_state = "force"; dir = 6},/obj/electro/cable/output,/turf/simulated/floor/plating,/area)
+"cy" = (/obj/electro/cable/output{tag = "icon-force (NORTHWEST)"; icon_state = "force"; dir = 9},/obj/electro/transformator,/turf/simulated/floor/plating,/area)
+"cz" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/obj/item/weapon/stunbaton,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/bar,/area)
+"cA" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/bar,/area)
+"cB" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor/bar,/area)
+"cC" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor/bar,/area)
+"cD" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor/plating,/area)
+"cE" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/turf/simulated/floor/plating,/area)
+"cF" = (/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
+"cG" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/turf/simulated/floor/plating,/area)
+"cH" = (/obj/machinery/generator/rad_gen,/turf/simulated/floor/plating,/area)
+"cI" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor/plating,/area)
+"cJ" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/firedoor,/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area)
+"cK" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
+"cL" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
+"cM" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/door/airlock,/turf/simulated/floor,/area)
+"cN" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor,/area)
+"cO" = (/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor/plating,/area)
+"cP" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/obj/electro/cable/output{tag = "icon-force (NORTHWEST)"; icon_state = "force"; dir = 9},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor/plating,/area)
+"cQ" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor/bar,/area)
+"cR" = (/obj/machinery/door/airlock,/turf/simulated/floor/bar,/area)
+"cS" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area)
+"cT" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor/plating,/area)
+"cU" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/atmospherics/pipe/manifold,/turf/simulated/floor,/area)
+"cV" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"cW" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"cX" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor,/area)
+"cY" = (/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"cZ" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
+"da" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor/plating,/area)
+"db" = (/obj/electro/cable/output,/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (NORTH)"; icon_state = "pipe_tr"; dir = 1},/turf/simulated/floor/plating,/area)
+"dc" = (/obj/machinery/generator,/turf/simulated/floor/plating,/area)
+"dd" = (/turf/simulated/floor,/area)
+"de" = (/obj/electro/cable/copper,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
+"df" = (/obj/machinery/vending/tools,/turf/simulated/floor,/area)
+"dg" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/effect{pixel_y = 32},/turf/simulated/floor,/area)
+"dh" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"di" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
+"dj" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/radio/intercom{id = 8; pixel_y = 32},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"dk" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/prof/ass,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"dl" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"dm" = (/obj/machinery/atmospherics/pipe,/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/electro/cable/copper,/turf/simulated/floor,/area)
+"dn" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
+"do" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
+"dp" = (/obj/machinery/radio/receiver{pixel_x = -32},/turf/simulated/floor/plating,/area)
+"dq" = (/obj/electro/cable/output,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor/plating,/area)
+"dr" = (/obj/machinery/atmospherics/outer,/turf/simulated/floor/plating,/area)
 "ds" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor,/area)
 "dt" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
 "du" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/turf/simulated/floor,/area)
@@ -184,89 +184,89 @@
 "dB" = (/obj/structure/grille,/obj/structure/window,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor/plating,/area)
 "dC" = (/obj/electro{layer = 10; pixel_y = 32},/turf/simulated/floor/plating,/area)
 "dD" = (/obj/electro/cable/copper,/obj/machinery/firedoor,/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"dE" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"dF" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor,/area)
-"dG" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/plating,/area)
-"dH" = (/obj/electro/battery/smes,/turf/simulated/floor/plating,/area)
-"dI" = (/obj/electro/cable/copper,/turf/simulated/floor,/area)
-"dJ" = (/obj/machinery/plumbing/pipe,/obj/electro/cable/copper,/turf/simulated/floor,/area)
-"dK" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/turf/simulated/floor,/area)
-"dL" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor,/area)
-"dM" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor,/area)
-"dN" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/radio/intercom{id = 8; pixel_y = -32},/turf/simulated/floor,/area)
-"dO" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
-"dP" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor,/area)
-"dQ" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"dR" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"dS" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/electro/cable/copper,/turf/simulated/floor,/area)
-"dT" = (/obj/structure/window,/obj/structure/grille,/turf/simulated/floor/plating,/area)
-"dU" = (/obj/structure/table{tag = "icon-tabledir (NORTHEAST)"; icon_state = "tabledir"; dir = 5},/turf/simulated/floor,/area)
-"dV" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor,/area)
-"dW" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor,/area)
-"dX" = (/obj/machinery/laser{tag = "icon-laser (EAST)"; icon_state = "laser"; dir = 4},/turf/simulated/floor,/area)
-"dY" = (/obj/machinery/radio/intercom{id = 8; pixel_y = 32},/turf/simulated/floor,/area)
-"dZ" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/turf/simulated/floor,/area)
-"ea" = (/obj/machinery/plumbing/connector,/obj/machinery/plumbing/canister/empty,/turf/simulated/floor,/area)
-"eb" = (/obj/machinery/firedoor,/obj/machinery/trash/pipe,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
-"ec" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/turf/simulated/floor,/area)
-"ed" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/turf/simulated/floor,/area)
-"ee" = (/obj/machinery/plumbing/pipe/pipemainfold,/turf/simulated/floor,/area)
-"ef" = (/obj/machinery/plumbing/pipe/pipemainfold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/turf/simulated/floor,/area)
-"eg" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/radio/receiver{pixel_y = 32},/turf/simulated/floor,/area)
-"eh" = (/obj/structure/table{tag = "icon-tabledir (SOUTHWEST)"; icon_state = "tabledir"; dir = 10},/obj/item/tools/screwdriver,/turf/simulated/floor,/area)
-"ei" = (/obj/structure/table{tag = "icon-tabledir"; icon_state = "tabledir"},/obj/item/tools/wrench,/obj/item/clothing/head/HELMET_SYN,/turf/simulated/floor,/area)
-"ej" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/obj/item/tools/screwdriver,/obj/item/tools/radiotest,/turf/simulated/floor,/area)
-"ek" = (/obj/machinery/atmospherics/pipe/manifold,/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
-"el" = (/obj/structure/closet/crate,/obj/item/tools/power/welding_tool,/obj/item/tools/power/welding_tool,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor,/area)
-"em" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (WEST)"; icon_state = "light"; dir = 8},/turf/simulated/floor,/area)
-"en" = (/obj/structure/toilet,/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/obj/electro/cable/copper,/turf/simulated/floor,/area)
-"eo" = (/obj/machinery/plumbing/connector,/obj/machinery/plumbing/canister/water,/turf/simulated/floor,/area)
-"ep" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor,/area)
-"eq" = (/obj/machinery/atmospherics/pipe,/obj/machinery/trash/disposal,/turf/simulated/floor,/area)
-"er" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
-"es" = (/obj/electro/cable/copper,/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor,/area)
-"et" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"eu" = (/obj/machinery/atmospherics/pipe,/obj/item/fire_ballon,/turf/simulated/floor,/area)
-"ev" = (/obj/item/clothing/shoes/BLACK,/turf/simulated/floor,/area)
-"ew" = (/turf/space,/obj/item/clothing/suit/SPACE,/turf/simulated/floor,/area)
-"ex" = (/obj/electro/cable/copper,/obj/machinery/door/airlock,/turf/simulated/floor,/area)
-"ey" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/turf/simulated/floor/plating,/area)
-"ez" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor/plating,/area)
-"eA" = (/obj/start,/turf/simulated/floor{icon = 'icons/lobby.dmi'; layer = 100; pixel_x = -224; pixel_y = -224},/area)
-"eB" = (/turf/space,/area/shuttle_2)
-"eC" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/effect{pixel_y = 32},/turf/simulated/floor,/area)
-"eD" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor,/area)
-"eE" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
-"eF" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor,/area)
-"eG" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/turf/simulated/floor/plating,/area)
-"eH" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor,/area)
-"eI" = (/obj/structure/window,/obj/structure/grille,/turf/simulated/floor,/area)
-"eJ" = (/obj/structure/window,/obj/structure/grille,/obj/structure/grille,/turf/simulated/floor,/area)
-"eK" = (/obj/structure/table{tag = "icon-tabledir"; icon_state = "tabledir"},/obj/item/weapon/reagent_containers/glass,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"eL" = (/obj/structure/table{tag = "icon-tabledir (SOUTHWEST)"; icon_state = "tabledir"; dir = 10},/obj/item/weapon/reagent_containers/glass,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"eM" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"eN" = (/obj/machinery/generator/solar,/turf/simulated/floor/plating,/area)
-"eO" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/obj/electro/cable/output{tag = "icon-force (SOUTHEAST)"; icon_state = "force"; dir = 6},/turf/simulated/floor/plating,/area)
-"eP" = (/obj/electro{pixel_x = -32},/turf/simulated/floor,/area)
-"eQ" = (/obj/electro/cable/output{tag = "icon-force (SOUTHEAST)"; icon_state = "force"; dir = 6},/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor/plating,/area)
-"eR" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor,/area)
-"eS" = (/obj/machinery/firedoor,/obj/machinery/door/airlock,/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor,/area)
-"eT" = (/obj/machinery/door/airlock,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"eU" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"eV" = (/obj/electro/cable/output{tag = "icon-force (NORTHWEST)"; icon_state = "force"; dir = 9},/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/turf/simulated/floor/plating,/area)
-"eW" = (/obj/structure/window,/obj/structure/grille,/obj/electro/cable/output,/turf/simulated/floor/plating,/area)
-"eX" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/electro/cable/copper,/turf/simulated/floor,/area)
-"eY" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"eZ" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"fa" = (/obj/electro/cable/copper,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"fb" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor,/area)
-"fc" = (/obj/electro/cable/copper,/obj/machinery/chemdispenser,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"fd" = (/obj/electro/cable/copper,/obj/structure/closet,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"fe" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"ff" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"fg" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/structure/closet,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"fh" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
-"fi" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/plating,/area)
+"dE" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/turf/simulated/floor,/area)
+"dF" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"dG" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor,/area)
+"dH" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/plating,/area)
+"dI" = (/obj/electro/battery/smes,/turf/simulated/floor/plating,/area)
+"dJ" = (/obj/electro/cable/copper,/turf/simulated/floor,/area)
+"dK" = (/obj/machinery/plumbing/pipe,/obj/electro/cable/copper,/turf/simulated/floor,/area)
+"dL" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/turf/simulated/floor,/area)
+"dM" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor,/area)
+"dN" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe/manifold{tag = "icon-pipe_tr (EAST)"; icon_state = "pipe_tr"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/turf/simulated/floor,/area)
+"dO" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/radio/intercom{id = 8; pixel_y = -32},/turf/simulated/floor,/area)
+"dP" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/turf/simulated/floor,/area)
+"dQ" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/firedoor,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor,/area)
+"dR" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/atmospherics/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/trash/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"dS" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"dT" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/electro/cable/copper,/turf/simulated/floor,/area)
+"dU" = (/obj/structure/window,/obj/structure/grille,/turf/simulated/floor/plating,/area)
+"dV" = (/obj/structure/table{tag = "icon-tabledir (NORTHEAST)"; icon_state = "tabledir"; dir = 5},/turf/simulated/floor,/area)
+"dW" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor,/area)
+"dX" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor,/area)
+"dY" = (/obj/machinery/laser{tag = "icon-laser (EAST)"; icon_state = "laser"; dir = 4},/turf/simulated/floor,/area)
+"dZ" = (/obj/machinery/radio/intercom{id = 8; pixel_y = 32},/turf/simulated/floor,/area)
+"ea" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (SOUTHEAST)"; icon_state = "pipe"; dir = 6},/turf/simulated/floor,/area)
+"eb" = (/obj/machinery/plumbing/connector,/obj/machinery/plumbing/canister/empty,/turf/simulated/floor,/area)
+"ec" = (/obj/machinery/firedoor,/obj/machinery/trash/pipe,/obj/machinery/atmospherics/pipe,/turf/simulated/floor,/area)
+"ed" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/turf/simulated/floor,/area)
+"ee" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/turf/simulated/floor,/area)
+"ef" = (/obj/machinery/plumbing/pipe/pipemainfold,/turf/simulated/floor,/area)
+"eg" = (/obj/machinery/plumbing/pipe/pipemainfold{tag = "icon-pipe_tr (WEST)"; icon_state = "pipe_tr"; dir = 8},/turf/simulated/floor,/area)
+"eh" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/machinery/radio/receiver{pixel_y = 32},/turf/simulated/floor,/area)
+"ei" = (/obj/structure/table{tag = "icon-tabledir (SOUTHWEST)"; icon_state = "tabledir"; dir = 10},/obj/item/tools/screwdriver,/turf/simulated/floor,/area)
+"ej" = (/obj/structure/table{tag = "icon-tabledir"; icon_state = "tabledir"},/obj/item/tools/wrench,/obj/item/clothing/head/HELMET_SYN,/turf/simulated/floor,/area)
+"ek" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/obj/item/tools/screwdriver,/obj/item/tools/radiotest,/turf/simulated/floor,/area)
+"el" = (/obj/machinery/atmospherics/pipe/manifold,/obj/machinery/trash/pipe,/turf/simulated/floor,/area)
+"em" = (/obj/structure/closet/crate,/obj/item/tools/power/welding_tool,/obj/item/tools/power/welding_tool,/obj/machinery/atmospherics/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor,/area)
+"en" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (WEST)"; icon_state = "light"; dir = 8},/turf/simulated/floor,/area)
+"eo" = (/obj/structure/toilet,/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/obj/electro/cable/copper,/turf/simulated/floor,/area)
+"ep" = (/obj/machinery/plumbing/connector,/obj/machinery/plumbing/canister/water,/turf/simulated/floor,/area)
+"eq" = (/obj/machinery/atmospherics/pipe{tag = "icon-pipe (NORTHWEST)"; icon_state = "pipe"; dir = 9},/obj/machinery/trash/pipe{tag = "icon-pipe (SOUTHWEST)"; icon_state = "pipe"; dir = 10},/turf/simulated/floor,/area)
+"er" = (/obj/machinery/atmospherics/pipe,/obj/machinery/trash/disposal,/turf/simulated/floor,/area)
+"es" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor/plating,/area)
+"et" = (/obj/electro/cable/copper,/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor,/area)
+"eu" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (NORTHEAST)"; icon_state = "pipe"; dir = 5},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"ev" = (/obj/machinery/plumbing/pipe{tag = "icon-pipe (EAST)"; icon_state = "pipe"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor,/area)
+"ew" = (/obj/machinery/atmospherics/pipe,/obj/item/fire_ballon,/turf/simulated/floor,/area)
+"ex" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor,/area)
+"ey" = (/obj/machinery/door/airlock,/obj/electro/cable/copper,/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor,/area)
+"ez" = (/obj/item/clothing/shoes/BLACK,/turf/simulated/floor,/area)
+"eA" = (/turf/space,/obj/item/clothing/suit/SPACE,/turf/simulated/floor,/area)
+"eB" = (/obj/electro/cable/copper,/obj/machinery/door/airlock,/turf/simulated/floor,/area)
+"eC" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/turf/simulated/floor/plating,/area)
+"eD" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/turf/simulated/floor/plating,/area)
+"eE" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/turf/simulated/floor/plating,/area)
+"eF" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor,/area)
+"eG" = (/obj/structure/window,/obj/structure/grille,/obj/structure/grille,/turf/simulated/floor,/area)
+"eH" = (/obj/structure/window,/obj/structure/grille,/turf/simulated/floor,/area)
+"eI" = (/obj/structure/table{tag = "icon-tabledir (SOUTHWEST)"; icon_state = "tabledir"; dir = 10},/obj/item/weapon/reagent_containers/glass,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eJ" = (/obj/structure/table{tag = "icon-tabledir"; icon_state = "tabledir"},/obj/item/weapon/reagent_containers/glass,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eK" = (/obj/structure/table{tag = "icon-tabledir (SOUTHEAST)"; icon_state = "tabledir"; dir = 6},/obj/item/weapon/reagent_containers/poison,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eL" = (/obj/machinery/generator/solar,/turf/simulated/floor/plating,/area)
+"eM" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/obj/electro/cable/output{tag = "icon-force (SOUTHEAST)"; icon_state = "force"; dir = 6},/turf/simulated/floor/plating,/area)
+"eN" = (/obj/electro{pixel_x = -32},/turf/simulated/floor,/area)
+"eO" = (/obj/electro/cable/output{tag = "icon-force (SOUTHEAST)"; icon_state = "force"; dir = 6},/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor/plating,/area)
+"eP" = (/obj/machinery/firedoor,/obj/machinery/door/airlock,/obj/electro/cable/output{tag = "icon-force (EAST)"; icon_state = "force"; dir = 4},/turf/simulated/floor,/area)
+"eQ" = (/obj/electro/cable/output{tag = "icon-force (SOUTHWEST)"; icon_state = "force"; dir = 10},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor,/area)
+"eR" = (/obj/machinery/door/airlock,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eS" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eT" = (/obj/electro/cable/output{tag = "icon-force (NORTHWEST)"; icon_state = "force"; dir = 9},/obj/electro/cable/output{tag = "icon-force (NORTHEAST)"; icon_state = "force"; dir = 5},/turf/simulated/floor/plating,/area)
+"eU" = (/obj/structure/window,/obj/structure/grille,/obj/electro/cable/output,/turf/simulated/floor/plating,/area)
+"eV" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHEAST)"; icon_state = "copper"; dir = 6},/obj/electro/cable/copper,/turf/simulated/floor,/area)
+"eW" = (/obj/machinery/door/airlock,/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eX" = (/obj/electro/cable/copper{tag = "icon-copper (SOUTHWEST)"; icon_state = "copper"; dir = 10},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eY" = (/obj/electro/cable/copper,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"eZ" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/machinery/light{tag = "icon-light (EAST)"; icon_state = "light"; dir = 4},/turf/simulated/floor,/area)
+"fa" = (/obj/electro/cable/copper,/obj/machinery/chemdispenser,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"fb" = (/obj/electro/cable/copper,/obj/structure/closet,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"fc" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHEAST)"; icon_state = "copper"; dir = 5},/obj/machinery/juicer,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"fd" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"fe" = (/obj/electro/cable/copper{tag = "icon-copper (EAST)"; icon_state = "copper"; dir = 4},/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"ff" = (/obj/electro/cable/copper{tag = "icon-copper (NORTHWEST)"; icon_state = "copper"; dir = 9},/obj/structure/closet,/turf/simulated/floor{tag = "icon-cmo"; icon_state = "cmo"},/area)
+"fg" = (/obj/electro/cable/copper,/obj/machinery/light{tag = "icon-light (NORTH)"; icon_state = "light"; dir = 1},/turf/simulated/floor/plating,/area)
+"fh" = (/obj/start,/turf/simulated/floor{icon = 'icons/lobby.dmi'; layer = 100; pixel_x = -224; pixel_y = -224},/area)
+"fi" = (/turf/space,/area/shuttle_2)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -320,36 +320,36 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadahadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababababaiajaiababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabakalalalamanaoapadadadadadabababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaqaiaiaibaaiaibaaiaiaiaiasatatatauadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaqaiaiaiaraiaiaraiaiaiaiasatatatauadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababababaqaiavawaxayaiazayaAaBaiahaiaiaiaCaiaiabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaDaEaEaDaiaqaiaFaGaHaIaiaJaKaLaMaiaNaiaOaPaQaRaSabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadaTaTagaiaqaiaUaVaMaWaiaXaYaZavaiahaidbbbbbbbbbabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadaTaTbcaiaraiaiaibdbeaibeaibdaiaiajaibbdrbfbgbbbhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabatbibjbkbkblbmbnbobpbqbrbqbsbtbubvbwbxbybybybzbAbhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababbhbhababbBbhababaiaiaiaiaiaibCbDbEbEbFbEbEbEbEbDbGbHbIbJbKbLbbbMabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbNbObPbQbRbRbRabbSadadadadbTaibUbhbhbhbVadbWbhbhbhbXbYabababbhbhababaaaaaaababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhbZbObObObObObOabcacbcccdadcebhcfbhaacgcgchcgcgaabhciaMabaaaaaaaaaaaaaaaaababcjckababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhclcmcncocpcqbOabbSadceadadcebhcrbhbhcgcsadadcgbhbhctaMbhbhbhbhbhbhbhabababadcucvcwababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabcxcyczcAbObObOabadadcBcCcDcEbhcfadadchadcFcGcHcGcGcIcJcKcLcLcLcLcLcLcLcKcLcGcMcNadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababcOcPabababaiaicQcRaiaiaibUbhbhcgadadadcgbhbhctcScTcUcUcUcVcUcUcUcTcWcXcYcZcGdaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhdcdcdcdddcdcdcabdeeCdgdhdidjdkdlbhaacgcgchcgcgaabhdmdnbhbhbhbhbhbhbhaiaiaidoahdpdqababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhdcdcdcdscUdtducTcUdvdwdxdydzdzdAdBbhbhdCadbWbhbhbhdDbYaidfdEdEdEdEdEdFabababdGdHababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababbhbhababdIaiaidcdJaiaiaiaidKdLcUcVcUdMdNbodOdPdQdRdEdSdTdTdTdTdTdIdTaaababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdUdcdcdfdVdWaidXdJdYdZeaaiaiaibhbhbhebaiaiahababababdIdTaaaaaadTdIdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhecdcaiedaiedaidceebEefbEegeaaieheiejekelaiahabaaaadTemdTaaaaaadTdIdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhdcdcaienaienaidceebEbEbEbEeoaidIdcaVepeqaiahabaaaadTdKeraaaaaaeresdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbhbhababaibhabdcetdkeDbEbEeoaiemdcdcdceuaiahabaaaadTdcdTaaaaaadTdcdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababeEeFababababdIevewewavaiahabaaaadTdTdTaaaaaadTdTdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhdcdIbhaaaaabexaiaiaiaiaiahabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhdcdIbhaaaaabeyateGatatatezabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhdceHbhaaababababajabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeJeIeIeIeIaaaaababdcdIbhaaabeLeKeMbbdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeIeIeNeOeNeIdTdTabePdcdIaiaiabbbbbbbbbdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeIeNcGeQcGeSeRdceEdEdEdSdcdceTbbbbbbeUdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeIeIeNeVeNeIeWdTababdceXaYdEeYeZbbbbfadTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeIeIeIeIeIdHeGaterdEfbabababfcbbbbfddTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeIadadahadabdcdcabaaabfffefhfgdTaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadfiadababababaaabdTdTdTdTabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadaTaTagaiaqaiaUaVaMaWaiaXaYaZavaiahaibabbbbbbbbabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadaTaTbcaibdaiaiaibebfaibfaibeaiaiajaibbbgbhbibbbjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabatbkblbmbmbnbobpbqbrbsbtbsbubvbwbxbybzbAbAbAbBbCbjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababbjbjababbDbjababaiaiaiaiaiaibEbFbGbGbHbGbGbGbGbFbIbJbKbLbMbNbbbOabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbPbQbRbSbTbTbTabbUadadadadbVaibWbjbjbjbXadbYbjbjbjbZcaabababbjbjababaaaaaaababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjcbbQbQbQbQbQbQabcccdcecfadcgbjchbjaacicicjciciaabjckaMabaaaaaaaaaaaaaaaaababclcmababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjcncocpcqcrcsbQabbUadcgadadcgbjctbjbjcicuadadcibjbjcvaMbjbjbjbjbjbjbjabababadcwcxcyababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabczcAcBcCbQbQbQabadadcDcEcFcGbjchadadcjadcHcIcJcIcIcKcLcMcNcNcNcNcNcNcNcMcNcIcOcPadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababcQcRabababaiaicScTaiaiaibWbjbjciadadadcibjbjcvcUcVcWcWcWcXcWcWcWcVcYcZdadbcIdcabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjdddddddeddddddabdfdgdhdidjdkdldmbjaacicicjciciaabjdndobjbjbjbjbjbjbjaiaiaidpahdqdrababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjdddddddscWdtducVcWdvdwdxdydzdzdAdBbjbjdCadbYbjbjbjdDcaaidEdFdFdFdFdFdGabababdHdIababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababbjbjababdJaiaidddKaiaiaiaidLdMcWcXcWdNdObqdPdQdRdSdFdTdUdUdUdUdUdJdUaaababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdVdddddEdWdXaidYdKdZeaebaiaiaibjbjbjecaiaiahababababdJdUaaaaaadUdJdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjedddaieeaieeaiddefbGegbGehebaieiejekelemaiahabaaaadUendUaaaaaadUdJdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjddddaieoaieoaiddefbGbGbGbGepaidJddaVeqeraiahabaaaadUdLesaaaaaaesetdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbjbjababaibjabddeudlevbGbGepaienddddddewaiahabaaaadUdddUaaaaaadUdddUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababexeyababababdJezeAeAavaiahabaaaadUdUdUaaaaaadUdUdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjdddJbjaaaaabeBaiaiaiaiaiahabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjdddJbjaaaaabeCateDatatateEabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjddeFbjaaababababajabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeGeHeHeHeHaaaaababdddJbjaaabeIeJeKbbdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeHeHeLeMeLeHdUdUabeNdddJaiaiabbbbbbbbbdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeHeLcIeOcIePeQddexdFdFdTddddeRbbbbbbeSdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeHeHeLeTeLeHeUdUababddeVaYdFeWeXbbbbeYdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeHeHeHeHeHdIeDatesdFeZabababfabbbbfbdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeHadadahadabddddabaaabfcfdfeffdUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadfgadababababaaabdUdUdUdUabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -419,7 +419,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiai
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaieAaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaifhaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -529,13 +529,13 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBeBeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBeBeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBeBeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBeBeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBeBeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBeBeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeBeBeBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafififiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafififiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafififiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafififiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafififiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafififiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafififiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -576,4 +576,3 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
-

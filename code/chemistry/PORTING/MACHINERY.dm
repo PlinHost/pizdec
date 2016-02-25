@@ -55,6 +55,48 @@
 /obj/machinery/chemdispenser/act_by_item(var/obj/item/I)
 	if(istype(I,/obj/item/weapon/reagent_containers/glass))
 		if(contents.len == 0)
-			I.Move(src)
+			if(usr.client.my_hand_active == "left")
+				if(istype(I, usr.client.lhand_items[1]))
+					I.Move(src)
+					usr << "\bold Вы суете [I] в [src]"
+					usr.client.L.overlays.Cut()
+					usr.client.lhand_items.Cut()
+
+			if(usr.client.my_hand_active == "right")
+				if(istype(I, usr.client.rhand_items[1]))
+					I.Move(src)
+					usr << "\bold Вы суете [I] в [src]"
+					usr.client.R.overlays.Cut()
+					usr.client.rhand_items.Cut()
 		else
 			usr << "\red В автомате уже есть колба"
+
+
+/obj/machinery/juicer
+	icon = 'icons/obj/chem.dmi'
+	icon_state = "juicer"
+
+/obj/machinery/juicer/act_by_item(var/obj/item/I)
+	if(istype(I,/obj/item/weapon/reagent_containers))
+		for(I in usr.contents)
+			if(usr.client.my_hand_active == "left")
+				if(istype(I, usr.client.lhand_items[1]))
+					I.Move(src)
+					usr << "\bold Вы суете [I] в [src]"
+					usr.client.L.overlays.Cut()
+					usr.client.lhand_items.Cut()
+
+			if(usr.client.my_hand_active == "right")
+				if(istype(I, usr.client.rhand_items[1]))
+					I.Move(src)
+					usr << "\bold Вы суете [I] в [src]"
+					usr.client.R.overlays.Cut()
+					usr.client.rhand_items.Cut()
+
+/obj/machinery/juicer/act()
+	var/obj/item/weapon/reagent_containers/glass/stakan = new()
+	for(var/obj/item/weapon/reagent_containers/I in contents)
+		I.reagents.trans_to(stakan, 50, 1)
+		usr << "\blue Преобразование..."
+		//world << "[stakan.reagents.get_reagent_amount("poison")]"
+	stakan.Move(src.loc)
