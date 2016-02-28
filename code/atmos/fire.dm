@@ -5,6 +5,14 @@ var/global/list/ass = list()
 var/global/list/hunt = list()
 var/global/list/ultraboy = list()
 
+/obj/effect/blood
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "blood1"
+
+/obj/effect/blood/New()
+	var/recei_poshel_nahui = pick(1,2,3)
+	icon_state = "blood[recei_poshel_nahui]"
+
 /obj/effect/fire
 	name = "fire"
 	icon = 'icons/effects/effects.dmi'

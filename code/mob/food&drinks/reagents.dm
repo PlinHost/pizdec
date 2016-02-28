@@ -42,3 +42,8 @@
 			var/datum/reagents/R = new/datum/reagents(200)
 			reagents = R
 			R.my_atom = src
+
+/turf/simulated/floor/act_by_item(var/obj/item/I)
+	if(istype(I, /obj/item/weapon/reagent_containers))
+		I.reagents.trans_to(src, 50, 1)
+		usr << "Вы выливаете часть содержимого колбы на пол"

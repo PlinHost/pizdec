@@ -190,4 +190,7 @@ mob/verb/block_test()
 /turf/simulated/floor/New()
 	FUCK += src
 	//fuck_light()
+	var/datum/reagents/R = new/datum/reagents(200)
+	reagents = R
+	R.my_atom = src
 	process()

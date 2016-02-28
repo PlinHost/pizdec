@@ -452,8 +452,8 @@ window "outputwindow"
 		font-family = "@FangSong"
 		font-size = 12
 		font-style = ""
-		text-color = #000000
-		background-color = none
+		text-color = #cdcdcd
+		background-color = #000000
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
@@ -737,8 +737,8 @@ window "infowindow"
 		font-family = ""
 		font-size = 0
 		font-style = ""
-		text-color = #000000
-		background-color = none
+		text-color = #e5e5e5
+		background-color = #000000
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
@@ -749,9 +749,9 @@ window "infowindow"
 		saved-params = ""
 		on-size = ""
 		highlight-color = #00aa00
-		tab-text-color = #000000
-		tab-background-color = none
-		tab-font-family = "DejaVu Sans"
+		tab-text-color = #cdcdcd
+		tab-background-color = #000000
+		tab-font-family = ""
 		tab-font-size = 0
 		tab-font-style = ""
 		allow-html = false

@@ -60,7 +60,7 @@
 
 			if(ISSCRDRI == 1)
 				ISSCRDRI = 0
-				usr << "¬ы прикрутили внешние креплени&#255; от стены"
+				usr << "¬ы прикрутили внешние креплени&#255;"
 				return
 
 		if(istype(I, /obj/item/tools/wrench))

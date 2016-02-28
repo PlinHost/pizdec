@@ -260,9 +260,12 @@ client
 		stat("oxygen(ALERT) - ", my_oxygen)
 		stat("pulse - ", pulse)
 		stat("chem - ", cur_val)
+		stat("blood - ", reagents.get_reagent_amount("blood"))
 		statpanel("Organs")
 		for(var/obj/item/organs/O in usr)
 			stat("\[[O.name]\]", "soundness - [O.hit_points]; percent burns - [O.burn_points]")
+
+
 
 		statpanel("Description")
 		var/turf/T = locate(usr.x,usr.y, usr.z + 1)
@@ -340,6 +343,10 @@ client
 	//text2file("HELLO",FT)
 
 	objects += src
+	var/datum/reagents/R = new/datum/reagents(380)
+	reagents = R
+	R.my_atom = src
+	R.add_reagent("blood", 300)
 
 	spawn while(1)
 		//if(src == usr)
@@ -373,6 +380,8 @@ client
 
 
 		organ_damage_calculate()
+		bloodloss()
+		blood_new()
 		for(var/obj/O in usr.contents)
 			usr.client.my_weight += O.weight
 
