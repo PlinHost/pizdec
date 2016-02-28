@@ -36,6 +36,45 @@
 			del_from_hand()
 			del(src)
 
+	caffeine
+		name = "SOLID_COFE"
+		icon_state = "caffeine"
+
+		New()
+			var/datum/reagents/R = new/datum/reagents(100)
+			reagents = R
+			R.my_atom = src
+			R.add_reagent("caffeine", 30)
+
+		act_self(src)
+			usr << "\blue Ты принимаешь [src]."
+			if(reagents.total_volume)
+				reagents.reaction(usr)
+				spawn(5)
+					reagents.trans_to(usr, reagents.total_volume)
+			del_from_hand()
+			del(src)
+
+	SPIRT
+		name = "SOVIET SPIRT"
+		icon_state = "ethanol"
+
+		New()
+			var/datum/reagents/R = new/datum/reagents(100)
+			reagents = R
+			R.my_atom = src
+			R.add_reagent("ethanol", 30)
+
+		act_self(src)
+			usr << "\blue Ты принимаешь [src]."
+			if(reagents.total_volume)
+				reagents.reaction(usr)
+				spawn(5)
+					reagents.trans_to(usr, reagents.total_volume)
+			del_from_hand()
+			del(src)
+
+
 	glass
 		icon_state = "container"
 		New()

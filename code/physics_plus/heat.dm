@@ -11,7 +11,7 @@
 //Площадь, которая нагревается
 
 /atom
-	var/typer = "NoFlammable"
+	var/typer = "Melts"
 	var/MAXTEMP = 1000
 	var/my_temp = 21
 

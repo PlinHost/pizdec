@@ -1,6 +1,7 @@
 //кровопотери
 
 /mob/human
+	typer = "NoFlammable"
 	proc/bloodloss()
 		for(var/obj/item/organs/O in src)
 			if(O.hit_points < 70 || O.burn_points > 30)
