@@ -28,6 +28,8 @@
 #include "code\chemistry\PORTING\REAGENTS.dm"
 #include "code\chemistry\PORTING\RECIPES.dm"
 #include "code\fast_porting\HMHMHM.dm"
+#include "code\fast_porting\3DSHADOW\MAIN.dm"
+#include "code\fast_porting\3DSOUND\MAIN.dm"
 #include "code\fast_porting\HYDRO\MAIN.dm"
 #include "code\fast_porting\HYDRO\SEED.dm"
 #include "code\Kate_core\main.dm"
