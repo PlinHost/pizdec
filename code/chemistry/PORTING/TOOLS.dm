@@ -10,16 +10,16 @@
 /obj/item/weapon/chem_grenade
 	name = "metal casing"
 	icon_state = "chemg1"
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	item_state = "flashbang"
-	w_class = 2.0
+	//w_class = 2.0
 	force = 2.0
 	var/stage = 0
 	var/state = 0
 	var/list/beakers = new/list()
-	throw_speed = 4
-	throw_range = 20
-	flags = FPRINT | TABLEPASS | CONDUCT | ONBELT | USEDELAY
+	//throw_speed = 4
+	//throw_range = 20
+	//flags = FPRINT | TABLEPASS | CONDUCT | ONBELT | USEDELAY
 
 	New()
 		var/datum/reagents/R = new/datum/reagents(1000)
@@ -29,7 +29,7 @@
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		if(istype(W,/obj/item/assembly/time_ignite) && !stage)
 			user << "\blue You add [W] to the metal casing."
-			playsound(src.loc, 'Screwdriver2.ogg', 25, -3)
+			//playsound(src.loc, 'Screwdriver2.ogg', 25, -3)
 			del(W) //Okay so we're not really adding anything here. cheating.
 			icon_state = "chemg2"
 			name = "unsecured grenade"
@@ -37,7 +37,7 @@
 		else if(istype(W,/obj/item/weapon/screwdriver) && stage == 1)
 			if(beakers.len)
 				user << "\blue You lock the assembly."
-				playsound(src.loc, 'Screwdriver.ogg', 25, -3)
+				//playsound(src.loc, 'Screwdriver.ogg', 25, -3)
 				name = "grenade"
 				icon_state = "chemg3"
 				stage = 2
@@ -62,19 +62,19 @@
 			user << "\red You prime the grenade! 3 seconds!"
 			src.state = 1
 			src.icon_state = "chemg4"
-			playsound(src.loc, 'armbomb.ogg', 75, 1, -3)
+			//playsound(src.loc, 'armbomb.ogg', 75, 1, -3)
 			spawn(30)
 				explode()
 			user.drop_item()
 			var/t = (isturf(target) ? target : target.loc)
 			walk_towards(src, t, 3)
 
-	attack_self(mob/user as mob)
+	act_self(mob/user as mob)
 		if (!src.state && stage == 2)
 			user << "\red You prime the grenade! 3 seconds!"
 			src.state = 1
 			src.icon_state = "chemg4"
-			playsound(src.loc, 'armbomb.ogg', 75, 1, -3)
+			//playsound(src.loc, 'armbomb.ogg', 75, 1, -3)
 			spawn(30)
 				explode()
 
@@ -91,11 +91,11 @@
 				if(G.reagents.total_volume) has_reagents = 1
 
 			if(!has_reagents)
-				playsound(src.loc, 'Screwdriver2.ogg', 50, 1)
+				//playsound(src.loc, 'Screwdriver2.ogg', 50, 1)
 				state = 0
 				return
 
-			playsound(src.loc, 'bamf.ogg', 50, 1)
+			//playsound(src.loc, 'bamf.ogg', 50, 1)
 
 			for(var/obj/item/weapon/reagent_containers/glass/G in beakers)
 				G.reagents.trans_to(src, G.reagents.total_volume)
@@ -174,7 +174,7 @@
 /obj/syringe_gun_dummy
 	name = ""
 	desc = ""
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "null"
 	anchored = 1
 	density = 0
@@ -189,9 +189,9 @@
 	icon = 'gun.dmi'
 	icon_state = "syringegun"
 	item_state = "syringegun"
-	w_class = 3.0
-	throw_speed = 2
-	throw_range = 10
+	//w_class = 3.0
+	//throw_speed = 2
+	//throw_range = 10
 	force = 4.0
 	var/list/syringes = new/list()
 	var/max_syringes = 1
@@ -232,7 +232,7 @@
 			del(S)
 			D.icon_state = "syringeproj"
 			D.name = "syringe"
-			playsound(user.loc, 'syringeproj.ogg', 50, 1)
+			//playsound(user.loc, 'syringeproj.ogg', 50, 1)
 
 			for(var/i=0, i<6, i++)
 				if(D.loc == trg) break
@@ -267,7 +267,7 @@
 	icon_state = "watertank"
 	density = 1
 	anchored = 0
-	flags = FPRINT
+	//flags = FPRINT
 	pressure_resistance = 2*ONE_ATMOSPHERE
 
 	var/amount_per_transfer_from_this = 10
@@ -319,9 +319,9 @@
 /obj/item/weapon/reagent_containers
 	name = "Container"
 	desc = "..."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = null
-	w_class = 1
+	//w_class = 1
 	var/amount_per_transfer_from_this = 5
 
 	New()
@@ -331,7 +331,7 @@
 
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		return
-	attack_self(mob/user as mob)
+	act_self(mob/user as mob)
 		return
 	attack(mob/M as mob, mob/user as mob, def_zone)
 		return
@@ -346,11 +346,11 @@
 /obj/item/weapon/reagent_containers/glass/
 	name = " "
 	desc = " "
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "null"
 	item_state = "null"
 	amount_per_transfer_from_this = 10
-	flags = FPRINT | TABLEPASS | OPENCONTAINER
+	//flags = FPRINT | TABLEPASS | OPENCONTAINER
 
 	examine()
 		set src in view(2)
@@ -431,7 +431,7 @@
 /obj/item/weapon/reagent_containers/dropper
 	name = "Dropper"
 	desc = "A dropper. Transfers 5 units."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "dropper0"
 	amount_per_transfer_from_this = 5
 	var/filled = 0
@@ -515,7 +515,7 @@
 		..()
 		update_icon()
 
-	attack_self(mob/user as mob)
+	act_self(mob/user as mob)
 		switch(mode)
 			if("d")
 				mode = "i"
@@ -633,7 +633,7 @@
 
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		return
-	attack_self(mob/user as mob)
+	act_self(mob/user as mob)
 		return
 	attack(mob/M as mob, mob/user as mob, def_zone)
 		if(!src.amount)
@@ -651,7 +651,7 @@
 				M.nutrition += src.heal_amt * 10
 				M.poo += 0.1
 				src.heal(M)
-				playsound(M.loc,'eatfood.ogg', rand(10,50), 1)
+				//playsound(M.loc,'eatfood.ogg', rand(10,50), 1)
 				if(!src.amount)
 					user << "\red You finish eating [src]."
 					del(src)
@@ -671,7 +671,7 @@
 				M.nutrition += src.heal_amt * 10
 				M.poo += 0.1
 				src.heal(M)
-				playsound(M.loc, 'eatfood.ogg', rand(10,50), 1)
+				//playsound(M.loc, 'eatfood.ogg', rand(10,50), 1)
 				if(!src.amount)
 					user << "\red [M] finishes eating [src]."
 					del(src)
@@ -697,7 +697,7 @@
 	desc = "yummy"
 	icon = 'food.dmi'
 	icon_state = null
-	flags = FPRINT | TABLEPASS | OPENCONTAINER
+	//flags = FPRINT | TABLEPASS | OPENCONTAINER
 	var/gulp_size = 5 //This is now officially broken ... need to think of a nice way to fix it.
 
 	New()
@@ -716,7 +716,7 @@
 
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		return
-	attack_self(mob/user as mob)
+	act_self(mob/user as mob)
 		return
 	attack(mob/M as mob, mob/user as mob, def_zone)
 		var/datum/reagents/R = src.reagents
@@ -732,7 +732,7 @@
 				spawn(5)
 					reagents.trans_to(M, gulp_size)
 
-			playsound(M.loc,'drink.ogg', rand(10,50), 1)
+			//playsound(M.loc,'drink.ogg', rand(10,50), 1)
 			M.urine += 0.1
 			return 1
 
@@ -749,7 +749,7 @@
 				spawn(5)
 					reagents.trans_to(M, gulp_size)
 
-			playsound(M.loc,'drink.ogg', rand(10,50), 1)
+			//playsound(M.loc,'drink.ogg', rand(10,50), 1)
 			M.urine += 0.1
 			return 1
 
@@ -796,7 +796,7 @@
 /obj/item/weapon/reagent_containers/pill
 	name = "pill"
 	desc = "a pill."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = null
 	item_state = "pill"
 
@@ -808,7 +808,7 @@
 
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		return
-	attack_self(mob/user as mob)
+	act_self(mob/user as mob)
 		return
 	attack(mob/M as mob, mob/user as mob, def_zone)
 		if(M == user)
@@ -878,7 +878,7 @@
 	icon_state = "bucket"
 	item_state = "bucket"
 	amount_per_transfer_from_this = 10
-	flags = FPRINT | OPENCONTAINER
+	//flags = FPRINT | OPENCONTAINER
 	New()
 		var/datum/reagents/R = new/datum/reagents(30)
 		reagents = R
@@ -902,10 +902,10 @@
 /obj/item/weapon/reagent_containers/glass/dispenser
 	name = "reagent glass"
 	desc = "A reagent glass."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "beaker"
 	amount_per_transfer_from_this = 10
-	flags = FPRINT | TABLEPASS | OPENCONTAINER
+	//flags = FPRINT | TABLEPASS | OPENCONTAINER
 
 
 /obj/item/weapon/reagent_containers/glass/dispenser/surfactant
@@ -920,11 +920,11 @@
 /obj/item/weapon/reagent_containers/glass/large
 	name = "large reagent glass"
 	desc = "A large reagent glass."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "beakerlarge"
 	item_state = "beaker"
 	amount_per_transfer_from_this = 10
-	flags = FPRINT | TABLEPASS | OPENCONTAINER
+	//flags = FPRINT | TABLEPASS | OPENCONTAINER
 
 	New()
 		var/datum/reagents/R = new/datum/reagents(50)
@@ -934,11 +934,11 @@
 /obj/item/weapon/reagent_containers/glass/bottle/
 	name = "bottle"
 	desc = "A small bottle."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "bottle16"
 	item_state = "atoxinbottle"
 	amount_per_transfer_from_this = 10
-	flags = FPRINT | TABLEPASS | OPENCONTAINER
+	//flags = FPRINT | TABLEPASS | OPENCONTAINER
 
 	New()
 		var/datum/reagents/R = new/datum/reagents(30)
@@ -949,7 +949,7 @@
 /obj/item/weapon/reagent_containers/glass/bottle/inaprovaline
 	name = "inaprovaline bottle"
 	desc = "A small bottle. Contains inaprovaline - used to stabilize patients."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "bottle16"
 	amount_per_transfer_from_this = 10
 
@@ -962,7 +962,7 @@
 /obj/item/weapon/reagent_containers/glass/bottle/toxin
 	name = "toxin bottle"
 	desc = "A small bottle."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "bottle12"
 	amount_per_transfer_from_this = 5
 
@@ -975,7 +975,7 @@
 /obj/item/weapon/reagent_containers/glass/bottle/stoxin
 	name = "sleep-toxin bottle"
 	desc = "A small bottle."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "bottle20"
 	amount_per_transfer_from_this = 5
 
@@ -988,7 +988,7 @@
 /obj/item/weapon/reagent_containers/glass/bottle/antitoxin
 	name = "anti-toxin bottle"
 	desc = "A small bottle."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "bottle17"
 	amount_per_transfer_from_this = 5
 
@@ -1003,7 +1003,7 @@
 /obj/item/weapon/reagent_containers/glass/beaker
 	name = "beaker"
 	desc = "A beaker. Can hold up to 30 units."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "beaker0"
 	item_state = "beaker"
 
@@ -1016,7 +1016,7 @@
 /obj/item/weapon/reagent_containers/glass/beaker/cryoxadone
 	name = "beaker"
 	desc = "A beaker. Can hold up to 30 units."
-	icon = 'chemical.dmi'
+	icon = 'icons/obj/chem.dmi'
 	icon_state = "beaker0"
 	item_state = "beaker"
 

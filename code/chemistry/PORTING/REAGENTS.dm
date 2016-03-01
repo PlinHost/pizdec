@@ -205,3 +205,35 @@ datum
 		purifier
 			name = "purifier"
 			id = "purifier"
+
+		adderal
+			name = "adderal"
+			id = "adderal"
+
+		sleeping
+			name = "sleeping"
+			id = "sleeping"
+
+		oxycodone
+			name = "oxycodone"
+			id = "oxycodone"
+
+		tramadol
+			name = "tramadol"
+			id = "tramadol"
+
+		xanax
+			name = "xanax"
+			id = "xanax"
+
+		codeine //от слова code
+			name = "codeine"
+			id = "codeine"
+
+		antibiotic
+			name = "antibiotic"
+			id = "antibiotic"
+
+		metamphetamine
+			name = "metamphetamine"
+			id = "metamphetamine"

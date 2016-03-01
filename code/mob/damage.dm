@@ -20,4 +20,6 @@
 
 	proc/blood_new() //восстановление крови
 		if(reagents.get_reagent_amount("blood") < 300)
-			reagents.add_reagent("blood", rand(3,6))
+			if(reagents.get_reagent_amount("nutrments") > 1)
+				reagents.add_reagent("blood", rand(3,6))
+				reagents.remove_reagent("nutriments", 1)

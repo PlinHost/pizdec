@@ -37,7 +37,7 @@
 			del(src)
 
 	caffeine
-		name = "SOLID_COFE"
+		name = "SOLID COFE"
 		icon_state = "caffeine"
 
 		New()
