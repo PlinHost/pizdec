@@ -25,7 +25,7 @@ var/global/list/wave/waves = list()
 
 	proc/waves()
 		var/wave/radio/RAD
-		for(var/turf/simulated/floor/F in range(round(frequency/pow(wave_length,2)), src))
+		for(var/turf/simulated/floor/F in range(round(frequency/pow(wave_length,2) * 8), src))
 			RAD = new(F)
 			RAD.id = id
 			RAD.frequency = frequency
