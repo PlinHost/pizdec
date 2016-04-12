@@ -544,7 +544,7 @@ atom/movable/Move() // when something moves
 	else
 		oldview = list()
 
-	. = ..()
+	..()
 
 	if(.&&(luminosity>0))	// if the atom moved and is luminous
 		if(istype(oldloc))

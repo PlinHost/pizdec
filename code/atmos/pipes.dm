@@ -9,7 +9,7 @@ var/global/GASWAGEN_NET = 0//
 
 
 /obj/machinery/atmospherics/pipe
-	icon = 'icons/obj/atmos.dmi'
+	icon = 'icons/obj/machine/atmos.dmi'
 	name = "pipe"
 	icon_state = "pipe"
 	density = 0

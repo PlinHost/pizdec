@@ -1,3 +1,5 @@
+var/global/list/chemical_reactions_list = list(/datum/chemical_reaction/homunculinus)//list of all /datum/chemical_reaction datums. Used during chemical reactions
+
 /atom
 	var/datum/reagents/reagents
 
@@ -86,35 +88,64 @@
 
 			handle_reactions()
 
-				if(ismob(my_atom)) return //No reactions inside mobs :I
+				var/reaction_occured = 0
+				do
+					reaction_occured = 0
+					for(var/datum/reagent/R in reagent_list) // Usually a small list
+						for(var/reaction in chemical_reactions_list[R.id]) // Was a big list but now it should be smaller since we filtered it with our reagent id
 
-				for(var/A in typesof(/datum/chemical_reaction) - /datum/chemical_reaction)
-					var/datum/chemical_reaction/C = new A()
-					var/total_required_reagents = C.required_reagents.len
-					var/total_matching_reagents = 0
-					var/list/multipliers = new/list()
+							if(!reaction)
+								continue
 
-					for(var/B in C.required_reagents)
-						if(has_reagent(B, C.required_reagents[B]))
-							total_matching_reagents++
-							multipliers += round(get_reagent_amount(B) / C.required_reagents[B])
+							var/datum/chemical_reaction/C = reaction
+							var/total_required_reagents = C.required_reagents.len
+							var/total_matching_reagents = 0
+							var/total_required_catalysts = C.required_catalysts.len
+							var/total_matching_catalysts= 0
+							var/matching_container = 0
+							var/matching_other = 0
+							var/list/multipliers = new/list()
 
-					if(total_matching_reagents == total_required_reagents)
-						var/multiplier = min(multipliers)
-						for(var/B in C.required_reagents)
-							del_reagent(B)
+							for(var/B in C.required_reagents)
+								if(!has_reagent(B, C.required_reagents[B]))	break
+								total_matching_reagents++
+								multipliers += round(get_reagent_amount(B) / C.required_reagents[B])
+							for(var/B in C.required_catalysts)
+								if(!has_reagent(B, C.required_catalysts[B]))	break
+								total_matching_catalysts++
 
-						var/created_volume = C.result_amount*multiplier
-						if(C.result)
-							multiplier = max(multiplier, 1) //this shouldnt happen ...
-							add_reagent(C.result, C.result_amount*multiplier)
+							if(!C.required_container)
+								matching_container = 1
 
-						for(var/mob/M in viewers(4, my_atom.loc))
-							M << "\blue \icon[my_atom] The solution begins to bubble."
-						////playsound(get_turf(my_atom), 'bubbles.ogg', 80, 1)
+							else
+								if(my_atom.type == C.required_container)
+									matching_container = 1
 
-						C.on_reaction(src, created_volume)
+							if(!C.required_other)
+								matching_other = 1
 
+
+							if(total_matching_reagents == total_required_reagents && total_matching_catalysts == total_required_catalysts && matching_container && matching_other)
+								var/multiplier = min(multipliers)
+								for(var/B in C.required_reagents)
+									remove_reagent(B, (multiplier * C.required_reagents[B]), safety = 1)
+
+								var/created_volume = C.result_amount*multiplier
+								if(C.result)
+									multiplier = max(multiplier, 1) //this shouldnt happen ...
+									add_reagent(C.result, C.result_amount*multiplier)
+
+								var/list/seen = viewers(4, my_atom.loc)
+
+								if(!istype(my_atom, /mob)) // No bubbling mobs
+									for(var/mob/M in seen)
+										M << "\blue \icon[my_atom] The solution begins to bubble."
+
+								C.on_reaction(src, created_volume)
+								reaction_occured = 1
+								break
+
+				while(reaction_occured)
 				update_total()
 				return 0
 

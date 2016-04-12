@@ -8,7 +8,7 @@ var/list/global/machines = list()
 
 /obj/machinery/recharger
 	name = "recharger"
-	icon = 'icons/obj/shaitan_machine.dmi'
+	icon = 'icons/obj/machine/shaitan_machine.dmi'
 	icon_state = "recharger"
 	need_amperage = 35
 	on = 0
@@ -95,7 +95,7 @@ var/list/global/machines = list()
 ////////////////////////////////////////////////////////////
 
 /obj/machinery/computer
-	icon = 'icons/obj/computer.dmi'
+	icon = 'icons/obj/machine/computer.dmi'
 	icon_state = "computer"
 	name = "computer"
 	use_power = 1

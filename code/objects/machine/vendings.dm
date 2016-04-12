@@ -7,7 +7,7 @@
 /obj/machinery/vending
 	var/amount = 3
 	density = 1
-	icon = 'icons/obj/vending.dmi'
+	icon = 'icons/obj/machine/vending.dmi'
 	var/list/obj/item/my_items = list()
 	var/list/obj/item/my_types= list()
 	var/list/items_num = list()

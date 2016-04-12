@@ -1,5 +1,5 @@
 /obj/item/organs
-	icon = 'icons/human.dmi'
+	icon = 'icons/mob/human.dmi'
 	var/hit_points = 100
 	var/burn_points = 0
 	weight = 0
@@ -225,7 +225,7 @@ client
 
 /mob/human
 	name = "human"
-	icon = 'icons/human.dmi'
+	icon = 'icons/mob/human.dmi'
 	icon_state = "human"
 	layer = 6
 	weight = 70
@@ -291,7 +291,7 @@ client
 
 		for(var/obj/item/organs/O in organs)
 			overlays -= O
-			O.icon = 'icons/human_lying.dmi'
+			O.icon = 'icons/mob/human_lying.dmi'
 			overlays += O
 
 		if(usr.client.foot_items.len > 0)
@@ -315,7 +315,7 @@ client
 
 		for(var/obj/item/organs/O in organs)
 			overlays -= O
-			O.icon = 'icons/human.dmi'
+			O.icon = 'icons/mob/human.dmi'
 			overlays += O
 
 		if(usr.client.foot_items.len > 0)
@@ -516,46 +516,36 @@ mob/human/proc/hello_bitch()
 
 		process()
 
+/mob/human/proc/punch_organ(var/obj/item/organs/O)
+	for(O in src)
+		usr << "\red Вы бьете [src] кулаком по телу!"
+		src << "\red [usr] ударил вас кулаком по телу!"
+		O.hit_points -= 1
+
 /mob/human/act()
 	if(usr.client.act == "harm")
 		if(usr.client.zone == "chest")
-			for(var/obj/item/organs/chest/O in src)
-				usr << "\red Вы бьете [src] кулаком по телу!"
-				src << "\red [usr] ударил вас кулаком по телу!"
-				O.hit_points -= 1
+			var/obj/item/organs/chest/O = new()
+			punch_organ(O)
 
 		if(usr.client.zone == "head")
-			for(var/obj/item/organs/head/O in src)
-				usr << "\red Вы бьете [src] кулаком по голове!"
-				src << "\red [usr] ударил вас кулаком по голове!"
-				O.hit_points -= 1
+			var/obj/item/organs/head/O = new()
+			punch_organ(O)
 
 		if(usr.client.zone == "r_leg")
-			for(var/obj/item/organs/r_leg/O in src)
-				usr << "\red Вы бьете [src] кулаком по правой ноге!"
-				src << "\red [usr] ударил вас кулаком по правой ноге!"
-				O.hit_points -= 1
+			var/obj/item/organs/r_leg/O = new()
+			punch_organ(O)
 
 		if(usr.client.zone == "l_leg")
-			for(var/obj/item/organs/l_leg/O in src)
-				usr << "\red Вы бьете [src] кулаком по левой ноге!"
-				src << "\red [usr] ударил вас кулаком по левой ноге!"
-				O.hit_points -= 1
+			var/obj/item/organs/l_leg/O = new()
+			punch_organ(O)
 
 		if(usr.client.zone == "l_arm")
-			for(var/obj/item/organs/l_leg/O in src)
-				usr << "\red Вы бьете [src] кулаком по левой руке!"
-				src << "\red [usr] ударил вас кулаком по левой руке!"
-				O.hit_points -= 1
+			var/obj/item/organs/l_arm/O = new()
+			punch_organ(O)
 
 		if(usr.client.zone == "r_arm")
-			for(var/obj/item/organs/l_leg/O in src)
-				usr << "\red Вы бьете [src] кулаком по правой руке!"
-				src << "\red [usr] ударил вас кулаком по правой руке!"
-				O.hit_points -= 1
+			var/obj/item/organs/r_arm/O = new()
+			punch_organ(O)
 
-		if(usr.client.zone == "groin")
-			for(var/obj/item/organs/l_leg/O in src)
-				usr << "\red Вы бьете [src] кулаком в область паха!"
-				src << "\red [usr] ударил вас кулаком в область паха!"
-				O.hit_points -= 1
+//Экономия кода 20 строчек! Ого! Целых 20, ДВАДЦАТЬ БЛЯДЬ, TWENTY нахуй (ну охуеть теперь оптимизация)

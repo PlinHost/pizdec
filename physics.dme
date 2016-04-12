@@ -7,10 +7,6 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
-#define FILE_DIR "icons"
-#define FILE_DIR "icons/effects"
-#define FILE_DIR "icons/obj"
-#define FILE_DIR "sound"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
@@ -33,10 +29,11 @@
 #include "code\fast_porting\HYDRO\MAIN.dm"
 #include "code\fast_porting\HYDRO\SEED.dm"
 #include "code\Kate_core\main.dm"
-#include "code\light\area.dm"
 #include "code\light\PORTING\SD_DYNAMIC.dm"
+#include "code\logic\main.dm"
 #include "code\mob\clothes.dm"
 #include "code\mob\damage.dm"
+#include "code\mob\farm.dm"
 #include "code\mob\human.dm"
 #include "code\mob\item_attacks.dm"
 #include "code\mob\life.dm"

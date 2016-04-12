@@ -1,6 +1,6 @@
 /obj/item/weapon/reagent_containers
 	name = "Rgnt_Cntnr"
-	icon = 'icons/obj/medbay.dmi'
+	icon = 'icons/obj/item/medbay.dmi'
 	icon_state = "pill"
 
 	New()
@@ -17,6 +17,12 @@
 				reagents.trans_to(usr, reagents.total_volume)
 		del_from_hand()
 		del(src)
+
+
+	act_by_item(var/obj/item/I)
+		if(istype(I, /obj/item/weapon/reagent_containers))
+			usr << "\blue Ты мешаешь [src] с [I]."
+			reagents.trans_to(src, 5)
 
 	poison
 		name = "poison"
@@ -74,6 +80,15 @@
 			del_from_hand()
 			del(src)
 
+	milk
+		name = "JUST MILK"
+		icon_state = "milk"
+
+		New()
+			var/datum/reagents/R = new/datum/reagents(100)
+			reagents = R
+			R.my_atom = src
+			R.add_reagent("milk", 30)
 
 	glass
 		icon_state = "container"

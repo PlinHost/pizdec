@@ -6,7 +6,7 @@
 #define SUPER_MEGA_LASER_POINT 3
 
 /obj/machinery/laser
-	icon = 'icons/obj/shaitan_machine.dmi'
+	icon = 'icons/obj/machine/shaitan_machine.dmi'
 	icon_state = "laser"
 
 	act()
@@ -37,7 +37,7 @@
 			B.fly()
 
 /obj/beam
-	icon = 'icons/obj/shaitan_machine.dmi'
+	icon = 'icons/obj/machine/shaitan_machine.dmi'
 	icon_state = "beam"
 	var/brute_damage = 0
 	var/burn_damage = 20
@@ -181,6 +181,12 @@
 
 //****** ÏÓØÊÀ ÈÇ ÊÎÒÎÐÎÉ ß ÕÎ×Ó ÕÓÉÍÓÒÜ Â ÀÍÈÌÓÑ ******//
 
+/obj/beam/proc/for_you(var/mob/human/A, var/obj/item/organs/O)
+	for(O in A)
+		if(O.hit_points > 1 && O.burn_points < 100)
+			O.hit_points -= brute_damage
+			O.burn_points += burn_damage
+
 /obj/beam/HAHAHA
 	burn_damage = 1000
 	fly()
@@ -201,80 +207,55 @@
 					if(attack_zone != 0)
 						switch(attack_zone)
 							if("head")
-								for(var/obj/item/organs/head/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/head/O = new()
+								for_you(O, A)
 
 							if("chest")
-								for(var/obj/item/organs/chest/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/chest/O = new()
+								for_you(O, A)
 
 							if("r_leg")
-								for(var/obj/item/organs/r_leg/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/r_leg/O = new()
+								for_you(O, A)
 
 							if("l_leg")
-								for(var/obj/item/organs/l_leg/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/l_leg/O = new()
+								for_you(O, A)
 
 							if("r_arm")
-								for(var/obj/item/organs/r_arm/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/r_arm/O = new()
+								for_you(O, A)
 
 							if("l_arm")
-								for(var/obj/item/organs/l_arm/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/l_arm/O = new()
+								for_you(O, A)
 
 					if(attack_zone == 0)
 						attack_zone = pick("head", "chest", "r_leg", "l_leg", "r_arm", "l_arm")
 						switch(attack_zone)
 							if("head")
-								for(var/obj/item/organs/head/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/head/O = new()
+								for_you(O, A)
 
 							if("chest")
-								for(var/obj/item/organs/chest/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/chest/O = new()
+								for_you(O, A)
 
 							if("r_leg")
-								for(var/obj/item/organs/r_leg/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/r_leg/O = new()
+								for_you(O, A)
 
 							if("l_leg")
-								for(var/obj/item/organs/l_leg/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/l_leg/O = new()
+								for_you(O, A)
 
 							if("r_arm")
-								for(var/obj/item/organs/r_arm/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
+								var/obj/item/organs/r_arm/O = new()
+								for_you(O, A)
 
 							if("l_arm")
-								for(var/obj/item/organs/l_arm/O in A)
-									if(O.hit_points > 1 && O.burn_points < 100)
-										O.hit_points -= brute_damage
-										O.burn_points += burn_damage
-
+								var/obj/item/organs/l_arm/O = new()
+								for_you(O, A)
 			sleep(1)
 			if(dir == 2)
 				y -= 1
@@ -292,3 +273,5 @@
 			del(src)
 
 //****** ÏÓØÊÀ ÈÇ ÊÎÒÎÐÎÉ ß ÕÎ×Ó ÕÓÉÍÓÒÜ Â ÀÍÈÌÓÑ ******//
+
+//OPTIMIZIROVANO

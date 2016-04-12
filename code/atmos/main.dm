@@ -5,7 +5,7 @@ var/global/list/turf/simulated/floor/FUCK = list()
 
 /turf/space
 	name = "space"
-	icon = 'icons/turfs.dmi'
+	icon = 'icons/turf/turfs.dmi'
 	icon_state = "space"
 	pass_gas = 1
 	oxygen = 0
@@ -184,7 +184,7 @@ mob/verb/block_test()
 /turf/simulated/floor/act()
 //	my_val()
 //	my_LIGHT_state = 1
-	world << "nitrogen [nitrogen]; plasma [plasma]; oxygen [oxygen]; temperature [temperature]; blood [blood] ; water [water]"
+	world << "nitrogen [nitrogen]; plasma [plasma]; oxygen [oxygen]; temperature [temperature]; water [water]"
 	usr << "brightness:[sd_lumcount]"
 
 /turf/simulated/floor/New()

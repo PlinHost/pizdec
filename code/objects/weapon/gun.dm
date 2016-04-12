@@ -1,5 +1,5 @@
 /obj/item/weapon/gun/lasergun
-	icon = 'icons/obj/gun.dmi'
+	icon = 'icons/obj/item/gun.dmi'
 	icon_state = "advancelaser"
 
 	pew()

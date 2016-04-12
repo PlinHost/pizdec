@@ -4,7 +4,7 @@
 obj
 	screen
 		layer = 60
-		icon = 'icons/screen.dmi'
+		icon = 'icons/mob/screen.dmi'
 		icon_state = "screen"
 		var/active = 0
 		var/time_to_swap = 0
@@ -15,7 +15,7 @@ obj
 
 		humanhead
 			icon_state = "head"
-			icon = 'big_screen.dmi'
+			icon = 'icons/mob/big_screen.dmi'
 			layer = 60
 			New(client/C)
 				screen_loc="14,14"
@@ -33,7 +33,7 @@ obj
 
 		humanchest
 			icon_state = "chest"
-			icon = 'big_screen.dmi'
+			icon = 'icons/mob/big_screen.dmi'
 			layer = 60
 			New(client/C)
 				screen_loc="14,14"
@@ -51,7 +51,7 @@ obj
 
 		humanright_leg
 			icon_state = "right_leg"
-			icon = 'big_screen.dmi'
+			icon = 'icons/mob/big_screen.dmi'
 			layer = 60
 			New(client/C)
 				screen_loc="14,14"
@@ -69,7 +69,7 @@ obj
 
 		humanleft_leg
 			icon_state = "left_leg"
-			icon = 'big_screen.dmi'
+			icon = 'icons/mob/big_screen.dmi'
 			layer = 60
 			New(client/C)
 				screen_loc="14,14"
@@ -87,7 +87,7 @@ obj
 
 		humanleft_arm
 			icon_state = "left_arm"
-			icon = 'big_screen.dmi'
+			icon = 'icons/mob/big_screen.dmi'
 			layer = 60
 			New(client/C)
 				screen_loc="14,14"
@@ -106,7 +106,7 @@ obj
 
 		humanright_arm
 			icon_state = "right_arm"
-			icon = 'big_screen.dmi'
+			icon = 'icons/mob/big_screen.dmi'
 			layer = 60
 			New(client/C)
 				screen_loc="14,14"
@@ -124,7 +124,7 @@ obj
 
 		humangroin
 			icon_state = "groin"
-			icon = 'big_screen.dmi'
+			icon = 'icons/mob/big_screen.dmi'
 			layer = 60
 			New(client/C)
 				screen_loc="14,14"

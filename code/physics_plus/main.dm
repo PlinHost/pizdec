@@ -1,3 +1,5 @@
+//РАЗБИТО НА ПРОЦЕДУРЫ, ЕПТА
+
 var/global/personal_id = 0
 
 /atom
@@ -27,6 +29,28 @@ var/global/personal_id = 0
 				del(W)
 
 
+	proc/wave_throw(var/atom/movable/I, var/wave/force/RAD, var/k, var/plus, var/k_2, var/plus_2)
+		while(RAD.force > 0 && RAD.force > round(I.weight/10))
+			RAD.force -= 1
+			if(plus == 1)
+				k += 1
+			else
+				k -=1
+
+			if(k_2 != 0)
+				if(plus == 1)
+					k_2 += 1
+				else
+					k_2 -= 1
+
+			if(istype(I.loc,/turf/simulated/wall))
+				I.y -= RAD.force + 1
+				for(var/mob/M in range(6, I))
+					M << "\red [I] отскакивает от стены"
+
+				for(var/mob/M in range(6, I))
+					M << "\red [I] уносит в сторону ударной волной"
+
 
 	proc/force_wave(var/frequency, var/wave_length)
 		var/wave/force/RAD
@@ -39,231 +63,63 @@ var/global/personal_id = 0
 
 			for(var/obj/item/I in RAD.loc)
 				if(RAD.x > x && RAD.y == y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10)) //одна единица силы может сдвинуть с места 10 кг
-						RAD.force -= 1
-						I.x += 1
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, 1)
 
 				if(RAD.x < x && RAD.y == y)
 					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+						wave_throw(I, RAD,I.x, -9999, 0, 0)
 
 
 				if(RAD.y < y && RAD.x == x)
 					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.y -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.y += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+						wave_throw(I, RAD,I.y, -9999, 0, 0)
 
 				if(RAD.y > y && RAD.x == x)
 					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.y += 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.y -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+						wave_throw(I, RAD,I.y, 1, 0, 0)
 
 				if(RAD.x < x && RAD.y < y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x -= 1
-						I.y -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x += RAD.force + 1
-							I.y += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, -9999, I.y, -9999)
 
 				if(RAD.x > x && RAD.y > y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x += 1
-						I.y += 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x -= RAD.force + 1
-							I.y -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, 1, I.y, 1)
 
 				if(RAD.x < x && RAD.y > y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x -= 1
-						I.y += 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x += RAD.force + 1
-							I.y -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, -9999, I.y, 1)
 
 				if(RAD.x > x && RAD.y < y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x += 1
-						I.y -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x -= RAD.force + 1
-							I.y += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, 1, I.y, -9999)
 
 ///////////////////////////MOB////HUMAN//////////
 
 			for(var/mob/I in RAD.loc)
 				if(RAD.x > x && RAD.y == y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10)) //одна единица силы может сдвинуть с места 10 кг
-						RAD.force -= 1
-						I.x += 1
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, 1)
 
 				if(RAD.x < x && RAD.y == y)
 					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+						wave_throw(I, RAD,I.x, -9999, 0, 0)
 
 
 				if(RAD.y < y && RAD.x == x)
 					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.y -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.y += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+						wave_throw(I, RAD,I.y, -9999, 0, 0)
 
 				if(RAD.y > y && RAD.x == x)
 					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.y += 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.y -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+						wave_throw(I, RAD,I.y, 1, 0, 0)
 
 				if(RAD.x < x && RAD.y < y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x -= 1
-						I.y -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x += RAD.force + 1
-							I.y += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, -9999, I.y, -9999)
 
 				if(RAD.x > x && RAD.y > y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x += 1
-						I.y += 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x -= RAD.force + 1
-							I.y -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, 1, I.y, 1)
 
 				if(RAD.x < x && RAD.y > y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x -= 1
-						I.y += 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x += RAD.force + 1
-							I.y -= RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, -9999, I.y, 1)
 
 				if(RAD.x > x && RAD.y < y)
-					while(RAD.force > 0 && RAD.force > round(I.weight/10))
-						RAD.force -= 1
-						I.x += 1
-						I.y -= 1
-
-						if(istype(I.loc,/turf/simulated/wall))
-							I.x -= RAD.force + 1
-							I.y += RAD.force + 1
-							for(var/mob/M in range(6, I))
-								M << "\red [I] отскакивает от стены"
-
-						for(var/mob/M in range(6, I))
-							M << "\red [I] уносит в сторону ударной волной"
+					wave_throw(I, RAD,I.x, 1, I.y, -9999)
 
 			for(var/wave/W in waves)
 				if(W.id == "boom")

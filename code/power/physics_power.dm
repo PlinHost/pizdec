@@ -31,7 +31,7 @@ var/global/list/generators = list()
 
 /obj/electro/powerbox
 	name = "powerbox"
-	icon = 'icons/obj/power.dmi'
+	icon = 'icons/obj/machine/power.dmi'
 	icon_state = "apc"
 	var/powernet = 0
 	alpha = 128
@@ -41,7 +41,7 @@ var/global/list/generators = list()
 
 /obj/electro/transformator
 	name = "transformator"
-	icon = 'icons/obj/HICH_VOLTAGE.dmi'
+	icon = 'icons/obj/machine/HICH_VOLTAGE.dmi'
 	icon_state = "transformator"
 	var/powernet = 0
 	density = 1
@@ -78,7 +78,7 @@ var/global/list/generators = list()
 		name = "out_cable"
 		icon_state = "force"
 		resistance = 50
-		sq = 10
+		sq = 12
 
 	act()
 		world << "[resistance];[amperage];[voltage];[power_limit];[my_temperature]"
@@ -86,20 +86,20 @@ var/global/list/generators = list()
 /obj/electro/cable/copper
 	name = "copper_cable"
 	icon_state = "copper"
-	resistance = 87
-	sq = 4
+	resistance = 99
+	sq = 15
 
 /obj/electro/cable/iron
 	name = "iron_cable"
 	icon_state = "iron"
-	resistance = 10
-	sq = 4
+	resistance = 25
+	sq = 12
 
 /obj/electro/cable/alluminium
 	name = "alluminium_cable"
 	icon_state = "alluminium"
-	resistance = 67
-	sq = 4
+	resistance = 97
+	sq = 12
 
 /obj/machinery
 	var/use_power = 1
@@ -132,7 +132,7 @@ var/global/list/generators = list()
 		powernet
 	smes
 		name = "smes"
-		icon = 'power.dmi'
+		icon = 'icons/obj/machine/power.dmi'
 		icon_state = "smes"
 		work_voltage = 320
 
@@ -388,14 +388,14 @@ var/global/list/generators = list()
 
 /obj/effect/sparks
 	name = "spaks"
-	icon = 'icons/obj/HICH_VOLTAGE.dmi'
+	icon = 'icons/obj/machine/HICH_VOLTAGE.dmi'
 	icon_state = "sparks"
 
 /obj/decor
 
 /obj/decor/cable_part
 	name = "cable"
-	icon = 'icons/obj/HICH_VOLTAGE.dmi'
+	icon = 'icons/obj/machine/HICH_VOLTAGE.dmi'
 	icon_state = "cable_part"
 
 /obj/electro/cable/Del()
@@ -407,7 +407,7 @@ var/global/list/generators = list()
 
 /obj/machinery/generator
 	name = "generator"
-	icon = 'power.dmi'
+	icon = 'icons/obj/machine/power.dmi'
 	icon_state = "generator"
 	layer = 4
 
@@ -436,7 +436,7 @@ var/global/list/generators = list()
 		if(amperage > 0)
 			amperage -= 50
 
-		amperage += rand(35, 65)
+		amperage += rand(55, 75)
 
 
 /obj/machinery/generator/rad_gen
@@ -464,4 +464,4 @@ var/global/list/generators = list()
 		if(ha == 1)
 			for(var/wave/radioactive/RAD in range(1,src))
 				if(RAD.force > 1)
-					amperage += rand(70,80)
+					amperage += rand(80,150)

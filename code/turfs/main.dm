@@ -1,6 +1,6 @@
 /turf
 	name = "space"
-	icon = 'icons/turfs.dmi'
+	icon = 'icons/turf/turfs.dmi'
 	icon_state = "space"
 	var/oxygen = 0
 	var/nitrogen = 0
@@ -10,23 +10,6 @@
 	var/list/datum/reagents/chemical = list()
 	pass_gas = 0
 	///REAGENTS
-	var
-
-		blood = 0
-		Fe = 0
-		Ag = 0
-		Cu = 0
-		Au = 0
-		H = 0
-		K = 0
-		Rb = 0
-		Po = 0
-		O = 0
-		Pb = 0
-		N = 0
-		S = 0
-		Cl = 0
-
 
 
 /turf/simulated

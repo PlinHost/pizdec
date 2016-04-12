@@ -5,7 +5,7 @@
 	var/pass = 0
 
 /obj/item
-	icon = 'icons/obj/main_items.dmi'
+	icon = 'icons/obj/item/main_items.dmi'
 	layer = 26
 	weight = 2
 	var/brute_damage = 0
@@ -13,7 +13,7 @@
 	var/shock_damage = 0
 
 /obj/item/tools
-	icon = 'icons/obj/tools.dmi'
+	icon = 'icons/obj/item/tools.dmi'
 
 /obj/item/tools/screwdriver
 	icon_state = "screwdriver"
@@ -60,7 +60,7 @@
 
 /obj/item/other/bomb
 	icon_state = "bomb"
-	icon = 'icons/obj/main_items.dmi'
+	icon = 'icons/obj/item/main_items.dmi'
 	var
 		plasmaINSIDE = 30
 

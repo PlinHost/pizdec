@@ -2,7 +2,7 @@
 	var/medical_power = 0
 
 /obj/item/medical
-	icon = 'icons/obj/medbay.dmi'
+	icon = 'icons/obj/item/medbay.dmi'
 
 /obj/item/medical/brute/gel
 	icon_state = "medgel"

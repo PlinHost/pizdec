@@ -15,3 +15,17 @@ datum
 		proc
 			on_reaction(var/datum/reagents/holder, var/created_volume)
 				return
+
+		homunculinus
+			name = "homunculinus"
+			id = "homunculinus"
+			result = "homunculinus"
+			required_reagents = list("nutriments" = 1, "milk" = 1)
+			result_amount = 5
+
+			on_reaction(var/datum/reagents/holder, var/created_volume)
+				var/location = holder.my_atom.loc
+				new /obj/homunculus(location)
+				world << "PIZDEC"
+				holder.clear_reagents()
+				return

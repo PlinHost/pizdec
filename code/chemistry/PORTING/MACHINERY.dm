@@ -1,5 +1,5 @@
 /obj/machinery/chemdispenser
-	icon = 'icons/obj/chem.dmi'
+	icon = 'icons/obj/machine/chem.dmi'
 	icon_state = "dispenser"
 	density = 1
 
@@ -73,7 +73,7 @@
 
 
 /obj/machinery/juicer
-	icon = 'icons/obj/chem.dmi'
+	icon = 'icons/obj/machine/chem.dmi'
 	icon_state = "juicer"
 
 /obj/machinery/juicer/act_by_item(var/obj/item/I)
