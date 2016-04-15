@@ -1,6 +1,7 @@
 //Хуйня конечно, но сойдет, привкус атмоса есть.
 //upd. Это дерьмо претерпело некоторые изменения
-var/global/list/turf/simulated/floor/FUCK = list()
+//upd. Здесь были переименованы некоторые переменные
+var/global/list/turf/simulated/floor/floor_list = list()
 #define gas_number 21  //газоделитель
 
 /turf/space
@@ -32,33 +33,23 @@ var/global/list/turf/simulated/floor/FUCK = list()
 /turf/simulated/floor/Del()
 	new /turf/simulated/floor/whore(src.loc)
 
+/turf/simulated/floor/proc/one_unit(var/my_direction)
+	var/floor_in_range = 0
+	var/outer_space = 1
+	var/space_temperature = 0
 
-//turf/simulated/floor/proc/one_light(var/fuck)
-	//var/turf/simulated/floor/F = get_step(src,fuck)
-	//F.REMOVE_LIGHT()
-	//F.marker_on_me()
-	//F.check_marker()
-	//F.REMOVE_LIGHT()
-	//F.ADD_LIGHT()
-
-
-/turf/simulated/floor/proc/one_unit(var/fuck)
-	var/bitch = 0
-	var/dick = 1
-	var/bick = 0
-
-	var/turf/simulated/floor/F = get_step(src,fuck)
-	var/turf/TF = get_step(src,fuck)
+	var/turf/simulated/floor/F = get_step(src,my_direction)
+	var/turf/TF = get_step(src,my_direction)
 
 	for(var/atom/A in F)
 		if(A.pass_gas != 1)
-			bitch = 1
+			floor_in_range = 1
 
 	for(var/atom/A in TF)
 		if(A.pass_gas != 1)
-			dick = 0
+			outer_space = 0
 
-	if(bitch == 0)
+	if(floor_in_range == 0)
 		if(F.nitrogen < nitrogen)
 			F.nitrogen += nitrogen / gas_number
 			nitrogen = nitrogen - (nitrogen / gas_number)
@@ -70,13 +61,13 @@ var/global/list/turf/simulated/floor/FUCK = list()
 		//if(istype(F,/turf/simulated/floor))
 		//	F.chem()
 		//
-		if(dick == 1)
+		if(outer_space == 1)
 			if(istype(TF, /turf/space))
 				for(var/atom/A in src)
 					if(A.pass_gas != 1)
-						bick = 1
+						space_temperature = 1
 
-				if(bick == 0)
+				if(space_temperature == 0)
 					if(temperature > -320)
 						temperature -= pick(1,2)
 					if(nitrogen > 15)
@@ -102,9 +93,10 @@ var/global/list/turf/simulated/floor/FUCK = list()
 				temperature -= 2
 				F.temperature += 1
 
+		/turf/simulated/floor/up
+		/turf/simulated/floor/down
 
-
-		if(istype(F, /turf/simulated/floor/whore) || istype(src, /turf/simulated/floor/downbitch))
+		if(istype(F, /turf/simulated/floor/whore) || istype(src, /turf/simulated/floor/down))
 			var/turf/simulated/floor/MYWHORE = locate(x,y,z-1)
 			F.oxygen = MYWHORE.oxygen
 			F.nitrogen = MYWHORE.nitrogen
@@ -118,7 +110,7 @@ var/global/list/turf/simulated/floor/FUCK = list()
 			MYWHORE.temperature = F.temperature
 			MYWHORE.water = F.water
 
-		if(istype(F, /turf/simulated/floor/upbitch))
+		if(istype(F, /turf/simulated/floor/up))
 			var/turf/simulated/floor/MYWHORE = locate(x,y,z+1)
 
 			MYWHORE.oxygen = F.oxygen
@@ -141,10 +133,10 @@ var/global/list/turf/simulated/floor/FUCK = list()
 /datum/anal_controller/proc/process()
 	spawn while(1)
 		sleep(2)
-		turfs_bitchs()
+		turfs_processing()
 
-/datum/anal_controller/proc/turfs_bitchs()
-	for(var/turf/simulated/floor/F in FUCK)
+/datum/anal_controller/proc/turfs_processing()
+	for(var/turf/simulated/floor/F in floor_list)
 		F.one_unit(WEST)
 		F.one_unit(EAST)
 		F.one_unit(SOUTH)
@@ -188,7 +180,7 @@ mob/verb/block_test()
 	usr << "brightness:[sd_lumcount]"
 
 /turf/simulated/floor/New()
-	FUCK += src
+	floor_list += src
 	//fuck_light()
 	var/datum/reagents/R = new/datum/reagents(200)
 	reagents = R

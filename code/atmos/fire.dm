@@ -1,17 +1,26 @@
 var/global/list/landmarks = list()
 
-var/global/list/lesorub = list()
-var/global/list/ass = list()
-var/global/list/hunt = list()
-var/global/list/ultraboy = list()
+var/global/list/captain = list()
+var/global/list/assistant = list()
+var/global/list/HOS = list()
+var/global/list/HOP = list()
+var/global/list/CE = list()
+var/global/list/engineer = list()
+var/global/list/technic = list()
+var/global/list/scientist = list()
+var/global/list/doctor = list()
+var/global/list/bartender = list()
+var/global/list/cook = list()
+var/global/list/security = list()
+var/global/list/detective = list()
 
 /obj/effect/blood
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "blood1"
 
 /obj/effect/blood/New()
-	var/recei_poshel_nahui = pick(1,2,3)
-	icon_state = "blood[recei_poshel_nahui]"
+	var/blood_sprite = pick(1,2,3)
+	icon_state = "blood[blood_sprite]"
 
 /obj/effect/fire
 	name = "fire"
@@ -37,45 +46,139 @@ var/global/list/ultraboy = list()
 	icon_state = "start"
 	layer = 7
 
-/obj/prof/ass/New()
+/obj/prof/assistant/New()
 	layer = 1
 	var/turf/T = src.loc
-	ass += T
+	assistant += T
 
-/obj/prof/lesorub/New()
+/obj/prof/captain/New()
 	layer = 1
 	var/turf/T = src.loc
-	lesorub += T
+	captain += T
 
-/obj/prof/ultraboy/New()
+/obj/prof/security/New()
 	layer = 1
 	var/turf/T = src.loc
-	ultraboy += T
+	security += T
 
-/obj/prof/hunt/New()
+/obj/prof/detective/New()
 	layer = 1
 	var/turf/T = src.loc
-	hunt += T
+	detective += T
 
-/obj/prof/ass
+/obj/prof/HOS/New()
+	layer = 1
+	var/turf/T = src.loc
+	HOS += T
+
+/obj/prof/HOP/New()
+	layer = 1
+	var/turf/T = src.loc
+	HOP += T
+
+/obj/prof/scientist/New()
+	layer = 1
+	var/turf/T = src.loc
+	scientist += T
+
+/obj/prof/security/New()
+	layer = 1
+	var/turf/T = src.loc
+	security += T
+
+/obj/prof/doctor/New()
+	layer = 1
+	var/turf/T = src.loc
+	doctor += T
+
+/obj/prof/CE/New()
+	layer = 1
+	var/turf/T = src.loc
+	CE += T
+
+/obj/prof/engineer/New()
+	layer = 1
+	var/turf/T = src.loc
+	engineer += T
+
+/obj/prof/cook/New()
+	layer = 1
+	var/turf/T = src.loc
+	cook += T
+
+/obj/prof/assistant
 	name = "start"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
 	layer = 7
 
-/obj/prof/hunt
+/obj/prof/captain
 	name = "start"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
 	layer = 7
 
-/obj/prof/lesorub
+/obj/prof/engineer
 	name = "start"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
 	layer = 7
 
-/obj/prof/ultraboy
+/obj/prof/CE
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/technic
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/HOP
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/HOS
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/security
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/detective
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/doctor
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/bartender
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/scientist
+	name = "start"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "start2"
+	layer = 7
+
+/obj/prof/cook
 	name = "start"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "start2"
@@ -115,15 +218,15 @@ var/global/list/ultraboy = list()
 	force_wave(rand(round(T.oxygen/10 - pick(10,15,5)),T.oxygen/10), EXPLODE)
 	for(var/mob/M in range(15,src))
 		M << "Ты слышишь смачный бабах"
-	for(var/turf/simulated/floor/EPTAHULI in range(src,EXPLODE))
+	for(var/turf/simulated/floor/FLOOR in range(src,EXPLODE))
 		destroy = rand(0,100)
 		if(destroy < 45)
-			for(var/atom/A in EPTAHULI)
+			for(var/atom/A in FLOOR)
 				if(!(istype(A, /obj/effect/explode)))
 					del(A)
-			del(EPTAHULI)
+			del(FLOOR)
 		else
-			new /obj/effect/smoke(EPTAHULI)
+			new /obj/effect/smoke(FLOOR)
 	del(src)
 
 
@@ -136,31 +239,31 @@ var/global/list/ultraboy = list()
 	var/SAD
 	spawn while(1)
 		sleep(3)
-		for(var/turf/simulated/floor/EPTAHULI in range(src,1))
-			for(var/atom/A in EPTAHULI)
+		for(var/turf/simulated/floor/FLOOR in range(src,1))
+			for(var/atom/A in FLOOR)
 				if(A.pass_gas == 1)
-					if(EPTAHULI.temperature < 2048) //возможный максимум теплоединиц при самых оптимальных условиях на данной станции
-						EPTAHULI.temperature += 1 //передача тепла с помощью излучения
-						if(EPTAHULI.temperature > 600) //при данной температуре кислород пусть будет гореть без поддержания горения с помощью плазмы
-							if(EPTAHULI.oxygen > 100)
-								EPTAHULI.oxygen -= 1
-								EPTAHULI.CO2 += 1
-								EPTAHULI.temperature += 1
+					if(FLOOR.temperature < 2048) //возможный максимум теплоединиц при самых оптимальных условиях на данной станции
+						FLOOR.temperature += 1 //передача тепла с помощью излучения
+						if(FLOOR.temperature > 600) //при данной температуре кислород пусть будет гореть без поддержания горения с помощью плазмы
+							if(FLOOR.oxygen > 100)
+								FLOOR.oxygen -= 1
+								FLOOR.CO2 += 1
+								FLOOR.temperature += 1
 								if(SAD < 2)
-									new /obj/effect/fire(EPTAHULI)
+									new /obj/effect/fire(FLOOR)
 									SAD += 1
 
-						if(EPTAHULI.oxygen > 100 && EPTAHULI.plasma > 5) //выделение тепла при сжигании кислорода и плазмы
-							EPTAHULI.temperature += 1
-							EPTAHULI.oxygen -= 1
-							EPTAHULI.plasma -= 1
-							EPTAHULI.CO2 += 1
-							new /obj/effect/fire(EPTAHULI)
+						if(FLOOR.oxygen > 100 && FLOOR.plasma > 5) //выделение тепла при сжигании кислорода и плазмы
+							FLOOR.temperature += 1
+							FLOOR.oxygen -= 1
+							FLOOR.plasma -= 1
+							FLOOR.CO2 += 1
+							new /obj/effect/fire(FLOOR)
 
-						if(EPTAHULI.oxygen < 100)
+						if(FLOOR.oxygen < 100)
 							del(src)
 
-						if(EPTAHULI.water > 10)
+						if(FLOOR.water > 10)
 							del(src)
 
 

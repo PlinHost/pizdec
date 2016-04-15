@@ -151,7 +151,7 @@
 		if(hit == 1)
 			del(src)
 
-/obj/machinery/laser/FUCKINGGUN
+/obj/machinery/laser/big_gun
 	act()
 		for(var/mob/M in range(5,src))
 			M << "\red <b>охссссссссссссссс!</b>"

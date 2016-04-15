@@ -202,10 +202,9 @@ var/html = {"
 <br>
 Выбери роль:
 <br>
-<a href=?lesorub>Ученый</a>
-<a href=?hunt>Инженер</a>
-<a href=?ass>Ассистент</a>
-<a href=?ultra>Авантюрист</a>
+<a href=?scientist>Ученый</a>
+<a href=?engineer>Инженер</a>
+<a href=?assistant>Ассистент</a>
 
 <br>
 Левша или правша?
@@ -440,21 +439,6 @@ client
 		if(signal == 1)
 			return
 		pulse = rand(min_pulse, max_pulse)
-
-		//if(T.chemical.len > 0)
-		//	my_chem()
-
-		//for(var/turf/simulated/floor/F in range(1,usr))
-		//	F.my_LIGHT_state = 1
-		//for(var/turf/TURF in range(1,src))
-		//	TURF.REMOVE_LIGHT()
-		/*
-		if(usr.client.cloth_epta == 0)
-			if(T.oxygen < 300 || T.plasma > 100 || T.nitrogen > 100 || T.temperature > 100 || T.temperature < -20)
-				usr << "Тут ты это, ну умер."
-				icon_state = "dead"
-				return
-		*/
 		checking_turf()
 		checking_my_system()
 	//	on_turf_react()
@@ -492,14 +476,14 @@ mob/human/Move()
 			//see_in_night()
 		else
 			var/turf/T = src.loc
-			if(!(istype(T, /turf/simulated/floor/downbitch)) || !(istype(T, /turf/simulated/floor/upbitch)))
+			if(!(istype(T, /turf/simulated/floor/down)) || !(istype(T, /turf/simulated/floor/up)))
 				step_size = pick(64, 32)
 				if(stamina > 0)
 					stamina -= 1
 		oldloc = usr.loc
 		return
 
-mob/human/proc/hello_bitch()
+mob/human/proc/start_game()
 	usr.client.ouch = 1
 	return ..()
 
@@ -510,7 +494,7 @@ mob/human/proc/hello_bitch()
 		usr << "<h1> Мы рады вам(нет)!</h1>"
 		usr << browse(html,"window=setup")
 		no_way_bro = 1
-		hello_bitch()
+		start_game()
 		usr.loc = landmarks[rand(1,landmarks.len)]
 		//light_fom_my_heart_babe()
 

@@ -1,26 +1,24 @@
 /client/Topic(href,href_list[])
-	if(href == "lesorub" && usr.client.ouch == 1)
-		usr.loc = lesorub[rand(1,lesorub.len)]
+	if(href == "captain" && usr.client.ouch == 1)
+		usr.loc = captain[rand(1,captain.len)]
 		usr.client.create_hud()
 
 
 		usr.client.ouch = 0
 
-	if(href == "hunt" && usr.client.ouch == 1)
-		usr.loc = hunt[rand(1,hunt.len)]
+	if(href == "assistant" && usr.client.ouch == 1)
+		usr.loc =assistant[rand(1,assistant.len)]
 		usr.client.create_hud()
+		usr.client.ouch = 0
 
+	if(href == "engineer" && usr.client.ouch == 1)
+		usr.loc = engineer[rand(1,engineer.len)]
+		usr.client.create_hud()
 
 		usr.client.ouch = 0
 
-	if(href == "ass" && usr.client.ouch == 1)
-		usr.loc = ass[rand(1,ass.len)]
-		usr.client.create_hud()
-
-		usr.client.ouch = 0
-
-	if(href == "ultra" && usr.client.ouch == 1)
-		usr.loc = ultraboy[rand(1,ultraboy.len)]
+	if(href == "CE" && usr.client.ouch == 1)
+		usr.loc = CE[rand(1,CE.len)]
 		usr.client.create_hud()
 
 		usr.client.ouch = 0

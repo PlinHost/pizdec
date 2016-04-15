@@ -115,32 +115,6 @@ var/global/GASWAGEN_NET = 0//
 			atmosnet = 0
 			reset = 0
 			world << "ОБРЫВ ТРУБЫ К ХУЯМ БЛЯДЬ"
-		/*
-		if(dir == 6)
-
-			for(var/obj/machinery/atmospherics/A in get_step(src,SOUTH))
-				for(A in get_step(src,EAST)) //юговосточная йобатруба
-					atmosnet = A.atmosnet
-
-		if(dir == 10)
-
-			for(var/obj/machinery/atmospherics/A in get_step(src,SOUTH))
-				for(A in get_step(src,WEST))  //югозападная йобатруба
-					atmosnet = A.atmosnet
-
-		if(dir == 9)
-
-			for(var/obj/machinery/atmospherics/A in get_step(src,NORTH))
-				for(A in get_step(src,WEST))  //северозападная йобатруба
-					atmosnet = A.atmosnet
-
-		if(dir == 5)
-
-			for(var/obj/machinery/atmospherics/A in get_step(src,NORTH))
-				for(A in get_step(src,EAST))   //северовосточная йобатруба
-					atmosnet = A.atmosnet
-		*/
-
 
 
 /obj/machinery/atmospherics/pipe/New()
@@ -166,5 +140,4 @@ var/global/GASWAGEN_NET = 0//
 		if(atmosnet == P.atmosnet)
 			P.reset = 1
 
-	//world << "atmosnet №[atmosnet]"
 	..()

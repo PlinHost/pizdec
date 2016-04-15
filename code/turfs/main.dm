@@ -70,39 +70,6 @@
 	name = "floor"
 	icon_state = "down"
 
-/*
-/mob/human/proc/my_chem()
-	var/turf/T = src.loc
-	my_val()
-	var/fuck = 0
-	if(cur_val < reagents_max)
-		if(chemical.len < 1)
-			for(var/i = 1, i <= T.chemical.len, i++)
-				chemical += T.chemical[i]
-				world << "FU"
-				return
-
-		for(var/i = 1, i <= chemical.len, i++)
-			var/datum/reagents/RG = chemical[i]
-
-			for(var/g = 1, g <= T.chemical.len, g++)
-				var/datum/reagents/REAG = T.chemical[g]
-
-
-				if(RG.name == REAG.name)
-					RG.amount += REAG.amount
-					REAG.amount -= REAG.amount
-					fuck = 1
-					//world << "[RG.name]"
-
-
-		if(fuck == 0)
-			for(var/i = 1, i <= T.chemical.len, i++)
-				var/datum/reagents/REAG = T.chemical[i]
-				chemical += REAG
-				world << "YU"
-*/
-
 /turf/simulated/floor/upbitch/Enter(atom/movable/O)
 	O.z += 1
 

@@ -71,18 +71,18 @@ var/global/list/objects = list()
 																	if("имя")
 																		par = A.name
 
-																var/zebra = findtext(my_noun, parameters[f])
-																var/my_second_word = copytext(my_noun, zebra)
+																var/word_1 = findtext(my_noun, parameters[f])
+																var/my_second_word = copytext(my_noun, word_1)
 																if(findtext(my_second_word,"больше"))
-																	var/huerga = findtext(my_second_word, "больше ")
-																	var/my_third_word = copytext(my_second_word, huerga+7)
+																	var/word_imp = findtext(my_second_word, "больше ")
+																	var/my_third_word = copytext(my_second_word, word_imp+7)
 																	my_third_word = text2num(my_third_word)
 																	if(par > my_third_word)
 																		world << "\blue <b>Здесь - [A.x];[A.y];[A.z]</b>"
 
 																if(findtext(my_second_word,"меньше"))
-																	var/huerga = findtext(my_second_word, "меньше ")
-																	var/my_third_word = copytext(my_second_word, huerga+7)
+																	var/word_imp = findtext(my_second_word, "меньше ")
+																	var/my_third_word = copytext(my_second_word, word_imp+7)
 																	my_third_word = text2num(my_third_word)
 																	if(par < my_third_word)
 																		world << "\blue <b>Здесь - [A.x];[A.y];[A.z]</b>"
@@ -111,18 +111,18 @@ var/global/list/objects = list()
 																	if("имя")
 																		par = A.name
 
-																var/zebra = findtext(my_noun, parameters[f])
-																var/my_second_word = copytext(my_noun, zebra)
+																var/word_1 = findtext(my_noun, parameters[f])
+																var/my_second_word = copytext(my_noun, word_1)
 																if(findtext(my_second_word,"больше"))
-																	var/huerga = findtext(my_second_word, "больше ")
-																	var/my_third_word = copytext(my_second_word, huerga+7)
+																	var/word_imp = findtext(my_second_word, "больше ")
+																	var/my_third_word = copytext(my_second_word, word_imp+7)
 																	my_third_word = text2num(my_third_word)
 																	if(par > my_third_word)
 																		world << "\blue <b>Тип - [A.type]</b>"
 
 																if(findtext(my_second_word,"меньше"))
-																	var/huerga = findtext(my_second_word, "меньше ")
-																	var/my_third_word = copytext(my_second_word, huerga+7)
+																	var/word_imp = findtext(my_second_word, "меньше ")
+																	var/my_third_word = copytext(my_second_word, word_imp+7)
 																	my_third_word = text2num(my_third_word)
 																	if(par < my_third_word)
 																		world << "\blue <b>Тип - [A.type]</b>"

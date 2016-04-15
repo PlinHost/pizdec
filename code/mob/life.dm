@@ -3,7 +3,7 @@
 
 /mob/human/proc/checking_turf()
 	var/turf/T = src.loc
-	if(usr.client.cloth_epta == 0 || usr.client.helmet_epta == 0)
+	if(usr.client.cloth_ == 0 || usr.client.helmet_ == 0)
 
 	//OXY
 

@@ -1,3 +1,6 @@
+//реакции не работают
+//вникать лень
+
 datum
 	chemical_reaction
 		var/name = null

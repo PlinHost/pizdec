@@ -529,10 +529,10 @@ client
 	var/list/obj/item/head_items = list()
 	var/list/obj/item/foot_items = list()
 
-	var/cloth_epta = 0
-	var/helmet_epta = 0
-	var/shoes_epta = 0
-	var/uniform_epta = 0
+	var/cloth_ = 0
+	var/helmet_ = 0
+	var/shoes_ = 0
+	var/uniform_ = 0
 	var/time_to_change = 0
 
 	var/zone = "chest"

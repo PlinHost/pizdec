@@ -6,7 +6,7 @@
 
 #define MAX_FREQ 127 // максимальная частота
 
-var/global/list/obj/machinery/radio/radioeptich = list()
+var/global/list/obj/machinery/radio/radio_ = list()
 var/global/list/wave/waves = list()
 
 /atom
@@ -51,17 +51,7 @@ var/global/list/wave/waves = list()
 		waves += src
 
 /wave/radio
-	/*
-	process()
-		spawn while(1)
-			sleep(10)
-			if(frequency > 50 && force > 5)
-				for(var/turf/simulated/S in src.loc)
-					S.temperature += 1
 
-	New()
-		process()
-*/
 /wave/radioactive
 
 /wave/radio/psi
@@ -113,7 +103,7 @@ var/global/list/wave/waves = list()
 	var/counter = 0
 
 	New()
-		radioeptich += src
+		radio_ += src
 		waves()
 		process()
 
@@ -163,7 +153,7 @@ var/global/list/wave/waves = list()
 	icon_state = "plus"
 
 	act()
-		for(var/obj/machinery/radio/R in radioeptich)
+		for(var/obj/machinery/radio/R in radio_)
 			if(R.id == id)
 				if(R.wave_length < 25)
 					R.wave_length += 1
@@ -176,7 +166,7 @@ var/global/list/wave/waves = list()
 	icon_state = "minus"
 
 	act()
-		for(var/obj/machinery/radio/R in radioeptich)
+		for(var/obj/machinery/radio/R in radio_)
 			if(R.id == id)
 				if(R.wave_length > 0)
 					R.wave_length -= 1
@@ -190,7 +180,7 @@ var/global/list/wave/waves = list()
 	icon_state = "plus"
 
 	act()
-		for(var/obj/machinery/radio/R in radioeptich)
+		for(var/obj/machinery/radio/R in radio_)
 			if(R.id == id)
 				if(R.frequency < MAX_FREQ)
 					R.frequency += 1
@@ -203,7 +193,7 @@ var/global/list/wave/waves = list()
 	icon_state = "minus"
 
 	act()
-		for(var/obj/machinery/radio/R in radioeptich)
+		for(var/obj/machinery/radio/R in radio_)
 			if(R.id == id)
 				if(R.frequency > 0)
 					R.frequency -= 1
@@ -261,7 +251,7 @@ var/global/list/wave/waves = list()
 				del(W)
 
 	New()
-		radioeptich += src
+		radio_ += src
 		waves()
 		process()
 
@@ -278,7 +268,7 @@ var/global/list/wave/waves = list()
 	icon_state = "plus"
 
 	act()
-		for(var/obj/machinery/sound/transmitter/R in radioeptich)
+		for(var/obj/machinery/sound/transmitter/R in radio_)
 			if(R.id == id)
 				if(R.wave_length < 25)
 					R.wave_length += 1
@@ -290,7 +280,7 @@ var/global/list/wave/waves = list()
 	icon_state = "minus"
 
 	act()
-		for(var/obj/machinery/sound/transmitter/R in radioeptich)
+		for(var/obj/machinery/sound/transmitter/R in radio_)
 			if(R.id == id)
 				if(R.wave_length > 0)
 					R.wave_length -= 1
@@ -302,7 +292,7 @@ var/global/list/wave/waves = list()
 	icon_state = "plus"
 
 	act()
-		for(var/obj/machinery/sound/transmitter/R in radioeptich)
+		for(var/obj/machinery/sound/transmitter/R in radio_)
 			if(R.id == id)
 				if(R.frequency < MAX_FREQ)
 					R.frequency += 1
@@ -315,7 +305,7 @@ var/global/list/wave/waves = list()
 	icon_state = "minus"
 
 	act()
-		for(var/obj/machinery/sound/transmitter/R in radioeptich)
+		for(var/obj/machinery/sound/transmitter/R in radio_)
 			if(R.id == id)
 				if(R.frequency > 0)
 					R.frequency -= 1
@@ -349,7 +339,7 @@ var/global/list/wave/waves = list()
 				del(W)
 
 	New()
-		radioeptich += src
+		radio_ += src
 		waves()
 		process()
 

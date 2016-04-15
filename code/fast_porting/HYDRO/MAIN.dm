@@ -27,8 +27,8 @@
 	proc
 		update_icon()
 
-/obj/machinery/hydroponics/proc/adjustNutri(var/NUTRIEPTA)
-	nutrilevel += NUTRIEPTA
+/obj/machinery/hydroponics/proc/adjustNutri(var/NUTRI)
+	nutrilevel += NUTRI
 
 /obj/machinery/hydroponics/proc/adjustHealth(var/HEALTH)
 	health += HEALTH
