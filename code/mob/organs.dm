@@ -1,5 +1,5 @@
 /mob/human
-	proc/organ_damage_calculate()
+	proc/organ_damage_calculate() //расчеты урона органам
 		var/sum
 		var/burn_damage
 		for(var/obj/item/organs/O in usr)

@@ -1,9 +1,9 @@
 /datum/atmos_net
-	var/list/canisters = list()
+	var/list/canisters = list() //список канистр
 
-var/global/datum/atmos_net/a_net = new()
+var/global/datum/atmos_net/a_net = new() //атмососеть
 
-/obj/machinery/atmospherics
+/obj/machinery/atmospherics //родительский объект для всего, что кайнд оф атмос
 	var/oxygen = 0
 	var/nitrogen = 0
 	var/plasma = 0
@@ -91,11 +91,11 @@ var/global/datum/atmos_net/a_net = new()
 
 /obj/machinery/portable_atmospherics/canister/New()
 	//id = rand(1,999)
-	a_net.canisters += src
+	a_net.canisters += src //добавляем канистру в список канистр при создании
 	process()
 
 /obj/machinery/portable_atmospherics/canister/process()
-	spawn while(1)
+	spawn while(1) //бесконечный цикл, обрабатывает взаимодействие с внешним миром
 		sleep(1)
 		for(var/turf/simulated/floor/F in range(1, src))
 			for(var/atom/A in F)
@@ -115,7 +115,7 @@ var/global/datum/atmos_net/a_net = new()
 							oxygen -= 1
 
 		for(var/obj/machinery/portable_atmospherics/canister/Z in a_net.canisters)
-			if(Z.connected == 1 && Z.atmosnet == atmosnet)
+			if(Z.connected == 1 && Z.atmosnet == atmosnet) //если канистра подцеплена к какой-либо другой, то
 				if(Z != src)
 					//world << "Найдена канистра [Z.id]"
 					if(oxygen > Z.oxygen)
@@ -175,7 +175,7 @@ var/global/datum/atmos_net/a_net = new()
 /obj/machinery/atmospherics/connector/process()
 	spawn while(1)
 		sleep(2)
-		for(var/obj/machinery/atmospherics/pipe/P in range(1, src))
+		for(var/obj/machinery/atmospherics/pipe/P in range(1, src)) //коннектор ищет трубы в радиусе 1 тайла от себя
 			if(P.atmosnet != 0)
 				atmosnet = P.atmosnet
 

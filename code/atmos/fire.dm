@@ -1,5 +1,8 @@
+//здесь прописаны различные эффекты
+
 var/global/list/landmarks = list()
 
+//здесь прописаны списки профессий
 var/global/list/captain = list()
 var/global/list/assistant = list()
 var/global/list/HOS = list()
@@ -235,7 +238,7 @@ var/global/list/detective = list()
 
 /turf
 
-/obj/effect/fire/process()
+/obj/effect/fire/process() //огонь
 	var/SAD
 	spawn while(1)
 		sleep(3)

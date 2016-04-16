@@ -1,6 +1,8 @@
 //Хуйня конечно, но сойдет, привкус атмоса есть.
 //upd. Это дерьмо претерпело некоторые изменения
 //upd. Здесь были переименованы некоторые переменные
+
+//главный файл недоатмоса
 var/global/list/turf/simulated/floor/floor_list = list()
 #define gas_number 21  //газоделитель
 
@@ -125,17 +127,17 @@ var/global/list/turf/simulated/floor/floor_list = list()
 			F.temperature = MYWHORE.temperature
 			F.water = MYWHORE.water
 
-/datum/anal_controller/New()
+/datum/GAS_controller/New()
 	process()
 
-/datum/anal_controller
+/datum/GAS_controller
 
-/datum/anal_controller/proc/process()
+/datum/GAS_controller/proc/process()
 	spawn while(1)
 		sleep(2)
 		turfs_processing()
 
-/datum/anal_controller/proc/turfs_processing()
+/datum/GAS_controller/proc/turfs_processing()
 	for(var/turf/simulated/floor/F in floor_list)
 		F.one_unit(WEST)
 		F.one_unit(EAST)

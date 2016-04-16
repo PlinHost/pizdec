@@ -11,9 +11,9 @@
 //Площадь, которая нагревается
 
 /atom
-	var/typer = "Melts"
-	var/MAXTEMP = 1000
-	var/my_temp = 21
+	var/typer = "Melts" //горючий ли объект
+	var/MAXTEMP = 1000 //максимальная температуа, которую способен выдержать объект
+	var/my_temp = 21 //изначальная температура
 
 	//Flammable, NoFlammable, Melts
 

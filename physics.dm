@@ -11,7 +11,7 @@ world
 	hub = "S_Sting.Physics"	//Кей.Название, реально похуй что сюда писать
 
 
-// Make objects move 8 pixels per tick when walking
+// Make objects move 32 pixels per tick when walking
 
 mob
 	step_size = 32
@@ -27,22 +27,16 @@ world
 	mob = /mob/human
 	turf = /turf/space
 
-//	proc
 
-		//process_2()
-		//	spawn while(1)
-		//		sleep(5)
-				//name = pick("Dervenbay13","HelloStation","HELL","Dervenus_Mind","ATTENTIONWHORE13","SithStation","JediStation")
-
-	New()
-		new /datum/anal_controller()
-		new /datum/power_master()
+	New() //при создании мира мы
+		new /datum/GAS_controller() //создаем контроллер атмоса
+		new /datum/power_master() //создаем контроллер энергии
 		sleep(1)
-		sd_SetDarkIcon('icons/effects/SD_lum.dmi',11)
+		sd_SetDarkIcon('icons/effects/SD_lum.dmi',11) //задаем количество теней
 		world << "\blue <b>Инициализаци&#255;, подождите...</b>"
 		sleep(5)
-		new /datum/Kate()
-		new /datum/POWERMASTER()
+		new /datum/Kate() //создаем Кейт
+		new /datum/POWERMASTER() //создаем (отдельный) контроллер для проводки
 		name = "Physics Simulator 3000"
 
 /area

@@ -1,3 +1,5 @@
+//взаимодействие с различными объектами
+
 client/show_popup_menus = 0
 
 /atom/proc/pew()
