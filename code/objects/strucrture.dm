@@ -11,6 +11,40 @@
 	freq = 21
 	layer = 8
 
+	proc/check_move(var/atom/movable/O)
+		if(O.dir != src.dir)
+			return 0
+		else
+			return 1
+
+		if(dir == 1)
+			if(O.y > y)
+				return 1
+
+			if(O.y > y)
+				return 1
+
+		if(dir == 2)
+			if(O.y < y)
+				return 1
+
+			if(O.y > y)
+				return 1
+
+		if(dir == 4)
+			if(O.x < x)
+				return 1
+
+			if(O.x > x)
+				return 1
+
+		if(dir == 8)
+			if(O.x < x)
+				return 1
+
+			if(O.x > x)
+				return 1
+
 /obj/structure/grille
 	name = "hatch"
 	icon_state = "hatch"

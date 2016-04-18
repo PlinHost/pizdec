@@ -15,6 +15,7 @@
 
 // BEGIN_INCLUDE
 #include "physics.dm"
+#include "windowZZZ.dm"
 #include "code\atmos\device.dm"
 #include "code\atmos\fire.dm"
 #include "code\atmos\main.dm"
