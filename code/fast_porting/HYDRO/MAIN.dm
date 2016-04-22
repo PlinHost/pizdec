@@ -27,6 +27,9 @@
 	proc
 		update_icon()
 
+	New()
+		process()
+
 /obj/machinery/hydroponics/proc/adjustNutri(var/NUTRI)
 	nutrilevel += NUTRI
 
@@ -53,28 +56,55 @@
 		update_icon()
 		dead = 1
 
-obj/machinery/hydroponics/process()
+/obj/machinery/hydroponics/act_by_item(var/obj/item/O)
+	if(istype(O, /obj/item/seeds))
+		if(!planted)
+			dead = 0
+			planted = 1
+			age = 1
+			if(usr.client.my_hand_active == "left")
+				if(istype(O, usr.client.lhand_items[1]))
+					O.Move(src)
+					usr << "\bold Вы суете [O] в [src]"
+					usr.client.L.overlays.Cut()
+					usr.client.lhand_items.Cut()
 
-	if(myseed && (myseed.loc != src))
-		myseed.loc = src
+			if(usr.client.my_hand_active == "right")
+				if(istype(O, usr.client.rhand_items[1]))
+					O.Move(src)
+					usr << "\bold Вы суете [O] в [src]"
+					usr.client.R.overlays.Cut()
+					usr.client.rhand_items.Cut()
+			myseed = O
+			health = myseed.endurance
+			lastcycle = world.time
 
-	if(world.time > (lastcycle + cycledelay))
-		lastcycle = world.time
+		else
+			usr << "\red The [src] already has seeds in it!"
+
+/obj/machinery/hydroponics/process()
+
+	spawn while(1)
+		sleep(5)
+
+		if(myseed && (myseed.loc != src))
+			myseed.loc = src
+
 		if(planted && !dead)
-			// Advance age
+				// Advance age
 			age++
 
-//Nutrients//////////////////////////////////////////////////////////////
-			// Nutrients deplete slowly
+	//Nutrients//////////////////////////////////////////////////////////////
+				// Nutrients deplete slowly
 			if(prob(50))
 				adjustNutri(-1)
 
-			// Lack of nutrients hurts non-weeds
+				// Lack of nutrients hurts non-weeds
 			if(nutrilevel <= 0 && myseed.plant_type != 1)
 				adjustHealth(-rand(1,3))
 
-//Photosynthesis/////////////////////////////////////////////////////////
-			// Lack of light hurts non-mushrooms
+	//Photosynthesis/////////////////////////////////////////////////////////
+				// Lack of light hurts non-mushrooms
 			if(isturf(loc))
 				var/turf/currentTurf = loc
 				var/lightAmt = currentTurf.sd_lumcount
@@ -85,25 +115,25 @@ obj/machinery/hydroponics/process()
 					if(lightAmt < 4)
 						adjustHealth(-2)
 
-//Water//////////////////////////////////////////////////////////////////
-			// Drink random amount of water
+	//Water//////////////////////////////////////////////////////////////////
+				// Drink random amount of water
 			adjustWater(-rand(1,6))
 
-			// If the plant is dry, it loses health pretty fast, unless mushroom
+				// If the plant is dry, it loses health pretty fast, unless mushroom
 			if(waterlevel <= 10 && myseed.plant_type != 2)
 				adjustHealth(-rand(0,1))
 				if(waterlevel <= 0)
 					adjustHealth(-rand(0,2))
 
-			// Sufficient water level and nutrient level = plant healthy
+				// Sufficient water level and nutrient level = plant healthy
 			else if(waterlevel > 10 && nutrilevel > 0)
 				adjustHealth(rand(1,2))
 				if(prob(5))  //5 percent chance the weed population will increase
 					adjustWeeds(1)
 
-//Toxins/////////////////////////////////////////////////////////////////
+	//Toxins/////////////////////////////////////////////////////////////////
 
-			// Too much toxins cause harm, but when the plant drinks the contaiminated water, the toxins disappear slowly
+				// Too much toxins cause harm, but when the plant drinks the contaiminated water, the toxins disappear slowly
 			if(toxic >= 40 && toxic < 80)
 				adjustHealth(-1)
 				adjustToxic(-rand(1,10))
@@ -111,27 +141,27 @@ obj/machinery/hydroponics/process()
 				adjustHealth(-3)
 				adjustToxic(-rand(1,10))
 
-//Pests & Weeds//////////////////////////////////////////////////////////
+	//Pests & Weeds//////////////////////////////////////////////////////////
 
 			else if(pestlevel >= 5)
 				adjustHealth(-1)
 
-			// If it's a weed, it doesn't stunt the growth
+				// If it's a weed, it doesn't stunt the growth
 			if(weedlevel >= 5 && myseed.plant_type != 1 )
 				adjustHealth(-1)
 
-//Health & Age///////////////////////////////////////////////////////////
+	//Health & Age///////////////////////////////////////////////////////////
 
-			// Plant dies if health <= 0
+				// Plant dies if health <= 0
 			if(health <= 0)
 				plantdies()
 				adjustWeeds(1) // Weeds flourish
 
-			// If the plant is too old, lose health fast
+				// If the plant is too old, lose health fast
 			if(age > myseed.lifespan)
 				adjustHealth(-rand(1,5))
 
-			// Harvest code
+				// Harvest code
 			if(age > myseed.production && (age - lastproduce) > myseed.production && (!harvest && !dead))
 				if(myseed && myseed.yield != -1) // Unharvestable shouldn't be harvested
 					harvest = 1
@@ -143,5 +173,42 @@ obj/machinery/hydroponics/process()
 			if(waterlevel > 10 && nutrilevel > 0 && prob(10))  // If there's no plant, the percentage chance is 10%
 				adjustWeeds(1)
 
-		// Weeeeeeeeeeeeeeedddssss
+			// Weeeeeeeeeeeeeeedddssss
 	return
+
+/obj/machinery/hydroponics/act(mob/user as mob)
+	if(harvest)
+		if(!user in range(1,src))
+			return
+		myseed.harvest()
+		harvest = 0
+	else if(dead)
+		planted = 0
+		dead = 0
+		usr << text("You remove the dead plant from the [src].")
+		del(myseed)
+	else
+		if(planted && !dead)
+			usr << text("The [src] has \blue [myseed.plantname] \black planted.")
+			if(health <= (myseed.endurance / 2))
+				usr << text("The plant looks unhealthy")
+		else
+			usr << text("The [src] is empty.")
+		usr << text("Water: [waterlevel]/100")
+		usr << text("Nutrient: [nutrilevel]/10")
+		if(weedlevel >= 5) // Visual aid for those blind
+			usr << text("The [src] is filled with weeds!")
+		if(pestlevel >= 5) // Visual aid for those blind
+			usr << text("The [src] is filled with tiny worms!")
+		usr << text ("") // Empty line for readability.
+
+/obj/item/seeds/proc/harvest(mob/user = usr)
+	var/obj/item/seeds/produce = product
+	var/obj/machinery/hydroponics/parent = loc //for ease of access
+	var/t_amount = 0
+
+
+	var/num_of_harvest = rand(0,5)
+	while(num_of_harvest > 0)
+		new produce(user.loc, potency) // User gets a consumable
+		num_of_harvest -= 1
